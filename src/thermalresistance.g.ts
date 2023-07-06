@@ -11,7 +11,19 @@ export enum ThermalResistanceUnits {
     /** */
     SquareCentimeterHourDegreesCelsiusPerKilocalorie,
     /** */
-    HourSquareFeetDegreesFahrenheitPerBtu
+    HourSquareFeetDegreesFahrenheitPerBtu,
+    /** */
+    SquareMeterKelvinPerKilowatt,
+    /** */
+    SquareMeterKelvinPerWatt,
+    /** */
+    SquareMeterDegreeCelsiusPerWatt,
+    /** */
+    SquareCentimeterKelvinPerWatt,
+    /** */
+    SquareCentimeterHourDegreeCelsiusPerKilocalorie,
+    /** */
+    HourSquareFeetDegreeFahrenheitPerBtu
 }
 
 /** Heat Transfer Coefficient or Thermal conductivity - indicates a materials ability to conduct heat. */
@@ -156,16 +168,22 @@ export class ThermalResistance {
         switch (toUnit) {
                 
             case ThermalResistanceUnits.SquareMeterKelvinsPerKilowatt:
+            case ThermalResistanceUnits.SquareMeterKelvinsPerKilowatt:        
                 return this.value;
             case ThermalResistanceUnits.SquareMeterKelvinsPerWatt:
+            case ThermalResistanceUnits.SquareMeterKelvinsPerWatt:        
                 return this.value / 1000;
             case ThermalResistanceUnits.SquareMeterDegreesCelsiusPerWatt:
+            case ThermalResistanceUnits.SquareMeterDegreesCelsiusPerWatt:        
                 return this.value / 1000.0;
             case ThermalResistanceUnits.SquareCentimeterKelvinsPerWatt:
+            case ThermalResistanceUnits.SquareCentimeterKelvinsPerWatt:        
                 return this.value / 0.1;
             case ThermalResistanceUnits.SquareCentimeterHourDegreesCelsiusPerKilocalorie:
+            case ThermalResistanceUnits.SquareCentimeterHourDegreesCelsiusPerKilocalorie:        
                 return this.value / 0.0859779507590433;
             case ThermalResistanceUnits.HourSquareFeetDegreesFahrenheitPerBtu:
+            case ThermalResistanceUnits.HourSquareFeetDegreesFahrenheitPerBtu:        
                 return this.value / 176.1121482159839;
             default:
                 break;
@@ -177,16 +195,22 @@ export class ThermalResistance {
         switch (fromUnit) {
                 
             case ThermalResistanceUnits.SquareMeterKelvinsPerKilowatt:
+            case ThermalResistanceUnits.SquareMeterKelvinsPerKilowatt:        
                 return value;
             case ThermalResistanceUnits.SquareMeterKelvinsPerWatt:
+            case ThermalResistanceUnits.SquareMeterKelvinsPerWatt:        
                 return value * 1000;
             case ThermalResistanceUnits.SquareMeterDegreesCelsiusPerWatt:
+            case ThermalResistanceUnits.SquareMeterDegreesCelsiusPerWatt:        
                 return value * 1000.0;
             case ThermalResistanceUnits.SquareCentimeterKelvinsPerWatt:
+            case ThermalResistanceUnits.SquareCentimeterKelvinsPerWatt:        
                 return value * 0.1;
             case ThermalResistanceUnits.SquareCentimeterHourDegreesCelsiusPerKilocalorie:
+            case ThermalResistanceUnits.SquareCentimeterHourDegreesCelsiusPerKilocalorie:        
                 return value * 0.0859779507590433;
             case ThermalResistanceUnits.HourSquareFeetDegreesFahrenheitPerBtu:
+            case ThermalResistanceUnits.HourSquareFeetDegreesFahrenheitPerBtu:        
                 return value * 176.1121482159839;
             default:
                 break;

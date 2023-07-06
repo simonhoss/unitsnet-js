@@ -27,7 +27,35 @@ export enum PressureChangeRateUnits {
     /** */
     KilopoundsForcePerSquareInchPerMinute,
     /** */
-    MegapoundsForcePerSquareInchPerMinute
+    MegapoundsForcePerSquareInchPerMinute,
+    /** */
+    PascalPerSecond,
+    /** */
+    PascalPerMinute,
+    /** */
+    MillimeterOfMercuryPerSecond,
+    /** */
+    AtmospherePerSecond,
+    /** */
+    PoundForcePerSquareInchPerSecond,
+    /** */
+    PoundForcePerSquareInchPerMinute,
+    /** */
+    KilopascalPerSecond,
+    /** */
+    MegapascalPerSecond,
+    /** */
+    KilopascalPerMinute,
+    /** */
+    MegapascalPerMinute,
+    /** */
+    KilopoundForcePerSquareInchPerSecond,
+    /** */
+    MegapoundForcePerSquareInchPerSecond,
+    /** */
+    KilopoundForcePerSquareInchPerMinute,
+    /** */
+    MegapoundForcePerSquareInchPerMinute
 }
 
 /** Pressure change rate is the ratio of the pressure change to the time during which the change occurred (value of pressure changes per unit time). */
@@ -324,32 +352,46 @@ export class PressureChangeRate {
         switch (toUnit) {
                 
             case PressureChangeRateUnits.PascalsPerSecond:
+            case PressureChangeRateUnits.PascalsPerSecond:        
                 return this.value;
             case PressureChangeRateUnits.PascalsPerMinute:
+            case PressureChangeRateUnits.PascalsPerMinute:        
                 return this.value * 60;
             case PressureChangeRateUnits.MillimetersOfMercuryPerSecond:
+            case PressureChangeRateUnits.MillimetersOfMercuryPerSecond:        
                 return this.value / 133.322;
             case PressureChangeRateUnits.AtmospheresPerSecond:
+            case PressureChangeRateUnits.AtmospheresPerSecond:        
                 return this.value / (1.01325 * 1e5);
             case PressureChangeRateUnits.PoundsForcePerSquareInchPerSecond:
+            case PressureChangeRateUnits.PoundsForcePerSquareInchPerSecond:        
                 return this.value / 6.894757293168361e3;
             case PressureChangeRateUnits.PoundsForcePerSquareInchPerMinute:
+            case PressureChangeRateUnits.PoundsForcePerSquareInchPerMinute:        
                 return this.value / 6.894757293168361e3 * 60;
             case PressureChangeRateUnits.KilopascalsPerSecond:
+            case PressureChangeRateUnits.KilopascalsPerSecond:        
                 return (this.value) / 1000;
             case PressureChangeRateUnits.MegapascalsPerSecond:
+            case PressureChangeRateUnits.MegapascalsPerSecond:        
                 return (this.value) / 1000000;
             case PressureChangeRateUnits.KilopascalsPerMinute:
+            case PressureChangeRateUnits.KilopascalsPerMinute:        
                 return (this.value * 60) / 1000;
             case PressureChangeRateUnits.MegapascalsPerMinute:
+            case PressureChangeRateUnits.MegapascalsPerMinute:        
                 return (this.value * 60) / 1000000;
             case PressureChangeRateUnits.KilopoundsForcePerSquareInchPerSecond:
+            case PressureChangeRateUnits.KilopoundsForcePerSquareInchPerSecond:        
                 return (this.value / 6.894757293168361e3) / 1000;
             case PressureChangeRateUnits.MegapoundsForcePerSquareInchPerSecond:
+            case PressureChangeRateUnits.MegapoundsForcePerSquareInchPerSecond:        
                 return (this.value / 6.894757293168361e3) / 1000000;
             case PressureChangeRateUnits.KilopoundsForcePerSquareInchPerMinute:
+            case PressureChangeRateUnits.KilopoundsForcePerSquareInchPerMinute:        
                 return (this.value / 6.894757293168361e3 * 60) / 1000;
             case PressureChangeRateUnits.MegapoundsForcePerSquareInchPerMinute:
+            case PressureChangeRateUnits.MegapoundsForcePerSquareInchPerMinute:        
                 return (this.value / 6.894757293168361e3 * 60) / 1000000;
             default:
                 break;
@@ -361,32 +403,46 @@ export class PressureChangeRate {
         switch (fromUnit) {
                 
             case PressureChangeRateUnits.PascalsPerSecond:
+            case PressureChangeRateUnits.PascalsPerSecond:        
                 return value;
             case PressureChangeRateUnits.PascalsPerMinute:
+            case PressureChangeRateUnits.PascalsPerMinute:        
                 return value / 60;
             case PressureChangeRateUnits.MillimetersOfMercuryPerSecond:
+            case PressureChangeRateUnits.MillimetersOfMercuryPerSecond:        
                 return value * 133.322;
             case PressureChangeRateUnits.AtmospheresPerSecond:
+            case PressureChangeRateUnits.AtmospheresPerSecond:        
                 return value * 1.01325 * 1e5;
             case PressureChangeRateUnits.PoundsForcePerSquareInchPerSecond:
+            case PressureChangeRateUnits.PoundsForcePerSquareInchPerSecond:        
                 return value * 6.894757293168361e3;
             case PressureChangeRateUnits.PoundsForcePerSquareInchPerMinute:
+            case PressureChangeRateUnits.PoundsForcePerSquareInchPerMinute:        
                 return value * 6.894757293168361e3 / 60;
             case PressureChangeRateUnits.KilopascalsPerSecond:
+            case PressureChangeRateUnits.KilopascalsPerSecond:        
                 return (value) * 1000;
             case PressureChangeRateUnits.MegapascalsPerSecond:
+            case PressureChangeRateUnits.MegapascalsPerSecond:        
                 return (value) * 1000000;
             case PressureChangeRateUnits.KilopascalsPerMinute:
+            case PressureChangeRateUnits.KilopascalsPerMinute:        
                 return (value / 60) * 1000;
             case PressureChangeRateUnits.MegapascalsPerMinute:
+            case PressureChangeRateUnits.MegapascalsPerMinute:        
                 return (value / 60) * 1000000;
             case PressureChangeRateUnits.KilopoundsForcePerSquareInchPerSecond:
+            case PressureChangeRateUnits.KilopoundsForcePerSquareInchPerSecond:        
                 return (value * 6.894757293168361e3) * 1000;
             case PressureChangeRateUnits.MegapoundsForcePerSquareInchPerSecond:
+            case PressureChangeRateUnits.MegapoundsForcePerSquareInchPerSecond:        
                 return (value * 6.894757293168361e3) * 1000000;
             case PressureChangeRateUnits.KilopoundsForcePerSquareInchPerMinute:
+            case PressureChangeRateUnits.KilopoundsForcePerSquareInchPerMinute:        
                 return (value * 6.894757293168361e3 / 60) * 1000;
             case PressureChangeRateUnits.MegapoundsForcePerSquareInchPerMinute:
+            case PressureChangeRateUnits.MegapoundsForcePerSquareInchPerMinute:        
                 return (value * 6.894757293168361e3 / 60) * 1000000;
             default:
                 break;

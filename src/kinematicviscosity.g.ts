@@ -17,7 +17,11 @@ export enum KinematicViscosityUnits {
     /** */
     Decistokes,
     /** */
-    Kilostokes
+    Kilostokes,
+    /** */
+    SquareMeterPerSecond,
+    /** */
+    SquareFootPerSecond
 }
 
 /** The viscosity of a fluid is a measure of its resistance to gradual deformation by shear stress or tensile stress. */
@@ -219,22 +223,31 @@ export class KinematicViscosity {
         switch (toUnit) {
                 
             case KinematicViscosityUnits.SquareMetersPerSecond:
+            case KinematicViscosityUnits.SquareMetersPerSecond:        
                 return this.value;
             case KinematicViscosityUnits.Stokes:
+                    
                 return this.value * 1e4;
             case KinematicViscosityUnits.SquareFeetPerSecond:
+            case KinematicViscosityUnits.SquareFeetPerSecond:        
                 return this.value * 10.7639;
             case KinematicViscosityUnits.Nanostokes:
+                    
                 return (this.value * 1e4) / 1e-9;
             case KinematicViscosityUnits.Microstokes:
+                    
                 return (this.value * 1e4) / 0.000001;
             case KinematicViscosityUnits.Millistokes:
+                    
                 return (this.value * 1e4) / 0.001;
             case KinematicViscosityUnits.Centistokes:
+                    
                 return (this.value * 1e4) / 0.01;
             case KinematicViscosityUnits.Decistokes:
+                    
                 return (this.value * 1e4) / 0.1;
             case KinematicViscosityUnits.Kilostokes:
+                    
                 return (this.value * 1e4) / 1000;
             default:
                 break;
@@ -246,22 +259,31 @@ export class KinematicViscosity {
         switch (fromUnit) {
                 
             case KinematicViscosityUnits.SquareMetersPerSecond:
+            case KinematicViscosityUnits.SquareMetersPerSecond:        
                 return value;
             case KinematicViscosityUnits.Stokes:
+                    
                 return value / 1e4;
             case KinematicViscosityUnits.SquareFeetPerSecond:
+            case KinematicViscosityUnits.SquareFeetPerSecond:        
                 return value / 10.7639;
             case KinematicViscosityUnits.Nanostokes:
+                    
                 return (value / 1e4) * 1e-9;
             case KinematicViscosityUnits.Microstokes:
+                    
                 return (value / 1e4) * 0.000001;
             case KinematicViscosityUnits.Millistokes:
+                    
                 return (value / 1e4) * 0.001;
             case KinematicViscosityUnits.Centistokes:
+                    
                 return (value / 1e4) * 0.01;
             case KinematicViscosityUnits.Decistokes:
+                    
                 return (value / 1e4) * 0.1;
             case KinematicViscosityUnits.Kilostokes:
+                    
                 return (value / 1e4) * 1000;
             default:
                 break;

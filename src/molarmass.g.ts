@@ -25,7 +25,33 @@ export enum MolarMassUnits {
     /** */
     KilopoundsPerMole,
     /** */
-    MegapoundsPerMole
+    MegapoundsPerMole,
+    /** */
+    GramPerMole,
+    /** */
+    KilogramPerKilomole,
+    /** */
+    PoundPerMole,
+    /** */
+    NanogramPerMole,
+    /** */
+    MicrogramPerMole,
+    /** */
+    MilligramPerMole,
+    /** */
+    CentigramPerMole,
+    /** */
+    DecigramPerMole,
+    /** */
+    DecagramPerMole,
+    /** */
+    HectogramPerMole,
+    /** */
+    KilogramPerMole,
+    /** */
+    KilopoundPerMole,
+    /** */
+    MegapoundPerMole
 }
 
 /** In chemistry, the molar mass M is a physical property defined as the mass of a given substance (chemical element or chemical compound) divided by the amount of substance. */
@@ -303,30 +329,43 @@ export class MolarMass {
         switch (toUnit) {
                 
             case MolarMassUnits.GramsPerMole:
+            case MolarMassUnits.GramsPerMole:        
                 return this.value * 1e3;
             case MolarMassUnits.KilogramsPerKilomole:
+            case MolarMassUnits.KilogramsPerKilomole:        
                 return this.value * 1e3;
             case MolarMassUnits.PoundsPerMole:
+            case MolarMassUnits.PoundsPerMole:        
                 return this.value / 0.45359237;
             case MolarMassUnits.NanogramsPerMole:
+            case MolarMassUnits.NanogramsPerMole:        
                 return (this.value * 1e3) / 1e-9;
             case MolarMassUnits.MicrogramsPerMole:
+            case MolarMassUnits.MicrogramsPerMole:        
                 return (this.value * 1e3) / 0.000001;
             case MolarMassUnits.MilligramsPerMole:
+            case MolarMassUnits.MilligramsPerMole:        
                 return (this.value * 1e3) / 0.001;
             case MolarMassUnits.CentigramsPerMole:
+            case MolarMassUnits.CentigramsPerMole:        
                 return (this.value * 1e3) / 0.01;
             case MolarMassUnits.DecigramsPerMole:
+            case MolarMassUnits.DecigramsPerMole:        
                 return (this.value * 1e3) / 0.1;
             case MolarMassUnits.DecagramsPerMole:
+            case MolarMassUnits.DecagramsPerMole:        
                 return (this.value * 1e3) / 10;
             case MolarMassUnits.HectogramsPerMole:
+            case MolarMassUnits.HectogramsPerMole:        
                 return (this.value * 1e3) / 100;
             case MolarMassUnits.KilogramsPerMole:
+            case MolarMassUnits.KilogramsPerMole:        
                 return (this.value * 1e3) / 1000;
             case MolarMassUnits.KilopoundsPerMole:
+            case MolarMassUnits.KilopoundsPerMole:        
                 return (this.value / 0.45359237) / 1000;
             case MolarMassUnits.MegapoundsPerMole:
+            case MolarMassUnits.MegapoundsPerMole:        
                 return (this.value / 0.45359237) / 1000000;
             default:
                 break;
@@ -338,30 +377,43 @@ export class MolarMass {
         switch (fromUnit) {
                 
             case MolarMassUnits.GramsPerMole:
+            case MolarMassUnits.GramsPerMole:        
                 return value / 1e3;
             case MolarMassUnits.KilogramsPerKilomole:
+            case MolarMassUnits.KilogramsPerKilomole:        
                 return value / 1e3;
             case MolarMassUnits.PoundsPerMole:
+            case MolarMassUnits.PoundsPerMole:        
                 return value * 0.45359237;
             case MolarMassUnits.NanogramsPerMole:
+            case MolarMassUnits.NanogramsPerMole:        
                 return (value / 1e3) * 1e-9;
             case MolarMassUnits.MicrogramsPerMole:
+            case MolarMassUnits.MicrogramsPerMole:        
                 return (value / 1e3) * 0.000001;
             case MolarMassUnits.MilligramsPerMole:
+            case MolarMassUnits.MilligramsPerMole:        
                 return (value / 1e3) * 0.001;
             case MolarMassUnits.CentigramsPerMole:
+            case MolarMassUnits.CentigramsPerMole:        
                 return (value / 1e3) * 0.01;
             case MolarMassUnits.DecigramsPerMole:
+            case MolarMassUnits.DecigramsPerMole:        
                 return (value / 1e3) * 0.1;
             case MolarMassUnits.DecagramsPerMole:
+            case MolarMassUnits.DecagramsPerMole:        
                 return (value / 1e3) * 10;
             case MolarMassUnits.HectogramsPerMole:
+            case MolarMassUnits.HectogramsPerMole:        
                 return (value / 1e3) * 100;
             case MolarMassUnits.KilogramsPerMole:
+            case MolarMassUnits.KilogramsPerMole:        
                 return (value / 1e3) * 1000;
             case MolarMassUnits.KilopoundsPerMole:
+            case MolarMassUnits.KilopoundsPerMole:        
                 return (value * 0.45359237) * 1000;
             case MolarMassUnits.MegapoundsPerMole:
+            case MolarMassUnits.MegapoundsPerMole:        
                 return (value * 0.45359237) * 1000000;
             default:
                 break;

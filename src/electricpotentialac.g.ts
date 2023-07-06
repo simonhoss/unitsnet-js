@@ -9,7 +9,17 @@ export enum ElectricPotentialAcUnits {
     /** */
     KilovoltsAc,
     /** */
-    MegavoltsAc
+    MegavoltsAc,
+    /** */
+    VoltAc,
+    /** */
+    MicrovoltAc,
+    /** */
+    MillivoltAc,
+    /** */
+    KilovoltAc,
+    /** */
+    MegavoltAc
 }
 
 /** The Electric Potential of a system known to use Alternating Current. */
@@ -135,14 +145,19 @@ export class ElectricPotentialAc {
         switch (toUnit) {
                 
             case ElectricPotentialAcUnits.VoltsAc:
+            case ElectricPotentialAcUnits.VoltsAc:        
                 return this.value;
             case ElectricPotentialAcUnits.MicrovoltsAc:
+            case ElectricPotentialAcUnits.MicrovoltsAc:        
                 return (this.value) / 0.000001;
             case ElectricPotentialAcUnits.MillivoltsAc:
+            case ElectricPotentialAcUnits.MillivoltsAc:        
                 return (this.value) / 0.001;
             case ElectricPotentialAcUnits.KilovoltsAc:
+            case ElectricPotentialAcUnits.KilovoltsAc:        
                 return (this.value) / 1000;
             case ElectricPotentialAcUnits.MegavoltsAc:
+            case ElectricPotentialAcUnits.MegavoltsAc:        
                 return (this.value) / 1000000;
             default:
                 break;
@@ -154,14 +169,19 @@ export class ElectricPotentialAc {
         switch (fromUnit) {
                 
             case ElectricPotentialAcUnits.VoltsAc:
+            case ElectricPotentialAcUnits.VoltsAc:        
                 return value;
             case ElectricPotentialAcUnits.MicrovoltsAc:
+            case ElectricPotentialAcUnits.MicrovoltsAc:        
                 return (value) * 0.000001;
             case ElectricPotentialAcUnits.MillivoltsAc:
+            case ElectricPotentialAcUnits.MillivoltsAc:        
                 return (value) * 0.001;
             case ElectricPotentialAcUnits.KilovoltsAc:
+            case ElectricPotentialAcUnits.KilovoltsAc:        
                 return (value) * 1000;
             case ElectricPotentialAcUnits.MegavoltsAc:
+            case ElectricPotentialAcUnits.MegavoltsAc:        
                 return (value) * 1000000;
             default:
                 break;

@@ -55,7 +55,63 @@ export enum MassMomentOfInertiaUnits {
     /** */
     KilotonneSquareMilimeters,
     /** */
-    MegatonneSquareMilimeters
+    MegatonneSquareMilimeters,
+    /** */
+    GramSquareMeter,
+    /** */
+    GramSquareDecimeter,
+    /** */
+    GramSquareCentimeter,
+    /** */
+    GramSquareMillimeter,
+    /** */
+    TonneSquareMeter,
+    /** */
+    TonneSquareDecimeter,
+    /** */
+    TonneSquareCentimeter,
+    /** */
+    TonneSquareMilimeter,
+    /** */
+    PoundSquareFoot,
+    /** */
+    PoundSquareInch,
+    /** */
+    SlugSquareFoot,
+    /** */
+    SlugSquareInch,
+    /** */
+    MilligramSquareMeter,
+    /** */
+    KilogramSquareMeter,
+    /** */
+    MilligramSquareDecimeter,
+    /** */
+    KilogramSquareDecimeter,
+    /** */
+    MilligramSquareCentimeter,
+    /** */
+    KilogramSquareCentimeter,
+    /** */
+    MilligramSquareMillimeter,
+    /** */
+    KilogramSquareMillimeter,
+    /** */
+    KilotonneSquareMeter,
+    /** */
+    MegatonneSquareMeter,
+    /** */
+    KilotonneSquareDecimeter,
+    /** */
+    MegatonneSquareDecimeter,
+    /** */
+    KilotonneSquareCentimeter,
+    /** */
+    MegatonneSquareCentimeter,
+    /** */
+    KilotonneSquareMilimeter,
+    /** */
+    MegatonneSquareMilimeter
 }
 
 /** A property of body reflects how its mass is distributed with regard to an axis. */
@@ -618,60 +674,88 @@ export class MassMomentOfInertia {
         switch (toUnit) {
                 
             case MassMomentOfInertiaUnits.GramSquareMeters:
+            case MassMomentOfInertiaUnits.GramSquareMeters:        
                 return this.value * 1e3;
             case MassMomentOfInertiaUnits.GramSquareDecimeters:
+            case MassMomentOfInertiaUnits.GramSquareDecimeters:        
                 return this.value * 1e5;
             case MassMomentOfInertiaUnits.GramSquareCentimeters:
+            case MassMomentOfInertiaUnits.GramSquareCentimeters:        
                 return this.value * 1e7;
             case MassMomentOfInertiaUnits.GramSquareMillimeters:
+            case MassMomentOfInertiaUnits.GramSquareMillimeters:        
                 return this.value * 1e9;
             case MassMomentOfInertiaUnits.TonneSquareMeters:
+            case MassMomentOfInertiaUnits.TonneSquareMeters:        
                 return this.value * 1e-3;
             case MassMomentOfInertiaUnits.TonneSquareDecimeters:
+            case MassMomentOfInertiaUnits.TonneSquareDecimeters:        
                 return this.value * 1e-1;
             case MassMomentOfInertiaUnits.TonneSquareCentimeters:
+            case MassMomentOfInertiaUnits.TonneSquareCentimeters:        
                 return this.value * 1e1;
             case MassMomentOfInertiaUnits.TonneSquareMilimeters:
+            case MassMomentOfInertiaUnits.TonneSquareMilimeters:        
                 return this.value * 1e3;
             case MassMomentOfInertiaUnits.PoundSquareFeet:
+            case MassMomentOfInertiaUnits.PoundSquareFeet:        
                 return this.value / 4.21401101e-2;
             case MassMomentOfInertiaUnits.PoundSquareInches:
+            case MassMomentOfInertiaUnits.PoundSquareInches:        
                 return this.value / 2.9263965e-4;
             case MassMomentOfInertiaUnits.SlugSquareFeet:
+            case MassMomentOfInertiaUnits.SlugSquareFeet:        
                 return this.value / 1.3558179619;
             case MassMomentOfInertiaUnits.SlugSquareInches:
+            case MassMomentOfInertiaUnits.SlugSquareInches:        
                 return this.value / 9.41540242e-3;
             case MassMomentOfInertiaUnits.MilligramSquareMeters:
+            case MassMomentOfInertiaUnits.MilligramSquareMeters:        
                 return (this.value * 1e3) / 0.001;
             case MassMomentOfInertiaUnits.KilogramSquareMeters:
+            case MassMomentOfInertiaUnits.KilogramSquareMeters:        
                 return (this.value * 1e3) / 1000;
             case MassMomentOfInertiaUnits.MilligramSquareDecimeters:
+            case MassMomentOfInertiaUnits.MilligramSquareDecimeters:        
                 return (this.value * 1e5) / 0.001;
             case MassMomentOfInertiaUnits.KilogramSquareDecimeters:
+            case MassMomentOfInertiaUnits.KilogramSquareDecimeters:        
                 return (this.value * 1e5) / 1000;
             case MassMomentOfInertiaUnits.MilligramSquareCentimeters:
+            case MassMomentOfInertiaUnits.MilligramSquareCentimeters:        
                 return (this.value * 1e7) / 0.001;
             case MassMomentOfInertiaUnits.KilogramSquareCentimeters:
+            case MassMomentOfInertiaUnits.KilogramSquareCentimeters:        
                 return (this.value * 1e7) / 1000;
             case MassMomentOfInertiaUnits.MilligramSquareMillimeters:
+            case MassMomentOfInertiaUnits.MilligramSquareMillimeters:        
                 return (this.value * 1e9) / 0.001;
             case MassMomentOfInertiaUnits.KilogramSquareMillimeters:
+            case MassMomentOfInertiaUnits.KilogramSquareMillimeters:        
                 return (this.value * 1e9) / 1000;
             case MassMomentOfInertiaUnits.KilotonneSquareMeters:
+            case MassMomentOfInertiaUnits.KilotonneSquareMeters:        
                 return (this.value * 1e-3) / 1000;
             case MassMomentOfInertiaUnits.MegatonneSquareMeters:
+            case MassMomentOfInertiaUnits.MegatonneSquareMeters:        
                 return (this.value * 1e-3) / 1000000;
             case MassMomentOfInertiaUnits.KilotonneSquareDecimeters:
+            case MassMomentOfInertiaUnits.KilotonneSquareDecimeters:        
                 return (this.value * 1e-1) / 1000;
             case MassMomentOfInertiaUnits.MegatonneSquareDecimeters:
+            case MassMomentOfInertiaUnits.MegatonneSquareDecimeters:        
                 return (this.value * 1e-1) / 1000000;
             case MassMomentOfInertiaUnits.KilotonneSquareCentimeters:
+            case MassMomentOfInertiaUnits.KilotonneSquareCentimeters:        
                 return (this.value * 1e1) / 1000;
             case MassMomentOfInertiaUnits.MegatonneSquareCentimeters:
+            case MassMomentOfInertiaUnits.MegatonneSquareCentimeters:        
                 return (this.value * 1e1) / 1000000;
             case MassMomentOfInertiaUnits.KilotonneSquareMilimeters:
+            case MassMomentOfInertiaUnits.KilotonneSquareMilimeters:        
                 return (this.value * 1e3) / 1000;
             case MassMomentOfInertiaUnits.MegatonneSquareMilimeters:
+            case MassMomentOfInertiaUnits.MegatonneSquareMilimeters:        
                 return (this.value * 1e3) / 1000000;
             default:
                 break;
@@ -683,60 +767,88 @@ export class MassMomentOfInertia {
         switch (fromUnit) {
                 
             case MassMomentOfInertiaUnits.GramSquareMeters:
+            case MassMomentOfInertiaUnits.GramSquareMeters:        
                 return value / 1e3;
             case MassMomentOfInertiaUnits.GramSquareDecimeters:
+            case MassMomentOfInertiaUnits.GramSquareDecimeters:        
                 return value / 1e5;
             case MassMomentOfInertiaUnits.GramSquareCentimeters:
+            case MassMomentOfInertiaUnits.GramSquareCentimeters:        
                 return value / 1e7;
             case MassMomentOfInertiaUnits.GramSquareMillimeters:
+            case MassMomentOfInertiaUnits.GramSquareMillimeters:        
                 return value / 1e9;
             case MassMomentOfInertiaUnits.TonneSquareMeters:
+            case MassMomentOfInertiaUnits.TonneSquareMeters:        
                 return value / 1e-3;
             case MassMomentOfInertiaUnits.TonneSquareDecimeters:
+            case MassMomentOfInertiaUnits.TonneSquareDecimeters:        
                 return value / 1e-1;
             case MassMomentOfInertiaUnits.TonneSquareCentimeters:
+            case MassMomentOfInertiaUnits.TonneSquareCentimeters:        
                 return value / 1e1;
             case MassMomentOfInertiaUnits.TonneSquareMilimeters:
+            case MassMomentOfInertiaUnits.TonneSquareMilimeters:        
                 return value / 1e3;
             case MassMomentOfInertiaUnits.PoundSquareFeet:
+            case MassMomentOfInertiaUnits.PoundSquareFeet:        
                 return value * 4.21401101e-2;
             case MassMomentOfInertiaUnits.PoundSquareInches:
+            case MassMomentOfInertiaUnits.PoundSquareInches:        
                 return value * 2.9263965e-4;
             case MassMomentOfInertiaUnits.SlugSquareFeet:
+            case MassMomentOfInertiaUnits.SlugSquareFeet:        
                 return value * 1.3558179619;
             case MassMomentOfInertiaUnits.SlugSquareInches:
+            case MassMomentOfInertiaUnits.SlugSquareInches:        
                 return value * 9.41540242e-3;
             case MassMomentOfInertiaUnits.MilligramSquareMeters:
+            case MassMomentOfInertiaUnits.MilligramSquareMeters:        
                 return (value / 1e3) * 0.001;
             case MassMomentOfInertiaUnits.KilogramSquareMeters:
+            case MassMomentOfInertiaUnits.KilogramSquareMeters:        
                 return (value / 1e3) * 1000;
             case MassMomentOfInertiaUnits.MilligramSquareDecimeters:
+            case MassMomentOfInertiaUnits.MilligramSquareDecimeters:        
                 return (value / 1e5) * 0.001;
             case MassMomentOfInertiaUnits.KilogramSquareDecimeters:
+            case MassMomentOfInertiaUnits.KilogramSquareDecimeters:        
                 return (value / 1e5) * 1000;
             case MassMomentOfInertiaUnits.MilligramSquareCentimeters:
+            case MassMomentOfInertiaUnits.MilligramSquareCentimeters:        
                 return (value / 1e7) * 0.001;
             case MassMomentOfInertiaUnits.KilogramSquareCentimeters:
+            case MassMomentOfInertiaUnits.KilogramSquareCentimeters:        
                 return (value / 1e7) * 1000;
             case MassMomentOfInertiaUnits.MilligramSquareMillimeters:
+            case MassMomentOfInertiaUnits.MilligramSquareMillimeters:        
                 return (value / 1e9) * 0.001;
             case MassMomentOfInertiaUnits.KilogramSquareMillimeters:
+            case MassMomentOfInertiaUnits.KilogramSquareMillimeters:        
                 return (value / 1e9) * 1000;
             case MassMomentOfInertiaUnits.KilotonneSquareMeters:
+            case MassMomentOfInertiaUnits.KilotonneSquareMeters:        
                 return (value / 1e-3) * 1000;
             case MassMomentOfInertiaUnits.MegatonneSquareMeters:
+            case MassMomentOfInertiaUnits.MegatonneSquareMeters:        
                 return (value / 1e-3) * 1000000;
             case MassMomentOfInertiaUnits.KilotonneSquareDecimeters:
+            case MassMomentOfInertiaUnits.KilotonneSquareDecimeters:        
                 return (value / 1e-1) * 1000;
             case MassMomentOfInertiaUnits.MegatonneSquareDecimeters:
+            case MassMomentOfInertiaUnits.MegatonneSquareDecimeters:        
                 return (value / 1e-1) * 1000000;
             case MassMomentOfInertiaUnits.KilotonneSquareCentimeters:
+            case MassMomentOfInertiaUnits.KilotonneSquareCentimeters:        
                 return (value / 1e1) * 1000;
             case MassMomentOfInertiaUnits.MegatonneSquareCentimeters:
+            case MassMomentOfInertiaUnits.MegatonneSquareCentimeters:        
                 return (value / 1e1) * 1000000;
             case MassMomentOfInertiaUnits.KilotonneSquareMilimeters:
+            case MassMomentOfInertiaUnits.KilotonneSquareMilimeters:        
                 return (value / 1e3) * 1000;
             case MassMomentOfInertiaUnits.MegatonneSquareMilimeters:
+            case MassMomentOfInertiaUnits.MegatonneSquareMilimeters:        
                 return (value / 1e3) * 1000000;
             default:
                 break;

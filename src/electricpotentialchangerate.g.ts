@@ -39,7 +39,47 @@ export enum ElectricPotentialChangeRateUnits {
     /** */
     KilovoltsPerHours,
     /** */
-    MegavoltsPerHours
+    MegavoltsPerHours,
+    /** */
+    VoltPerSecond,
+    /** */
+    VoltPerMicrosecond,
+    /** */
+    VoltPerMinute,
+    /** */
+    VoltPerHour,
+    /** */
+    MicrovoltPerSecond,
+    /** */
+    MillivoltPerSecond,
+    /** */
+    KilovoltPerSecond,
+    /** */
+    MegavoltPerSecond,
+    /** */
+    MicrovoltPerMicrosecond,
+    /** */
+    MillivoltPerMicrosecond,
+    /** */
+    KilovoltPerMicrosecond,
+    /** */
+    MegavoltPerMicrosecond,
+    /** */
+    MicrovoltPerMinute,
+    /** */
+    MillivoltPerMinute,
+    /** */
+    KilovoltPerMinute,
+    /** */
+    MegavoltPerMinute,
+    /** */
+    MicrovoltPerHour,
+    /** */
+    MillivoltPerHour,
+    /** */
+    KilovoltPerHour,
+    /** */
+    MegavoltPerHour
 }
 
 /** ElectricPotential change rate is the ratio of the electric potential change to the time during which the change occurred (value of electric potential changes per unit time). */
@@ -450,44 +490,64 @@ export class ElectricPotentialChangeRate {
         switch (toUnit) {
                 
             case ElectricPotentialChangeRateUnits.VoltsPerSeconds:
+            case ElectricPotentialChangeRateUnits.VoltsPerSeconds:        
                 return this.value;
             case ElectricPotentialChangeRateUnits.VoltsPerMicroseconds:
+            case ElectricPotentialChangeRateUnits.VoltsPerMicroseconds:        
                 return this.value / 1E6;
             case ElectricPotentialChangeRateUnits.VoltsPerMinutes:
+            case ElectricPotentialChangeRateUnits.VoltsPerMinutes:        
                 return this.value * 60;
             case ElectricPotentialChangeRateUnits.VoltsPerHours:
+            case ElectricPotentialChangeRateUnits.VoltsPerHours:        
                 return this.value * 3600;
             case ElectricPotentialChangeRateUnits.MicrovoltsPerSeconds:
+            case ElectricPotentialChangeRateUnits.MicrovoltsPerSeconds:        
                 return (this.value) / 0.000001;
             case ElectricPotentialChangeRateUnits.MillivoltsPerSeconds:
+            case ElectricPotentialChangeRateUnits.MillivoltsPerSeconds:        
                 return (this.value) / 0.001;
             case ElectricPotentialChangeRateUnits.KilovoltsPerSeconds:
+            case ElectricPotentialChangeRateUnits.KilovoltsPerSeconds:        
                 return (this.value) / 1000;
             case ElectricPotentialChangeRateUnits.MegavoltsPerSeconds:
+            case ElectricPotentialChangeRateUnits.MegavoltsPerSeconds:        
                 return (this.value) / 1000000;
             case ElectricPotentialChangeRateUnits.MicrovoltsPerMicroseconds:
+            case ElectricPotentialChangeRateUnits.MicrovoltsPerMicroseconds:        
                 return (this.value / 1E6) / 0.000001;
             case ElectricPotentialChangeRateUnits.MillivoltsPerMicroseconds:
+            case ElectricPotentialChangeRateUnits.MillivoltsPerMicroseconds:        
                 return (this.value / 1E6) / 0.001;
             case ElectricPotentialChangeRateUnits.KilovoltsPerMicroseconds:
+            case ElectricPotentialChangeRateUnits.KilovoltsPerMicroseconds:        
                 return (this.value / 1E6) / 1000;
             case ElectricPotentialChangeRateUnits.MegavoltsPerMicroseconds:
+            case ElectricPotentialChangeRateUnits.MegavoltsPerMicroseconds:        
                 return (this.value / 1E6) / 1000000;
             case ElectricPotentialChangeRateUnits.MicrovoltsPerMinutes:
+            case ElectricPotentialChangeRateUnits.MicrovoltsPerMinutes:        
                 return (this.value * 60) / 0.000001;
             case ElectricPotentialChangeRateUnits.MillivoltsPerMinutes:
+            case ElectricPotentialChangeRateUnits.MillivoltsPerMinutes:        
                 return (this.value * 60) / 0.001;
             case ElectricPotentialChangeRateUnits.KilovoltsPerMinutes:
+            case ElectricPotentialChangeRateUnits.KilovoltsPerMinutes:        
                 return (this.value * 60) / 1000;
             case ElectricPotentialChangeRateUnits.MegavoltsPerMinutes:
+            case ElectricPotentialChangeRateUnits.MegavoltsPerMinutes:        
                 return (this.value * 60) / 1000000;
             case ElectricPotentialChangeRateUnits.MicrovoltsPerHours:
+            case ElectricPotentialChangeRateUnits.MicrovoltsPerHours:        
                 return (this.value * 3600) / 0.000001;
             case ElectricPotentialChangeRateUnits.MillivoltsPerHours:
+            case ElectricPotentialChangeRateUnits.MillivoltsPerHours:        
                 return (this.value * 3600) / 0.001;
             case ElectricPotentialChangeRateUnits.KilovoltsPerHours:
+            case ElectricPotentialChangeRateUnits.KilovoltsPerHours:        
                 return (this.value * 3600) / 1000;
             case ElectricPotentialChangeRateUnits.MegavoltsPerHours:
+            case ElectricPotentialChangeRateUnits.MegavoltsPerHours:        
                 return (this.value * 3600) / 1000000;
             default:
                 break;
@@ -499,44 +559,64 @@ export class ElectricPotentialChangeRate {
         switch (fromUnit) {
                 
             case ElectricPotentialChangeRateUnits.VoltsPerSeconds:
+            case ElectricPotentialChangeRateUnits.VoltsPerSeconds:        
                 return value;
             case ElectricPotentialChangeRateUnits.VoltsPerMicroseconds:
+            case ElectricPotentialChangeRateUnits.VoltsPerMicroseconds:        
                 return value * 1E6;
             case ElectricPotentialChangeRateUnits.VoltsPerMinutes:
+            case ElectricPotentialChangeRateUnits.VoltsPerMinutes:        
                 return value / 60;
             case ElectricPotentialChangeRateUnits.VoltsPerHours:
+            case ElectricPotentialChangeRateUnits.VoltsPerHours:        
                 return value / 3600;
             case ElectricPotentialChangeRateUnits.MicrovoltsPerSeconds:
+            case ElectricPotentialChangeRateUnits.MicrovoltsPerSeconds:        
                 return (value) * 0.000001;
             case ElectricPotentialChangeRateUnits.MillivoltsPerSeconds:
+            case ElectricPotentialChangeRateUnits.MillivoltsPerSeconds:        
                 return (value) * 0.001;
             case ElectricPotentialChangeRateUnits.KilovoltsPerSeconds:
+            case ElectricPotentialChangeRateUnits.KilovoltsPerSeconds:        
                 return (value) * 1000;
             case ElectricPotentialChangeRateUnits.MegavoltsPerSeconds:
+            case ElectricPotentialChangeRateUnits.MegavoltsPerSeconds:        
                 return (value) * 1000000;
             case ElectricPotentialChangeRateUnits.MicrovoltsPerMicroseconds:
+            case ElectricPotentialChangeRateUnits.MicrovoltsPerMicroseconds:        
                 return (value * 1E6) * 0.000001;
             case ElectricPotentialChangeRateUnits.MillivoltsPerMicroseconds:
+            case ElectricPotentialChangeRateUnits.MillivoltsPerMicroseconds:        
                 return (value * 1E6) * 0.001;
             case ElectricPotentialChangeRateUnits.KilovoltsPerMicroseconds:
+            case ElectricPotentialChangeRateUnits.KilovoltsPerMicroseconds:        
                 return (value * 1E6) * 1000;
             case ElectricPotentialChangeRateUnits.MegavoltsPerMicroseconds:
+            case ElectricPotentialChangeRateUnits.MegavoltsPerMicroseconds:        
                 return (value * 1E6) * 1000000;
             case ElectricPotentialChangeRateUnits.MicrovoltsPerMinutes:
+            case ElectricPotentialChangeRateUnits.MicrovoltsPerMinutes:        
                 return (value / 60) * 0.000001;
             case ElectricPotentialChangeRateUnits.MillivoltsPerMinutes:
+            case ElectricPotentialChangeRateUnits.MillivoltsPerMinutes:        
                 return (value / 60) * 0.001;
             case ElectricPotentialChangeRateUnits.KilovoltsPerMinutes:
+            case ElectricPotentialChangeRateUnits.KilovoltsPerMinutes:        
                 return (value / 60) * 1000;
             case ElectricPotentialChangeRateUnits.MegavoltsPerMinutes:
+            case ElectricPotentialChangeRateUnits.MegavoltsPerMinutes:        
                 return (value / 60) * 1000000;
             case ElectricPotentialChangeRateUnits.MicrovoltsPerHours:
+            case ElectricPotentialChangeRateUnits.MicrovoltsPerHours:        
                 return (value / 3600) * 0.000001;
             case ElectricPotentialChangeRateUnits.MillivoltsPerHours:
+            case ElectricPotentialChangeRateUnits.MillivoltsPerHours:        
                 return (value / 3600) * 0.001;
             case ElectricPotentialChangeRateUnits.KilovoltsPerHours:
+            case ElectricPotentialChangeRateUnits.KilovoltsPerHours:        
                 return (value / 3600) * 1000;
             case ElectricPotentialChangeRateUnits.MegavoltsPerHours:
+            case ElectricPotentialChangeRateUnits.MegavoltsPerHours:        
                 return (value / 3600) * 1000000;
             default:
                 break;

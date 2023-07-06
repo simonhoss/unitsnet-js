@@ -27,7 +27,35 @@ export enum BitRateUnits {
     /** */
     PetabytesPerSecond,
     /** */
-    ExabytesPerSecond
+    ExabytesPerSecond,
+    /** */
+    BitPerSecond,
+    /** */
+    BytePerSecond,
+    /** */
+    KilobitPerSecond,
+    /** */
+    MegabitPerSecond,
+    /** */
+    GigabitPerSecond,
+    /** */
+    TerabitPerSecond,
+    /** */
+    PetabitPerSecond,
+    /** */
+    ExabitPerSecond,
+    /** */
+    KilobytePerSecond,
+    /** */
+    MegabytePerSecond,
+    /** */
+    GigabytePerSecond,
+    /** */
+    TerabytePerSecond,
+    /** */
+    PetabytePerSecond,
+    /** */
+    ExabytePerSecond
 }
 
 /** In telecommunications and computing, bit rate is the number of bits that are conveyed or processed per unit of time. */
@@ -324,32 +352,46 @@ export class BitRate {
         switch (toUnit) {
                 
             case BitRateUnits.BitsPerSecond:
+            case BitRateUnits.BitsPerSecond:        
                 return this.value;
             case BitRateUnits.BytesPerSecond:
+            case BitRateUnits.BytesPerSecond:        
                 return this.value / 8;
             case BitRateUnits.KilobitsPerSecond:
+            case BitRateUnits.KilobitsPerSecond:        
                 return (this.value) / 1000;
             case BitRateUnits.MegabitsPerSecond:
+            case BitRateUnits.MegabitsPerSecond:        
                 return (this.value) / 1000000;
             case BitRateUnits.GigabitsPerSecond:
+            case BitRateUnits.GigabitsPerSecond:        
                 return (this.value) / 1000000000;
             case BitRateUnits.TerabitsPerSecond:
+            case BitRateUnits.TerabitsPerSecond:        
                 return (this.value) / 1000000000000;
             case BitRateUnits.PetabitsPerSecond:
+            case BitRateUnits.PetabitsPerSecond:        
                 return (this.value) / 1000000000000000;
             case BitRateUnits.ExabitsPerSecond:
+            case BitRateUnits.ExabitsPerSecond:        
                 return (this.value) / 1000000000000000000;
             case BitRateUnits.KilobytesPerSecond:
+            case BitRateUnits.KilobytesPerSecond:        
                 return (this.value / 8) / 1000;
             case BitRateUnits.MegabytesPerSecond:
+            case BitRateUnits.MegabytesPerSecond:        
                 return (this.value / 8) / 1000000;
             case BitRateUnits.GigabytesPerSecond:
+            case BitRateUnits.GigabytesPerSecond:        
                 return (this.value / 8) / 1000000000;
             case BitRateUnits.TerabytesPerSecond:
+            case BitRateUnits.TerabytesPerSecond:        
                 return (this.value / 8) / 1000000000000;
             case BitRateUnits.PetabytesPerSecond:
+            case BitRateUnits.PetabytesPerSecond:        
                 return (this.value / 8) / 1000000000000000;
             case BitRateUnits.ExabytesPerSecond:
+            case BitRateUnits.ExabytesPerSecond:        
                 return (this.value / 8) / 1000000000000000000;
             default:
                 break;
@@ -361,32 +403,46 @@ export class BitRate {
         switch (fromUnit) {
                 
             case BitRateUnits.BitsPerSecond:
+            case BitRateUnits.BitsPerSecond:        
                 return value;
             case BitRateUnits.BytesPerSecond:
+            case BitRateUnits.BytesPerSecond:        
                 return value * 8;
             case BitRateUnits.KilobitsPerSecond:
+            case BitRateUnits.KilobitsPerSecond:        
                 return (value) * 1000;
             case BitRateUnits.MegabitsPerSecond:
+            case BitRateUnits.MegabitsPerSecond:        
                 return (value) * 1000000;
             case BitRateUnits.GigabitsPerSecond:
+            case BitRateUnits.GigabitsPerSecond:        
                 return (value) * 1000000000;
             case BitRateUnits.TerabitsPerSecond:
+            case BitRateUnits.TerabitsPerSecond:        
                 return (value) * 1000000000000;
             case BitRateUnits.PetabitsPerSecond:
+            case BitRateUnits.PetabitsPerSecond:        
                 return (value) * 1000000000000000;
             case BitRateUnits.ExabitsPerSecond:
+            case BitRateUnits.ExabitsPerSecond:        
                 return (value) * 1000000000000000000;
             case BitRateUnits.KilobytesPerSecond:
+            case BitRateUnits.KilobytesPerSecond:        
                 return (value * 8) * 1000;
             case BitRateUnits.MegabytesPerSecond:
+            case BitRateUnits.MegabytesPerSecond:        
                 return (value * 8) * 1000000;
             case BitRateUnits.GigabytesPerSecond:
+            case BitRateUnits.GigabytesPerSecond:        
                 return (value * 8) * 1000000000;
             case BitRateUnits.TerabytesPerSecond:
+            case BitRateUnits.TerabytesPerSecond:        
                 return (value * 8) * 1000000000000;
             case BitRateUnits.PetabytesPerSecond:
+            case BitRateUnits.PetabytesPerSecond:        
                 return (value * 8) * 1000000000000000;
             case BitRateUnits.ExabytesPerSecond:
+            case BitRateUnits.ExabytesPerSecond:        
                 return (value * 8) * 1000000000000000000;
             default:
                 break;

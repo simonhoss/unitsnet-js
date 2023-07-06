@@ -9,7 +9,17 @@ export enum ElectricPotentialDcUnits {
     /** */
     KilovoltsDc,
     /** */
-    MegavoltsDc
+    MegavoltsDc,
+    /** */
+    VoltDc,
+    /** */
+    MicrovoltDc,
+    /** */
+    MillivoltDc,
+    /** */
+    KilovoltDc,
+    /** */
+    MegavoltDc
 }
 
 /** The Electric Potential of a system known to use Direct Current. */
@@ -135,14 +145,19 @@ export class ElectricPotentialDc {
         switch (toUnit) {
                 
             case ElectricPotentialDcUnits.VoltsDc:
+            case ElectricPotentialDcUnits.VoltsDc:        
                 return this.value;
             case ElectricPotentialDcUnits.MicrovoltsDc:
+            case ElectricPotentialDcUnits.MicrovoltsDc:        
                 return (this.value) / 0.000001;
             case ElectricPotentialDcUnits.MillivoltsDc:
+            case ElectricPotentialDcUnits.MillivoltsDc:        
                 return (this.value) / 0.001;
             case ElectricPotentialDcUnits.KilovoltsDc:
+            case ElectricPotentialDcUnits.KilovoltsDc:        
                 return (this.value) / 1000;
             case ElectricPotentialDcUnits.MegavoltsDc:
+            case ElectricPotentialDcUnits.MegavoltsDc:        
                 return (this.value) / 1000000;
             default:
                 break;
@@ -154,14 +169,19 @@ export class ElectricPotentialDc {
         switch (fromUnit) {
                 
             case ElectricPotentialDcUnits.VoltsDc:
+            case ElectricPotentialDcUnits.VoltsDc:        
                 return value;
             case ElectricPotentialDcUnits.MicrovoltsDc:
+            case ElectricPotentialDcUnits.MicrovoltsDc:        
                 return (value) * 0.000001;
             case ElectricPotentialDcUnits.MillivoltsDc:
+            case ElectricPotentialDcUnits.MillivoltsDc:        
                 return (value) * 0.001;
             case ElectricPotentialDcUnits.KilovoltsDc:
+            case ElectricPotentialDcUnits.KilovoltsDc:        
                 return (value) * 1000;
             case ElectricPotentialDcUnits.MegavoltsDc:
+            case ElectricPotentialDcUnits.MegavoltsDc:        
                 return (value) * 1000000;
             default:
                 break;

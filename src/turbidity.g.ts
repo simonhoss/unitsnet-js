@@ -51,6 +51,7 @@ export class Turbidity {
         switch (toUnit) {
                 
             case TurbidityUnits.NTU:
+                    
                 return this.value;
             default:
                 break;
@@ -62,6 +63,7 @@ export class Turbidity {
         switch (fromUnit) {
                 
             case TurbidityUnits.NTU:
+                    
                 return value;
             default:
                 break;

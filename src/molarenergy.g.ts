@@ -5,7 +5,13 @@ export enum MolarEnergyUnits {
     /** */
     KilojoulesPerMole,
     /** */
-    MegajoulesPerMole
+    MegajoulesPerMole,
+    /** */
+    JoulePerMole,
+    /** */
+    KilojoulePerMole,
+    /** */
+    MegajoulePerMole
 }
 
 /** Molar energy is the amount of energy stored in 1 mole of a substance. */
@@ -93,10 +99,13 @@ export class MolarEnergy {
         switch (toUnit) {
                 
             case MolarEnergyUnits.JoulesPerMole:
+            case MolarEnergyUnits.JoulesPerMole:        
                 return this.value;
             case MolarEnergyUnits.KilojoulesPerMole:
+            case MolarEnergyUnits.KilojoulesPerMole:        
                 return (this.value) / 1000;
             case MolarEnergyUnits.MegajoulesPerMole:
+            case MolarEnergyUnits.MegajoulesPerMole:        
                 return (this.value) / 1000000;
             default:
                 break;
@@ -108,10 +117,13 @@ export class MolarEnergy {
         switch (fromUnit) {
                 
             case MolarEnergyUnits.JoulesPerMole:
+            case MolarEnergyUnits.JoulesPerMole:        
                 return value;
             case MolarEnergyUnits.KilojoulesPerMole:
+            case MolarEnergyUnits.KilojoulesPerMole:        
                 return (value) * 1000;
             case MolarEnergyUnits.MegajoulesPerMole:
+            case MolarEnergyUnits.MegajoulesPerMole:        
                 return (value) * 1000000;
             default:
                 break;

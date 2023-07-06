@@ -1,17 +1,17 @@
 import {
+    ClassDeclarationStructure,
+    ConstructorDeclarationStructure,
+    EnumDeclarationStructure,
+    EnumMemberStructure,
+    GetAccessorDeclarationStructure,
+    JSDocStructure,
+    MethodDeclarationStructure,
     Project,
-    StructureKind,
     PropertyDeclarationStructure,
     Scope,
-    EnumDeclarationStructure,
-    ClassDeclarationStructure,
-    GetAccessorDeclarationStructure,
-    ConstructorDeclarationStructure,
-    MethodDeclarationStructure,
-    EnumMemberStructure,
-    JSDocStructure
+    StructureKind
 } from "ts-morph";
-import { UnitProperties, UnitGenerateOptions } from "./models/units-properties";
+import { UnitGenerateOptions, UnitProperties } from "./models/units-properties";
 import { pascalToCamelCase } from "./utiles";
 
 /**
@@ -34,11 +34,27 @@ function buildEnum(enumName: string, units: UnitProperties[]): EnumDeclarationSt
     return {
         kind: StructureKind.Enum,
         name: enumName,
-        members: units.map((unit: UnitProperties): EnumMemberStructure => ({
-            kind: StructureKind.EnumMember,
-            name: unit.pluralName,
-            docs: [unit.JSDoc ?? '']
-        })),
+        members: [
+            ...units.map(
+              (unit: UnitProperties): EnumMemberStructure => ({
+                kind: StructureKind.EnumMember,
+                name: unit.pluralName,
+                docs: [unit.JSDoc ?? ""],
+              })
+            ),
+            ...units
+              .filter(
+                (u1) =>
+                  units.findIndex((u2) => u1.pluralName == u2.singularName) === -1
+              )
+              .map(
+                (unit: UnitProperties): EnumMemberStructure => ({
+                  kind: StructureKind.EnumMember,
+                  name: unit.singularName,
+                  docs: [unit.JSDoc ?? ""],
+                })
+              ),
+        ],
         isExported: true,
         docs: [`${enumName} enumeration`]
     }
@@ -113,13 +129,14 @@ function buildUnitCreatorsMethods(unitName: string, enumName: string, units: Uni
 
 /**
  * Build the case in a 'switch' with unit converting formula for the given unit.
- * @param unitName The specific unit name. (for example 'Degree' or 'Radian') 
+ * @param unitNameSingular The specific unit name. (for example 'Degree' or 'Radian') 
+ * @param unitNamePlural The specific unit name. (for example 'Degree' or 'Radian') 
  * @param enumName The unit enum name.
  * @param formulaDefinition THe formula code as string.
  * @param valueVarName The variable name to replace th 'x' in the formula.
  * @returns The unit case as a string.
  */
-function buildFormulaCase(unitName: string, enumName: string, formulaDefinition: string, valueVarName: string): string {
+function buildFormulaCase(unitNameSingular: string, unitNamePlural: string, enumName: string, formulaDefinition: string, valueVarName: string): string {
     // Remove C# number types
     formulaDefinition = formulaDefinition.replace('d', '').replace('m', '');
 
@@ -130,7 +147,12 @@ function buildFormulaCase(unitName: string, enumName: string, formulaDefinition:
     formulaDefinition = formulaDefinition.replace(/\.Sin\(/g, '.sin(');
 
     return `
-    case ${enumName}.${unitName}:
+    case ${enumName}.${unitNameSingular}:
+    ${
+        unitNamePlural != unitNameSingular
+            ? `case ${enumName}.${unitNameSingular}:`
+            : ""
+    }        
         return ${formulaDefinition.replace(/{x}|x/g, valueVarName)};`;
 }
 
@@ -146,6 +168,7 @@ function buildFormulaCases(enumName: string, units: UnitProperties[], isBaseToUn
 
     for (const unit of units) {
         switchUnitsCode += buildFormulaCase(unit.pluralName,
+            unit.singularName,
             enumName,
             isBaseToUnit
                 ? unit.baseToUnitFormula

@@ -17,7 +17,25 @@ export enum StandardVolumeFlowUnits {
     /** */
     StandardCubicFeetPerMinute,
     /** */
-    StandardCubicFeetPerHour
+    StandardCubicFeetPerHour,
+    /** */
+    StandardCubicMeterPerSecond,
+    /** */
+    StandardCubicMeterPerMinute,
+    /** */
+    StandardCubicMeterPerHour,
+    /** */
+    StandardCubicMeterPerDay,
+    /** */
+    StandardCubicCentimeterPerMinute,
+    /** */
+    StandardLiterPerMinute,
+    /** */
+    StandardCubicFootPerSecond,
+    /** */
+    StandardCubicFootPerMinute,
+    /** */
+    StandardCubicFootPerHour
 }
 
 /** The molar flow rate of a gas corrected to standardized conditions of temperature and pressure thus representing a fixed number of moles of gas regardless of composition and actual flow conditions. */
@@ -219,22 +237,31 @@ export class StandardVolumeFlow {
         switch (toUnit) {
                 
             case StandardVolumeFlowUnits.StandardCubicMetersPerSecond:
+            case StandardVolumeFlowUnits.StandardCubicMetersPerSecond:        
                 return this.value;
             case StandardVolumeFlowUnits.StandardCubicMetersPerMinute:
+            case StandardVolumeFlowUnits.StandardCubicMetersPerMinute:        
                 return this.value * 60;
             case StandardVolumeFlowUnits.StandardCubicMetersPerHour:
+            case StandardVolumeFlowUnits.StandardCubicMetersPerHour:        
                 return this.value * 3600;
             case StandardVolumeFlowUnits.StandardCubicMetersPerDay:
+            case StandardVolumeFlowUnits.StandardCubicMetersPerDay:        
                 return this.value * 86400;
             case StandardVolumeFlowUnits.StandardCubicCentimetersPerMinute:
+            case StandardVolumeFlowUnits.StandardCubicCentimetersPerMinute:        
                 return this.value * 6e7;
             case StandardVolumeFlowUnits.StandardLitersPerMinute:
+            case StandardVolumeFlowUnits.StandardLitersPerMinute:        
                 return this.value * 60000;
             case StandardVolumeFlowUnits.StandardCubicFeetPerSecond:
+            case StandardVolumeFlowUnits.StandardCubicFeetPerSecond:        
                 return this.value * 35.314666721;
             case StandardVolumeFlowUnits.StandardCubicFeetPerMinute:
+            case StandardVolumeFlowUnits.StandardCubicFeetPerMinute:        
                 return this.value * 2118.88000326;
             case StandardVolumeFlowUnits.StandardCubicFeetPerHour:
+            case StandardVolumeFlowUnits.StandardCubicFeetPerHour:        
                 return this.value / 7.8657907199999087346816086183876e-6;
             default:
                 break;
@@ -246,22 +273,31 @@ export class StandardVolumeFlow {
         switch (fromUnit) {
                 
             case StandardVolumeFlowUnits.StandardCubicMetersPerSecond:
+            case StandardVolumeFlowUnits.StandardCubicMetersPerSecond:        
                 return value;
             case StandardVolumeFlowUnits.StandardCubicMetersPerMinute:
+            case StandardVolumeFlowUnits.StandardCubicMetersPerMinute:        
                 return value / 60;
             case StandardVolumeFlowUnits.StandardCubicMetersPerHour:
+            case StandardVolumeFlowUnits.StandardCubicMetersPerHour:        
                 return value / 3600;
             case StandardVolumeFlowUnits.StandardCubicMetersPerDay:
+            case StandardVolumeFlowUnits.StandardCubicMetersPerDay:        
                 return value / 86400;
             case StandardVolumeFlowUnits.StandardCubicCentimetersPerMinute:
+            case StandardVolumeFlowUnits.StandardCubicCentimetersPerMinute:        
                 return value / 6e7;
             case StandardVolumeFlowUnits.StandardLitersPerMinute:
+            case StandardVolumeFlowUnits.StandardLitersPerMinute:        
                 return value / 60000;
             case StandardVolumeFlowUnits.StandardCubicFeetPerSecond:
+            case StandardVolumeFlowUnits.StandardCubicFeetPerSecond:        
                 return value / 35.314666721;
             case StandardVolumeFlowUnits.StandardCubicFeetPerMinute:
+            case StandardVolumeFlowUnits.StandardCubicFeetPerMinute:        
                 return value / 2118.88000326;
             case StandardVolumeFlowUnits.StandardCubicFeetPerHour:
+            case StandardVolumeFlowUnits.StandardCubicFeetPerHour:        
                 return value * 7.8657907199999087346816086183876e-6;
             default:
                 break;

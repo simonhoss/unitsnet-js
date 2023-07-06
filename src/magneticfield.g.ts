@@ -11,7 +11,19 @@ export enum MagneticFieldUnits {
     /** */
     Milliteslas,
     /** */
-    Milligausses
+    Milligausses,
+    /** */
+    Tesla,
+    /** */
+    Gauss,
+    /** */
+    Nanotesla,
+    /** */
+    Microtesla,
+    /** */
+    Millitesla,
+    /** */
+    Milligauss
 }
 
 /** A magnetic field is a force field that is created by moving electric charges (electric currents) and magnetic dipoles, and exerts a force on other nearby moving charges and magnetic dipoles. */
@@ -156,16 +168,22 @@ export class MagneticField {
         switch (toUnit) {
                 
             case MagneticFieldUnits.Teslas:
+            case MagneticFieldUnits.Teslas:        
                 return this.value;
             case MagneticFieldUnits.Gausses:
+            case MagneticFieldUnits.Gausses:        
                 return this.value * 1e4;
             case MagneticFieldUnits.Nanoteslas:
+            case MagneticFieldUnits.Nanoteslas:        
                 return (this.value) / 1e-9;
             case MagneticFieldUnits.Microteslas:
+            case MagneticFieldUnits.Microteslas:        
                 return (this.value) / 0.000001;
             case MagneticFieldUnits.Milliteslas:
+            case MagneticFieldUnits.Milliteslas:        
                 return (this.value) / 0.001;
             case MagneticFieldUnits.Milligausses:
+            case MagneticFieldUnits.Milligausses:        
                 return (this.value * 1e4) / 0.001;
             default:
                 break;
@@ -177,16 +195,22 @@ export class MagneticField {
         switch (fromUnit) {
                 
             case MagneticFieldUnits.Teslas:
+            case MagneticFieldUnits.Teslas:        
                 return value;
             case MagneticFieldUnits.Gausses:
+            case MagneticFieldUnits.Gausses:        
                 return value / 1e4;
             case MagneticFieldUnits.Nanoteslas:
+            case MagneticFieldUnits.Nanoteslas:        
                 return (value) * 1e-9;
             case MagneticFieldUnits.Microteslas:
+            case MagneticFieldUnits.Microteslas:        
                 return (value) * 0.000001;
             case MagneticFieldUnits.Milliteslas:
+            case MagneticFieldUnits.Milliteslas:        
                 return (value) * 0.001;
             case MagneticFieldUnits.Milligausses:
+            case MagneticFieldUnits.Milligausses:        
                 return (value / 1e4) * 0.001;
             default:
                 break;

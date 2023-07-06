@@ -27,7 +27,35 @@ export enum AreaUnits {
     /** */
     Hectares,
     /** */
-    SquareNauticalMiles
+    SquareNauticalMiles,
+    /** */
+    SquareKilometer,
+    /** */
+    SquareMeter,
+    /** */
+    SquareDecimeter,
+    /** */
+    SquareCentimeter,
+    /** */
+    SquareMillimeter,
+    /** */
+    SquareMicrometer,
+    /** The statute mile was standardised between the British Commonwealth and the United States by an international agreement in 1959, when it was formally redefined with respect to SI units as exactly 1,609.344 metres. */
+    SquareMile,
+    /** The yard (symbol: yd) is an English unit of length in both the British imperial and US customary systems of measurement equalling 3 feet (or 36 inches). Since 1959 the yard has been by international agreement standardized as exactly 0.9144 meter. A distance of 1,760 yards is equal to 1 mile. */
+    SquareYard,
+    /** */
+    SquareFoot,
+    /** In the United States, the foot was defined as 12 inches, with the inch being defined by the Mendenhall Order of 1893 as 39.37 inches = 1 m. This makes a U.S. survey foot exactly 1200/3937 meters. */
+    UsSurveySquareFoot,
+    /** */
+    SquareInch,
+    /** Based upon the international yard and pound agreement of 1959, an acre may be declared as exactly 4,046.8564224 square metres. */
+    Acre,
+    /** */
+    Hectare,
+    /** */
+    SquareNauticalMile
 }
 
 /** Area is a quantity that expresses the extent of a two-dimensional surface or shape, or planar lamina, in the plane. Area can be understood as the amount of material with a given thickness that would be necessary to fashion a model of the shape, or the amount of paint necessary to cover the surface with a single coat.[1] It is the two-dimensional analog of the length of a curve (a one-dimensional concept) or the volume of a solid (a three-dimensional concept). */
@@ -324,32 +352,46 @@ export class Area {
         switch (toUnit) {
                 
             case AreaUnits.SquareKilometers:
+            case AreaUnits.SquareKilometers:        
                 return this.value / 1e6;
             case AreaUnits.SquareMeters:
+            case AreaUnits.SquareMeters:        
                 return this.value;
             case AreaUnits.SquareDecimeters:
+            case AreaUnits.SquareDecimeters:        
                 return this.value / 1e-2;
             case AreaUnits.SquareCentimeters:
+            case AreaUnits.SquareCentimeters:        
                 return this.value / 1e-4;
             case AreaUnits.SquareMillimeters:
+            case AreaUnits.SquareMillimeters:        
                 return this.value / 1e-6;
             case AreaUnits.SquareMicrometers:
+            case AreaUnits.SquareMicrometers:        
                 return this.value / 1e-12;
             case AreaUnits.SquareMiles:
+            case AreaUnits.SquareMiles:        
                 return this.value / 1609.344 / 1609.344;
             case AreaUnits.SquareYards:
+            case AreaUnits.SquareYards:        
                 return this.value / 0.9144 / 0.9144;
             case AreaUnits.SquareFeet:
+            case AreaUnits.SquareFeet:        
                 return this.value / 9.290304e-2;
             case AreaUnits.UsSurveySquareFeet:
+            case AreaUnits.UsSurveySquareFeet:        
                 return this.value / (1200.0 / 3937.0) / (1200.0 / 3937.0);
             case AreaUnits.SquareInches:
+            case AreaUnits.SquareInches:        
                 return this.value / 0.00064516;
             case AreaUnits.Acres:
+            case AreaUnits.Acres:        
                 return this.value / 4046.8564224;
             case AreaUnits.Hectares:
+            case AreaUnits.Hectares:        
                 return this.value / 1e4;
             case AreaUnits.SquareNauticalMiles:
+            case AreaUnits.SquareNauticalMiles:        
                 return this.value / 3429904;
             default:
                 break;
@@ -361,32 +403,46 @@ export class Area {
         switch (fromUnit) {
                 
             case AreaUnits.SquareKilometers:
+            case AreaUnits.SquareKilometers:        
                 return value * 1e6;
             case AreaUnits.SquareMeters:
+            case AreaUnits.SquareMeters:        
                 return value;
             case AreaUnits.SquareDecimeters:
+            case AreaUnits.SquareDecimeters:        
                 return value * 1e-2;
             case AreaUnits.SquareCentimeters:
+            case AreaUnits.SquareCentimeters:        
                 return value * 1e-4;
             case AreaUnits.SquareMillimeters:
+            case AreaUnits.SquareMillimeters:        
                 return value * 1e-6;
             case AreaUnits.SquareMicrometers:
+            case AreaUnits.SquareMicrometers:        
                 return value * 1e-12;
             case AreaUnits.SquareMiles:
+            case AreaUnits.SquareMiles:        
                 return value * 1609.344 * 1609.344;
             case AreaUnits.SquareYards:
+            case AreaUnits.SquareYards:        
                 return value * 0.9144 * 0.9144;
             case AreaUnits.SquareFeet:
+            case AreaUnits.SquareFeet:        
                 return value * 9.290304e-2;
             case AreaUnits.UsSurveySquareFeet:
+            case AreaUnits.UsSurveySquareFeet:        
                 return value * (1200.0 / 3937.0) * (1200.0 / 3937.0);
             case AreaUnits.SquareInches:
+            case AreaUnits.SquareInches:        
                 return value * 0.00064516;
             case AreaUnits.Acres:
+            case AreaUnits.Acres:        
                 return value * 4046.8564224;
             case AreaUnits.Hectares:
+            case AreaUnits.Hectares:        
                 return value * 1e4;
             case AreaUnits.SquareNauticalMiles:
+            case AreaUnits.SquareNauticalMiles:        
                 return value * 3429904;
             default:
                 break;

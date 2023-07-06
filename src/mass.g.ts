@@ -53,7 +53,55 @@ export enum MassUnits {
     /** */
     Kilopounds,
     /** */
-    Megapounds
+    Megapounds,
+    /** */
+    Gram,
+    /** */
+    Tonne,
+    /** The short ton is a unit of mass equal to 2,000 pounds (907.18474 kg), that is most commonly used in the United States – known there simply as the ton. */
+    ShortTon,
+    /** Long ton (weight ton or Imperial ton) is a unit of mass equal to 2,240 pounds (1,016 kg) and is the name for the unit called the "ton" in the avoirdupois or Imperial system of measurements that was used in the United Kingdom and several other Commonwealth countries before metrication. */
+    LongTon,
+    /** The pound or pound-mass (abbreviations: lb, lbm) is a unit of mass used in the imperial, United States customary and other systems of measurement. A number of different definitions have been used, the most common today being the international avoirdupois pound which is legally defined as exactly 0.45359237 kilograms, and which is divided into 16 avoirdupois ounces. */
+    Pound,
+    /** The international avoirdupois ounce (abbreviated oz) is defined as exactly 28.349523125 g under the international yard and pound agreement of 1959, signed by the United States and countries of the Commonwealth of Nations. 16 oz make up an avoirdupois pound. */
+    Ounce,
+    /** The slug (abbreviation slug) is a unit of mass that is accelerated by 1 ft/s² when a force of one pound (lbf) is exerted on it. */
+    Slug,
+    /** A grain is a unit of measurement of mass, and in the troy weight, avoirdupois, and Apothecaries' system, equal to exactly 64.79891 milligrams. */
+    Grain,
+    /** Solar mass is a ratio unit to the mass of the solar system star, the sun. */
+    SolarMass,
+    /** Earth mass is a ratio unit to the mass of planet Earth. */
+    EarthMass,
+    /** */
+    Femtogram,
+    /** */
+    Picogram,
+    /** */
+    Nanogram,
+    /** */
+    Microgram,
+    /** */
+    Milligram,
+    /** */
+    Centigram,
+    /** */
+    Decigram,
+    /** */
+    Decagram,
+    /** */
+    Hectogram,
+    /** */
+    Kilogram,
+    /** */
+    Kilotonne,
+    /** */
+    Megatonne,
+    /** */
+    Kilopound,
+    /** */
+    Megapound
 }
 
 /** In physics, mass (from Greek μᾶζα "barley cake, lump [of dough]") is a property of a physical system or body, giving rise to the phenomena of the body's resistance to being accelerated by a force and the strength of its mutual gravitational attraction with other bodies. Instruments such as mass balances or scales use those phenomena to measure mass. The SI unit of mass is the kilogram (kg). */
@@ -597,58 +645,85 @@ export class Mass {
         switch (toUnit) {
                 
             case MassUnits.Grams:
+            case MassUnits.Grams:        
                 return this.value * 1e3;
             case MassUnits.Tonnes:
+            case MassUnits.Tonnes:        
                 return this.value / 1e3;
             case MassUnits.ShortTons:
+            case MassUnits.ShortTons:        
                 return this.value / 9.0718474e2;
             case MassUnits.LongTons:
+            case MassUnits.LongTons:        
                 return this.value / 1.0160469088e3;
             case MassUnits.Pounds:
+            case MassUnits.Pounds:        
                 return this.value / 0.45359237;
             case MassUnits.Ounces:
+            case MassUnits.Ounces:        
                 return this.value / 0.028349523125;
             case MassUnits.Slugs:
+            case MassUnits.Slugs:        
                 return this.value * 6.852176556196105e-2;
             case MassUnits.Stone:
+                    
                 return this.value * 0.1574731728702698;
             case MassUnits.ShortHundredweight:
+                    
                 return this.value * 0.022046226218487758;
             case MassUnits.LongHundredweight:
+                    
                 return this.value * 0.01968413055222121;
             case MassUnits.Grains:
+            case MassUnits.Grains:        
                 return this.value * 15432.358352941431;
             case MassUnits.SolarMasses:
+            case MassUnits.SolarMasses:        
                 return this.value / 1.98947e30;
             case MassUnits.EarthMasses:
+            case MassUnits.EarthMasses:        
                 return this.value / 5.9722E+24;
             case MassUnits.Femtograms:
+            case MassUnits.Femtograms:        
                 return (this.value * 1e3) / 1e-15;
             case MassUnits.Picograms:
+            case MassUnits.Picograms:        
                 return (this.value * 1e3) / 1e-12;
             case MassUnits.Nanograms:
+            case MassUnits.Nanograms:        
                 return (this.value * 1e3) / 1e-9;
             case MassUnits.Micrograms:
+            case MassUnits.Micrograms:        
                 return (this.value * 1e3) / 0.000001;
             case MassUnits.Milligrams:
+            case MassUnits.Milligrams:        
                 return (this.value * 1e3) / 0.001;
             case MassUnits.Centigrams:
+            case MassUnits.Centigrams:        
                 return (this.value * 1e3) / 0.01;
             case MassUnits.Decigrams:
+            case MassUnits.Decigrams:        
                 return (this.value * 1e3) / 0.1;
             case MassUnits.Decagrams:
+            case MassUnits.Decagrams:        
                 return (this.value * 1e3) / 10;
             case MassUnits.Hectograms:
+            case MassUnits.Hectograms:        
                 return (this.value * 1e3) / 100;
             case MassUnits.Kilograms:
+            case MassUnits.Kilograms:        
                 return (this.value * 1e3) / 1000;
             case MassUnits.Kilotonnes:
+            case MassUnits.Kilotonnes:        
                 return (this.value / 1e3) / 1000;
             case MassUnits.Megatonnes:
+            case MassUnits.Megatonnes:        
                 return (this.value / 1e3) / 1000000;
             case MassUnits.Kilopounds:
+            case MassUnits.Kilopounds:        
                 return (this.value / 0.45359237) / 1000;
             case MassUnits.Megapounds:
+            case MassUnits.Megapounds:        
                 return (this.value / 0.45359237) / 1000000;
             default:
                 break;
@@ -660,58 +735,85 @@ export class Mass {
         switch (fromUnit) {
                 
             case MassUnits.Grams:
+            case MassUnits.Grams:        
                 return value / 1e3;
             case MassUnits.Tonnes:
+            case MassUnits.Tonnes:        
                 return value * 1e3;
             case MassUnits.ShortTons:
+            case MassUnits.ShortTons:        
                 return value * 9.0718474e2;
             case MassUnits.LongTons:
+            case MassUnits.LongTons:        
                 return value * 1.0160469088e3;
             case MassUnits.Pounds:
+            case MassUnits.Pounds:        
                 return value * 0.45359237;
             case MassUnits.Ounces:
+            case MassUnits.Ounces:        
                 return value * 0.028349523125;
             case MassUnits.Slugs:
+            case MassUnits.Slugs:        
                 return value / 6.852176556196105e-2;
             case MassUnits.Stone:
+                    
                 return value / 0.1574731728702698;
             case MassUnits.ShortHundredweight:
+                    
                 return value / 0.022046226218487758;
             case MassUnits.LongHundredweight:
+                    
                 return value / 0.01968413055222121;
             case MassUnits.Grains:
+            case MassUnits.Grains:        
                 return value / 15432.358352941431;
             case MassUnits.SolarMasses:
+            case MassUnits.SolarMasses:        
                 return value * 1.98947e30;
             case MassUnits.EarthMasses:
+            case MassUnits.EarthMasses:        
                 return value * 5.9722E+24;
             case MassUnits.Femtograms:
+            case MassUnits.Femtograms:        
                 return (value / 1e3) * 1e-15;
             case MassUnits.Picograms:
+            case MassUnits.Picograms:        
                 return (value / 1e3) * 1e-12;
             case MassUnits.Nanograms:
+            case MassUnits.Nanograms:        
                 return (value / 1e3) * 1e-9;
             case MassUnits.Micrograms:
+            case MassUnits.Micrograms:        
                 return (value / 1e3) * 0.000001;
             case MassUnits.Milligrams:
+            case MassUnits.Milligrams:        
                 return (value / 1e3) * 0.001;
             case MassUnits.Centigrams:
+            case MassUnits.Centigrams:        
                 return (value / 1e3) * 0.01;
             case MassUnits.Decigrams:
+            case MassUnits.Decigrams:        
                 return (value / 1e3) * 0.1;
             case MassUnits.Decagrams:
+            case MassUnits.Decagrams:        
                 return (value / 1e3) * 10;
             case MassUnits.Hectograms:
+            case MassUnits.Hectograms:        
                 return (value / 1e3) * 100;
             case MassUnits.Kilograms:
+            case MassUnits.Kilograms:        
                 return (value / 1e3) * 1000;
             case MassUnits.Kilotonnes:
+            case MassUnits.Kilotonnes:        
                 return (value * 1e3) * 1000;
             case MassUnits.Megatonnes:
+            case MassUnits.Megatonnes:        
                 return (value * 1e3) * 1000000;
             case MassUnits.Kilopounds:
+            case MassUnits.Kilopounds:        
                 return (value * 0.45359237) * 1000;
             case MassUnits.Megapounds:
+            case MassUnits.Megapounds:        
                 return (value * 0.45359237) * 1000000;
             default:
                 break;

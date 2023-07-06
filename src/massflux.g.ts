@@ -23,7 +23,31 @@ export enum MassFluxUnits {
     /** */
     KilogramsPerHourPerSquareCentimeter,
     /** */
-    KilogramsPerHourPerSquareMillimeter
+    KilogramsPerHourPerSquareMillimeter,
+    /** */
+    GramPerSecondPerSquareMeter,
+    /** */
+    GramPerSecondPerSquareCentimeter,
+    /** */
+    GramPerSecondPerSquareMillimeter,
+    /** */
+    GramPerHourPerSquareMeter,
+    /** */
+    GramPerHourPerSquareCentimeter,
+    /** */
+    GramPerHourPerSquareMillimeter,
+    /** */
+    KilogramPerSecondPerSquareMeter,
+    /** */
+    KilogramPerSecondPerSquareCentimeter,
+    /** */
+    KilogramPerSecondPerSquareMillimeter,
+    /** */
+    KilogramPerHourPerSquareMeter,
+    /** */
+    KilogramPerHourPerSquareCentimeter,
+    /** */
+    KilogramPerHourPerSquareMillimeter
 }
 
 /** Mass flux is the mass flow rate per unit area. */
@@ -282,28 +306,40 @@ export class MassFlux {
         switch (toUnit) {
                 
             case MassFluxUnits.GramsPerSecondPerSquareMeter:
+            case MassFluxUnits.GramsPerSecondPerSquareMeter:        
                 return this.value * 1e3;
             case MassFluxUnits.GramsPerSecondPerSquareCentimeter:
+            case MassFluxUnits.GramsPerSecondPerSquareCentimeter:        
                 return this.value * 1e-1;
             case MassFluxUnits.GramsPerSecondPerSquareMillimeter:
+            case MassFluxUnits.GramsPerSecondPerSquareMillimeter:        
                 return this.value * 1e-3;
             case MassFluxUnits.GramsPerHourPerSquareMeter:
+            case MassFluxUnits.GramsPerHourPerSquareMeter:        
                 return this.value * 3.6e6;
             case MassFluxUnits.GramsPerHourPerSquareCentimeter:
+            case MassFluxUnits.GramsPerHourPerSquareCentimeter:        
                 return this.value * 3.6e2;
             case MassFluxUnits.GramsPerHourPerSquareMillimeter:
+            case MassFluxUnits.GramsPerHourPerSquareMillimeter:        
                 return this.value * 3.6e0;
             case MassFluxUnits.KilogramsPerSecondPerSquareMeter:
+            case MassFluxUnits.KilogramsPerSecondPerSquareMeter:        
                 return (this.value * 1e3) / 1000;
             case MassFluxUnits.KilogramsPerSecondPerSquareCentimeter:
+            case MassFluxUnits.KilogramsPerSecondPerSquareCentimeter:        
                 return (this.value * 1e-1) / 1000;
             case MassFluxUnits.KilogramsPerSecondPerSquareMillimeter:
+            case MassFluxUnits.KilogramsPerSecondPerSquareMillimeter:        
                 return (this.value * 1e-3) / 1000;
             case MassFluxUnits.KilogramsPerHourPerSquareMeter:
+            case MassFluxUnits.KilogramsPerHourPerSquareMeter:        
                 return (this.value * 3.6e6) / 1000;
             case MassFluxUnits.KilogramsPerHourPerSquareCentimeter:
+            case MassFluxUnits.KilogramsPerHourPerSquareCentimeter:        
                 return (this.value * 3.6e2) / 1000;
             case MassFluxUnits.KilogramsPerHourPerSquareMillimeter:
+            case MassFluxUnits.KilogramsPerHourPerSquareMillimeter:        
                 return (this.value * 3.6e0) / 1000;
             default:
                 break;
@@ -315,28 +351,40 @@ export class MassFlux {
         switch (fromUnit) {
                 
             case MassFluxUnits.GramsPerSecondPerSquareMeter:
+            case MassFluxUnits.GramsPerSecondPerSquareMeter:        
                 return value / 1e3;
             case MassFluxUnits.GramsPerSecondPerSquareCentimeter:
+            case MassFluxUnits.GramsPerSecondPerSquareCentimeter:        
                 return value / 1e-1;
             case MassFluxUnits.GramsPerSecondPerSquareMillimeter:
+            case MassFluxUnits.GramsPerSecondPerSquareMillimeter:        
                 return value / 1e-3;
             case MassFluxUnits.GramsPerHourPerSquareMeter:
+            case MassFluxUnits.GramsPerHourPerSquareMeter:        
                 return value / 3.6e6;
             case MassFluxUnits.GramsPerHourPerSquareCentimeter:
+            case MassFluxUnits.GramsPerHourPerSquareCentimeter:        
                 return value / 3.6e2;
             case MassFluxUnits.GramsPerHourPerSquareMillimeter:
+            case MassFluxUnits.GramsPerHourPerSquareMillimeter:        
                 return value / 3.6e0;
             case MassFluxUnits.KilogramsPerSecondPerSquareMeter:
+            case MassFluxUnits.KilogramsPerSecondPerSquareMeter:        
                 return (value / 1e3) * 1000;
             case MassFluxUnits.KilogramsPerSecondPerSquareCentimeter:
+            case MassFluxUnits.KilogramsPerSecondPerSquareCentimeter:        
                 return (value / 1e-1) * 1000;
             case MassFluxUnits.KilogramsPerSecondPerSquareMillimeter:
+            case MassFluxUnits.KilogramsPerSecondPerSquareMillimeter:        
                 return (value / 1e-3) * 1000;
             case MassFluxUnits.KilogramsPerHourPerSquareMeter:
+            case MassFluxUnits.KilogramsPerHourPerSquareMeter:        
                 return (value / 3.6e6) * 1000;
             case MassFluxUnits.KilogramsPerHourPerSquareCentimeter:
+            case MassFluxUnits.KilogramsPerHourPerSquareCentimeter:        
                 return (value / 3.6e2) * 1000;
             case MassFluxUnits.KilogramsPerHourPerSquareMillimeter:
+            case MassFluxUnits.KilogramsPerHourPerSquareMillimeter:        
                 return (value / 3.6e0) * 1000;
             default:
                 break;

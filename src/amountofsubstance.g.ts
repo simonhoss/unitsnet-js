@@ -29,7 +29,37 @@ export enum AmountOfSubstanceUnits {
     /** */
     DecipoundMoles,
     /** */
-    KilopoundMoles
+    KilopoundMoles,
+    /** */
+    Mole,
+    /** */
+    PoundMole,
+    /** */
+    Nanomole,
+    /** */
+    Micromole,
+    /** */
+    Millimole,
+    /** */
+    Centimole,
+    /** */
+    Decimole,
+    /** */
+    Kilomole,
+    /** */
+    Megamole,
+    /** */
+    NanopoundMole,
+    /** */
+    MicropoundMole,
+    /** */
+    MillipoundMole,
+    /** */
+    CentipoundMole,
+    /** */
+    DecipoundMole,
+    /** */
+    KilopoundMole
 }
 
 /** Mole is the amount of substance containing Avagadro's Number (6.02 x 10 ^ 23) of real particles such as molecules,atoms, ions or radicals. */
@@ -345,34 +375,49 @@ export class AmountOfSubstance {
         switch (toUnit) {
                 
             case AmountOfSubstanceUnits.Moles:
+            case AmountOfSubstanceUnits.Moles:        
                 return this.value;
             case AmountOfSubstanceUnits.PoundMoles:
+            case AmountOfSubstanceUnits.PoundMoles:        
                 return this.value / 453.59237;
             case AmountOfSubstanceUnits.Nanomoles:
+            case AmountOfSubstanceUnits.Nanomoles:        
                 return (this.value) / 1e-9;
             case AmountOfSubstanceUnits.Micromoles:
+            case AmountOfSubstanceUnits.Micromoles:        
                 return (this.value) / 0.000001;
             case AmountOfSubstanceUnits.Millimoles:
+            case AmountOfSubstanceUnits.Millimoles:        
                 return (this.value) / 0.001;
             case AmountOfSubstanceUnits.Centimoles:
+            case AmountOfSubstanceUnits.Centimoles:        
                 return (this.value) / 0.01;
             case AmountOfSubstanceUnits.Decimoles:
+            case AmountOfSubstanceUnits.Decimoles:        
                 return (this.value) / 0.1;
             case AmountOfSubstanceUnits.Kilomoles:
+            case AmountOfSubstanceUnits.Kilomoles:        
                 return (this.value) / 1000;
             case AmountOfSubstanceUnits.Megamoles:
+            case AmountOfSubstanceUnits.Megamoles:        
                 return (this.value) / 1000000;
             case AmountOfSubstanceUnits.NanopoundMoles:
+            case AmountOfSubstanceUnits.NanopoundMoles:        
                 return (this.value / 453.59237) / 1e-9;
             case AmountOfSubstanceUnits.MicropoundMoles:
+            case AmountOfSubstanceUnits.MicropoundMoles:        
                 return (this.value / 453.59237) / 0.000001;
             case AmountOfSubstanceUnits.MillipoundMoles:
+            case AmountOfSubstanceUnits.MillipoundMoles:        
                 return (this.value / 453.59237) / 0.001;
             case AmountOfSubstanceUnits.CentipoundMoles:
+            case AmountOfSubstanceUnits.CentipoundMoles:        
                 return (this.value / 453.59237) / 0.01;
             case AmountOfSubstanceUnits.DecipoundMoles:
+            case AmountOfSubstanceUnits.DecipoundMoles:        
                 return (this.value / 453.59237) / 0.1;
             case AmountOfSubstanceUnits.KilopoundMoles:
+            case AmountOfSubstanceUnits.KilopoundMoles:        
                 return (this.value / 453.59237) / 1000;
             default:
                 break;
@@ -384,34 +429,49 @@ export class AmountOfSubstance {
         switch (fromUnit) {
                 
             case AmountOfSubstanceUnits.Moles:
+            case AmountOfSubstanceUnits.Moles:        
                 return value;
             case AmountOfSubstanceUnits.PoundMoles:
+            case AmountOfSubstanceUnits.PoundMoles:        
                 return value * 453.59237;
             case AmountOfSubstanceUnits.Nanomoles:
+            case AmountOfSubstanceUnits.Nanomoles:        
                 return (value) * 1e-9;
             case AmountOfSubstanceUnits.Micromoles:
+            case AmountOfSubstanceUnits.Micromoles:        
                 return (value) * 0.000001;
             case AmountOfSubstanceUnits.Millimoles:
+            case AmountOfSubstanceUnits.Millimoles:        
                 return (value) * 0.001;
             case AmountOfSubstanceUnits.Centimoles:
+            case AmountOfSubstanceUnits.Centimoles:        
                 return (value) * 0.01;
             case AmountOfSubstanceUnits.Decimoles:
+            case AmountOfSubstanceUnits.Decimoles:        
                 return (value) * 0.1;
             case AmountOfSubstanceUnits.Kilomoles:
+            case AmountOfSubstanceUnits.Kilomoles:        
                 return (value) * 1000;
             case AmountOfSubstanceUnits.Megamoles:
+            case AmountOfSubstanceUnits.Megamoles:        
                 return (value) * 1000000;
             case AmountOfSubstanceUnits.NanopoundMoles:
+            case AmountOfSubstanceUnits.NanopoundMoles:        
                 return (value * 453.59237) * 1e-9;
             case AmountOfSubstanceUnits.MicropoundMoles:
+            case AmountOfSubstanceUnits.MicropoundMoles:        
                 return (value * 453.59237) * 0.000001;
             case AmountOfSubstanceUnits.MillipoundMoles:
+            case AmountOfSubstanceUnits.MillipoundMoles:        
                 return (value * 453.59237) * 0.001;
             case AmountOfSubstanceUnits.CentipoundMoles:
+            case AmountOfSubstanceUnits.CentipoundMoles:        
                 return (value * 453.59237) * 0.01;
             case AmountOfSubstanceUnits.DecipoundMoles:
+            case AmountOfSubstanceUnits.DecipoundMoles:        
                 return (value * 453.59237) * 0.1;
             case AmountOfSubstanceUnits.KilopoundMoles:
+            case AmountOfSubstanceUnits.KilopoundMoles:        
                 return (value * 453.59237) * 1000;
             default:
                 break;

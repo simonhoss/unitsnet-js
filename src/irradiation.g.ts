@@ -13,7 +13,21 @@ export enum IrradiationUnits {
     /** */
     MillijoulesPerSquareCentimeter,
     /** */
-    KilowattHoursPerSquareMeter
+    KilowattHoursPerSquareMeter,
+    /** */
+    JoulePerSquareMeter,
+    /** */
+    JoulePerSquareCentimeter,
+    /** */
+    JoulePerSquareMillimeter,
+    /** */
+    WattHourPerSquareMeter,
+    /** */
+    KilojoulePerSquareMeter,
+    /** */
+    MillijoulePerSquareCentimeter,
+    /** */
+    KilowattHourPerSquareMeter
 }
 
 /** Irradiation is the process by which an object is exposed to radiation. The exposure can originate from various sources, including natural sources. */
@@ -177,18 +191,25 @@ export class Irradiation {
         switch (toUnit) {
                 
             case IrradiationUnits.JoulesPerSquareMeter:
+            case IrradiationUnits.JoulesPerSquareMeter:        
                 return this.value;
             case IrradiationUnits.JoulesPerSquareCentimeter:
+            case IrradiationUnits.JoulesPerSquareCentimeter:        
                 return this.value / 1e4;
             case IrradiationUnits.JoulesPerSquareMillimeter:
+            case IrradiationUnits.JoulesPerSquareMillimeter:        
                 return this.value / 1e6;
             case IrradiationUnits.WattHoursPerSquareMeter:
+            case IrradiationUnits.WattHoursPerSquareMeter:        
                 return this.value / 3600;
             case IrradiationUnits.KilojoulesPerSquareMeter:
+            case IrradiationUnits.KilojoulesPerSquareMeter:        
                 return (this.value) / 1000;
             case IrradiationUnits.MillijoulesPerSquareCentimeter:
+            case IrradiationUnits.MillijoulesPerSquareCentimeter:        
                 return (this.value / 1e4) / 0.001;
             case IrradiationUnits.KilowattHoursPerSquareMeter:
+            case IrradiationUnits.KilowattHoursPerSquareMeter:        
                 return (this.value / 3600) / 1000;
             default:
                 break;
@@ -200,18 +221,25 @@ export class Irradiation {
         switch (fromUnit) {
                 
             case IrradiationUnits.JoulesPerSquareMeter:
+            case IrradiationUnits.JoulesPerSquareMeter:        
                 return value;
             case IrradiationUnits.JoulesPerSquareCentimeter:
+            case IrradiationUnits.JoulesPerSquareCentimeter:        
                 return value * 1e4;
             case IrradiationUnits.JoulesPerSquareMillimeter:
+            case IrradiationUnits.JoulesPerSquareMillimeter:        
                 return value * 1e6;
             case IrradiationUnits.WattHoursPerSquareMeter:
+            case IrradiationUnits.WattHoursPerSquareMeter:        
                 return value * 3600;
             case IrradiationUnits.KilojoulesPerSquareMeter:
+            case IrradiationUnits.KilojoulesPerSquareMeter:        
                 return (value) * 1000;
             case IrradiationUnits.MillijoulesPerSquareCentimeter:
+            case IrradiationUnits.MillijoulesPerSquareCentimeter:        
                 return (value * 1e4) * 0.001;
             case IrradiationUnits.KilowattHoursPerSquareMeter:
+            case IrradiationUnits.KilowattHoursPerSquareMeter:        
                 return (value * 3600) * 1000;
             default:
                 break;

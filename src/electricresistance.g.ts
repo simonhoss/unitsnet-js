@@ -13,7 +13,21 @@ export enum ElectricResistanceUnits {
     /** */
     Gigaohms,
     /** */
-    Teraohms
+    Teraohms,
+    /** */
+    Ohm,
+    /** */
+    Microohm,
+    /** */
+    Milliohm,
+    /** */
+    Kiloohm,
+    /** */
+    Megaohm,
+    /** */
+    Gigaohm,
+    /** */
+    Teraohm
 }
 
 /** The electrical resistance of an electrical conductor is the opposition to the passage of an electric current through that conductor. */
@@ -177,18 +191,25 @@ export class ElectricResistance {
         switch (toUnit) {
                 
             case ElectricResistanceUnits.Ohms:
+            case ElectricResistanceUnits.Ohms:        
                 return this.value;
             case ElectricResistanceUnits.Microohms:
+            case ElectricResistanceUnits.Microohms:        
                 return (this.value) / 0.000001;
             case ElectricResistanceUnits.Milliohms:
+            case ElectricResistanceUnits.Milliohms:        
                 return (this.value) / 0.001;
             case ElectricResistanceUnits.Kiloohms:
+            case ElectricResistanceUnits.Kiloohms:        
                 return (this.value) / 1000;
             case ElectricResistanceUnits.Megaohms:
+            case ElectricResistanceUnits.Megaohms:        
                 return (this.value) / 1000000;
             case ElectricResistanceUnits.Gigaohms:
+            case ElectricResistanceUnits.Gigaohms:        
                 return (this.value) / 1000000000;
             case ElectricResistanceUnits.Teraohms:
+            case ElectricResistanceUnits.Teraohms:        
                 return (this.value) / 1000000000000;
             default:
                 break;
@@ -200,18 +221,25 @@ export class ElectricResistance {
         switch (fromUnit) {
                 
             case ElectricResistanceUnits.Ohms:
+            case ElectricResistanceUnits.Ohms:        
                 return value;
             case ElectricResistanceUnits.Microohms:
+            case ElectricResistanceUnits.Microohms:        
                 return (value) * 0.000001;
             case ElectricResistanceUnits.Milliohms:
+            case ElectricResistanceUnits.Milliohms:        
                 return (value) * 0.001;
             case ElectricResistanceUnits.Kiloohms:
+            case ElectricResistanceUnits.Kiloohms:        
                 return (value) * 1000;
             case ElectricResistanceUnits.Megaohms:
+            case ElectricResistanceUnits.Megaohms:        
                 return (value) * 1000000;
             case ElectricResistanceUnits.Gigaohms:
+            case ElectricResistanceUnits.Gigaohms:        
                 return (value) * 1000000000;
             case ElectricResistanceUnits.Teraohms:
+            case ElectricResistanceUnits.Teraohms:        
                 return (value) * 1000000000000;
             default:
                 break;

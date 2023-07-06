@@ -17,7 +17,25 @@ export enum ElectricCurrentUnits {
     /** */
     Kiloamperes,
     /** */
-    Megaamperes
+    Megaamperes,
+    /** */
+    Ampere,
+    /** */
+    Femtoampere,
+    /** */
+    Picoampere,
+    /** */
+    Nanoampere,
+    /** */
+    Microampere,
+    /** */
+    Milliampere,
+    /** */
+    Centiampere,
+    /** */
+    Kiloampere,
+    /** */
+    Megaampere
 }
 
 /** An electric current is a flow of electric charge. In electric circuits this charge is often carried by moving electrons in a wire. It can also be carried by ions in an electrolyte, or by both ions and electrons such as in a plasma. */
@@ -219,22 +237,31 @@ export class ElectricCurrent {
         switch (toUnit) {
                 
             case ElectricCurrentUnits.Amperes:
+            case ElectricCurrentUnits.Amperes:        
                 return this.value;
             case ElectricCurrentUnits.Femtoamperes:
+            case ElectricCurrentUnits.Femtoamperes:        
                 return (this.value) / 1e-15;
             case ElectricCurrentUnits.Picoamperes:
+            case ElectricCurrentUnits.Picoamperes:        
                 return (this.value) / 1e-12;
             case ElectricCurrentUnits.Nanoamperes:
+            case ElectricCurrentUnits.Nanoamperes:        
                 return (this.value) / 1e-9;
             case ElectricCurrentUnits.Microamperes:
+            case ElectricCurrentUnits.Microamperes:        
                 return (this.value) / 0.000001;
             case ElectricCurrentUnits.Milliamperes:
+            case ElectricCurrentUnits.Milliamperes:        
                 return (this.value) / 0.001;
             case ElectricCurrentUnits.Centiamperes:
+            case ElectricCurrentUnits.Centiamperes:        
                 return (this.value) / 0.01;
             case ElectricCurrentUnits.Kiloamperes:
+            case ElectricCurrentUnits.Kiloamperes:        
                 return (this.value) / 1000;
             case ElectricCurrentUnits.Megaamperes:
+            case ElectricCurrentUnits.Megaamperes:        
                 return (this.value) / 1000000;
             default:
                 break;
@@ -246,22 +273,31 @@ export class ElectricCurrent {
         switch (fromUnit) {
                 
             case ElectricCurrentUnits.Amperes:
+            case ElectricCurrentUnits.Amperes:        
                 return value;
             case ElectricCurrentUnits.Femtoamperes:
+            case ElectricCurrentUnits.Femtoamperes:        
                 return (value) * 1e-15;
             case ElectricCurrentUnits.Picoamperes:
+            case ElectricCurrentUnits.Picoamperes:        
                 return (value) * 1e-12;
             case ElectricCurrentUnits.Nanoamperes:
+            case ElectricCurrentUnits.Nanoamperes:        
                 return (value) * 1e-9;
             case ElectricCurrentUnits.Microamperes:
+            case ElectricCurrentUnits.Microamperes:        
                 return (value) * 0.000001;
             case ElectricCurrentUnits.Milliamperes:
+            case ElectricCurrentUnits.Milliamperes:        
                 return (value) * 0.001;
             case ElectricCurrentUnits.Centiamperes:
+            case ElectricCurrentUnits.Centiamperes:        
                 return (value) * 0.01;
             case ElectricCurrentUnits.Kiloamperes:
+            case ElectricCurrentUnits.Kiloamperes:        
                 return (value) * 1000;
             case ElectricCurrentUnits.Megaamperes:
+            case ElectricCurrentUnits.Megaamperes:        
                 return (value) * 1000000;
             default:
                 break;

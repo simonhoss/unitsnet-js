@@ -1,7 +1,9 @@
 /** LuminousFluxUnits enumeration */
 export enum LuminousFluxUnits {
     /** */
-    Lumens
+    Lumens,
+    /** */
+    Lumen
 }
 
 /** In photometry, luminous flux or luminous power is the measure of the perceived power of light. */
@@ -51,6 +53,7 @@ export class LuminousFlux {
         switch (toUnit) {
                 
             case LuminousFluxUnits.Lumens:
+            case LuminousFluxUnits.Lumens:        
                 return this.value;
             default:
                 break;
@@ -62,6 +65,7 @@ export class LuminousFlux {
         switch (fromUnit) {
                 
             case LuminousFluxUnits.Lumens:
+            case LuminousFluxUnits.Lumens:        
                 return value;
             default:
                 break;

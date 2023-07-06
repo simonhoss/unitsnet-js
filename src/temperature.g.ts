@@ -19,7 +19,27 @@ export enum TemperatureUnits {
     /** */
     DegreesRoemer,
     /** */
-    SolarTemperatures
+    SolarTemperatures,
+    /** */
+    Kelvin,
+    /** */
+    DegreeCelsius,
+    /** */
+    MillidegreeCelsius,
+    /** */
+    DegreeDelisle,
+    /** */
+    DegreeFahrenheit,
+    /** */
+    DegreeNewton,
+    /** */
+    DegreeRankine,
+    /** */
+    DegreeReaumur,
+    /** */
+    DegreeRoemer,
+    /** */
+    SolarTemperature
 }
 
 /** A temperature is a numerical measure of hot or cold. Its measurement is by detection of heat radiation or particle velocity or kinetic energy, or by the bulk behavior of a thermometric material. It may be calibrated in any of various temperature scales, Celsius, Fahrenheit, Kelvin, etc. The fundamental physical definition of temperature is provided by thermodynamics. */
@@ -240,24 +260,34 @@ export class Temperature {
         switch (toUnit) {
                 
             case TemperatureUnits.Kelvins:
+            case TemperatureUnits.Kelvins:        
                 return this.value;
             case TemperatureUnits.DegreesCelsius:
+            case TemperatureUnits.DegreesCelsius:        
                 return this.value - 273.15;
             case TemperatureUnits.MillidegreesCelsius:
+            case TemperatureUnits.MillidegreesCelsius:        
                 return (this.value - 273.15) * 1000;
             case TemperatureUnits.DegreesDelisle:
+            case TemperatureUnits.DegreesDelisle:        
                 return (this.value - 373.15) * -3 / 2;
             case TemperatureUnits.DegreesFahrenheit:
+            case TemperatureUnits.DegreesFahrenheit:        
                 return (this.value - 459.67 * 5 / 9) * 9 / 5;
             case TemperatureUnits.DegreesNewton:
+            case TemperatureUnits.DegreesNewton:        
                 return (this.value - 273.15) * 33 / 100;
             case TemperatureUnits.DegreesRankine:
+            case TemperatureUnits.DegreesRankine:        
                 return this.value * 9 / 5;
             case TemperatureUnits.DegreesReaumur:
+            case TemperatureUnits.DegreesReaumur:        
                 return (this.value - 273.15) * 4 / 5;
             case TemperatureUnits.DegreesRoemer:
+            case TemperatureUnits.DegreesRoemer:        
                 return (this.value - (273.15 - 7.5 * 40 / 21)) * 21 / 40;
             case TemperatureUnits.SolarTemperatures:
+            case TemperatureUnits.SolarTemperatures:        
                 return this.value / 5778;
             default:
                 break;
@@ -269,24 +299,34 @@ export class Temperature {
         switch (fromUnit) {
                 
             case TemperatureUnits.Kelvins:
+            case TemperatureUnits.Kelvins:        
                 return value;
             case TemperatureUnits.DegreesCelsius:
+            case TemperatureUnits.DegreesCelsius:        
                 return value + 273.15;
             case TemperatureUnits.MillidegreesCelsius:
+            case TemperatureUnits.MillidegreesCelsius:        
                 return value / 1000 + 273.15;
             case TemperatureUnits.DegreesDelisle:
+            case TemperatureUnits.DegreesDelisle:        
                 return value * -2 / 3 + 373.15;
             case TemperatureUnits.DegreesFahrenheit:
+            case TemperatureUnits.DegreesFahrenheit:        
                 return value * 5 / 9 + 459.67 * 5 / 9;
             case TemperatureUnits.DegreesNewton:
+            case TemperatureUnits.DegreesNewton:        
                 return value * 100 / 33 + 273.15;
             case TemperatureUnits.DegreesRankine:
+            case TemperatureUnits.DegreesRankine:        
                 return value * 5 / 9;
             case TemperatureUnits.DegreesReaumur:
+            case TemperatureUnits.DegreesReaumur:        
                 return value * 5 / 4 + 273.15;
             case TemperatureUnits.DegreesRoemer:
+            case TemperatureUnits.DegreesRoemer:        
                 return value * 40 / 21 + 273.15 - 7.5 * 40 / 21;
             case TemperatureUnits.SolarTemperatures:
+            case TemperatureUnits.SolarTemperatures:        
                 return value * 5778;
             default:
                 break;

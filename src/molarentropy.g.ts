@@ -5,7 +5,13 @@ export enum MolarEntropyUnits {
     /** */
     KilojoulesPerMoleKelvin,
     /** */
-    MegajoulesPerMoleKelvin
+    MegajoulesPerMoleKelvin,
+    /** */
+    JoulePerMoleKelvin,
+    /** */
+    KilojoulePerMoleKelvin,
+    /** */
+    MegajoulePerMoleKelvin
 }
 
 /** Molar entropy is amount of energy required to increase temperature of 1 mole substance by 1 Kelvin. */
@@ -93,10 +99,13 @@ export class MolarEntropy {
         switch (toUnit) {
                 
             case MolarEntropyUnits.JoulesPerMoleKelvin:
+            case MolarEntropyUnits.JoulesPerMoleKelvin:        
                 return this.value;
             case MolarEntropyUnits.KilojoulesPerMoleKelvin:
+            case MolarEntropyUnits.KilojoulesPerMoleKelvin:        
                 return (this.value) / 1000;
             case MolarEntropyUnits.MegajoulesPerMoleKelvin:
+            case MolarEntropyUnits.MegajoulesPerMoleKelvin:        
                 return (this.value) / 1000000;
             default:
                 break;
@@ -108,10 +117,13 @@ export class MolarEntropy {
         switch (fromUnit) {
                 
             case MolarEntropyUnits.JoulesPerMoleKelvin:
+            case MolarEntropyUnits.JoulesPerMoleKelvin:        
                 return value;
             case MolarEntropyUnits.KilojoulesPerMoleKelvin:
+            case MolarEntropyUnits.KilojoulesPerMoleKelvin:        
                 return (value) * 1000;
             case MolarEntropyUnits.MegajoulesPerMoleKelvin:
+            case MolarEntropyUnits.MegajoulesPerMoleKelvin:        
                 return (value) * 1000000;
             default:
                 break;

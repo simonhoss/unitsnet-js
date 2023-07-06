@@ -5,7 +5,13 @@ export enum BrakeSpecificFuelConsumptionUnits {
     /** */
     KilogramsPerJoule,
     /** The pound per horse power hour uses mechanical horse power and the imperial pound */
-    PoundsPerMechanicalHorsepowerHour
+    PoundsPerMechanicalHorsepowerHour,
+    /** */
+    GramPerKiloWattHour,
+    /** */
+    KilogramPerJoule,
+    /** The pound per horse power hour uses mechanical horse power and the imperial pound */
+    PoundPerMechanicalHorsepowerHour
 }
 
 /** Brake specific fuel consumption (BSFC) is a measure of the fuel efficiency of any prime mover that burns fuel and produces rotational, or shaft, power. It is typically used for comparing the efficiency of internal combustion engines with a shaft output. */
@@ -93,10 +99,13 @@ export class BrakeSpecificFuelConsumption {
         switch (toUnit) {
                 
             case BrakeSpecificFuelConsumptionUnits.GramsPerKiloWattHour:
+            case BrakeSpecificFuelConsumptionUnits.GramsPerKiloWattHour:        
                 return this.value * 3.6e9;
             case BrakeSpecificFuelConsumptionUnits.KilogramsPerJoule:
+            case BrakeSpecificFuelConsumptionUnits.KilogramsPerJoule:        
                 return this.value;
             case BrakeSpecificFuelConsumptionUnits.PoundsPerMechanicalHorsepowerHour:
+            case BrakeSpecificFuelConsumptionUnits.PoundsPerMechanicalHorsepowerHour:        
                 return this.value / 1.689659410672e-7;
             default:
                 break;
@@ -108,10 +117,13 @@ export class BrakeSpecificFuelConsumption {
         switch (fromUnit) {
                 
             case BrakeSpecificFuelConsumptionUnits.GramsPerKiloWattHour:
+            case BrakeSpecificFuelConsumptionUnits.GramsPerKiloWattHour:        
                 return value / 3.6e9;
             case BrakeSpecificFuelConsumptionUnits.KilogramsPerJoule:
+            case BrakeSpecificFuelConsumptionUnits.KilogramsPerJoule:        
                 return value;
             case BrakeSpecificFuelConsumptionUnits.PoundsPerMechanicalHorsepowerHour:
+            case BrakeSpecificFuelConsumptionUnits.PoundsPerMechanicalHorsepowerHour:        
                 return value * 1.689659410672e-7;
             default:
                 break;

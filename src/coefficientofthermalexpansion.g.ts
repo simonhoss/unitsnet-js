@@ -93,10 +93,13 @@ export class CoefficientOfThermalExpansion {
         switch (toUnit) {
                 
             case CoefficientOfThermalExpansionUnits.InverseKelvin:
+                    
                 return this.value;
             case CoefficientOfThermalExpansionUnits.InverseDegreeCelsius:
+                    
                 return this.value;
             case CoefficientOfThermalExpansionUnits.InverseDegreeFahrenheit:
+                    
                 return this.value * 5 / 9;
             default:
                 break;
@@ -108,10 +111,13 @@ export class CoefficientOfThermalExpansion {
         switch (fromUnit) {
                 
             case CoefficientOfThermalExpansionUnits.InverseKelvin:
+                    
                 return value;
             case CoefficientOfThermalExpansionUnits.InverseDegreeCelsius:
+                    
                 return value;
             case CoefficientOfThermalExpansionUnits.InverseDegreeFahrenheit:
+                    
                 return value * 9 / 5;
             default:
                 break;

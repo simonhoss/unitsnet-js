@@ -11,7 +11,19 @@ export enum AreaMomentOfInertiaUnits {
     /** */
     FeetToTheFourth,
     /** */
-    InchesToTheFourth
+    InchesToTheFourth,
+    /** */
+    MeterToTheFourth,
+    /** */
+    DecimeterToTheFourth,
+    /** */
+    CentimeterToTheFourth,
+    /** */
+    MillimeterToTheFourth,
+    /** */
+    FootToTheFourth,
+    /** */
+    InchToTheFourth
 }
 
 /** A geometric property of an area that reflects how its points are distributed with regard to an axis. */
@@ -156,16 +168,22 @@ export class AreaMomentOfInertia {
         switch (toUnit) {
                 
             case AreaMomentOfInertiaUnits.MetersToTheFourth:
+            case AreaMomentOfInertiaUnits.MetersToTheFourth:        
                 return this.value;
             case AreaMomentOfInertiaUnits.DecimetersToTheFourth:
+            case AreaMomentOfInertiaUnits.DecimetersToTheFourth:        
                 return this.value * 1e4;
             case AreaMomentOfInertiaUnits.CentimetersToTheFourth:
+            case AreaMomentOfInertiaUnits.CentimetersToTheFourth:        
                 return this.value * 1e8;
             case AreaMomentOfInertiaUnits.MillimetersToTheFourth:
+            case AreaMomentOfInertiaUnits.MillimetersToTheFourth:        
                 return this.value * 1e12;
             case AreaMomentOfInertiaUnits.FeetToTheFourth:
+            case AreaMomentOfInertiaUnits.FeetToTheFourth:        
                 return this.value / Math.pow(0.3048, 4);
             case AreaMomentOfInertiaUnits.InchesToTheFourth:
+            case AreaMomentOfInertiaUnits.InchesToTheFourth:        
                 return this.value / Math.pow(2.54e-2, 4);
             default:
                 break;
@@ -177,16 +195,22 @@ export class AreaMomentOfInertia {
         switch (fromUnit) {
                 
             case AreaMomentOfInertiaUnits.MetersToTheFourth:
+            case AreaMomentOfInertiaUnits.MetersToTheFourth:        
                 return value;
             case AreaMomentOfInertiaUnits.DecimetersToTheFourth:
+            case AreaMomentOfInertiaUnits.DecimetersToTheFourth:        
                 return value / 1e4;
             case AreaMomentOfInertiaUnits.CentimetersToTheFourth:
+            case AreaMomentOfInertiaUnits.CentimetersToTheFourth:        
                 return value / 1e8;
             case AreaMomentOfInertiaUnits.MillimetersToTheFourth:
+            case AreaMomentOfInertiaUnits.MillimetersToTheFourth:        
                 return value / 1e12;
             case AreaMomentOfInertiaUnits.FeetToTheFourth:
+            case AreaMomentOfInertiaUnits.FeetToTheFourth:        
                 return value * Math.pow(0.3048, 4);
             case AreaMomentOfInertiaUnits.InchesToTheFourth:
+            case AreaMomentOfInertiaUnits.InchesToTheFourth:        
                 return value * Math.pow(2.54e-2, 4);
             default:
                 break;

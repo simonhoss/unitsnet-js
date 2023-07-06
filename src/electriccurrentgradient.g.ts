@@ -7,7 +7,15 @@ export enum ElectricCurrentGradientUnits {
     /** */
     AmperesPerMicrosecond,
     /** */
-    AmperesPerNanosecond
+    AmperesPerNanosecond,
+    /** */
+    AmperePerSecond,
+    /** */
+    AmperePerMillisecond,
+    /** */
+    AmperePerMicrosecond,
+    /** */
+    AmperePerNanosecond
 }
 
 /** In electromagnetism, the current gradient describes how the current changes in time. */
@@ -114,12 +122,16 @@ export class ElectricCurrentGradient {
         switch (toUnit) {
                 
             case ElectricCurrentGradientUnits.AmperesPerSecond:
+            case ElectricCurrentGradientUnits.AmperesPerSecond:        
                 return this.value;
             case ElectricCurrentGradientUnits.AmperesPerMillisecond:
+            case ElectricCurrentGradientUnits.AmperesPerMillisecond:        
                 return this.value / 1E3;
             case ElectricCurrentGradientUnits.AmperesPerMicrosecond:
+            case ElectricCurrentGradientUnits.AmperesPerMicrosecond:        
                 return this.value / 1E6;
             case ElectricCurrentGradientUnits.AmperesPerNanosecond:
+            case ElectricCurrentGradientUnits.AmperesPerNanosecond:        
                 return this.value / 1E9;
             default:
                 break;
@@ -131,12 +143,16 @@ export class ElectricCurrentGradient {
         switch (fromUnit) {
                 
             case ElectricCurrentGradientUnits.AmperesPerSecond:
+            case ElectricCurrentGradientUnits.AmperesPerSecond:        
                 return value;
             case ElectricCurrentGradientUnits.AmperesPerMillisecond:
+            case ElectricCurrentGradientUnits.AmperesPerMillisecond:        
                 return value * 1E3;
             case ElectricCurrentGradientUnits.AmperesPerMicrosecond:
+            case ElectricCurrentGradientUnits.AmperesPerMicrosecond:        
                 return value * 1E6;
             case ElectricCurrentGradientUnits.AmperesPerNanosecond:
+            case ElectricCurrentGradientUnits.AmperesPerNanosecond:        
                 return value * 1E9;
             default:
                 break;

@@ -51,6 +51,7 @@ export class Scalar {
         switch (toUnit) {
                 
             case ScalarUnits.Amount:
+                    
                 return this.value;
             default:
                 break;
@@ -62,6 +63,7 @@ export class Scalar {
         switch (fromUnit) {
                 
             case ScalarUnits.Amount:
+                    
                 return value;
             default:
                 break;

@@ -23,7 +23,31 @@ export enum EnergyDensityUnits {
     /** */
     TerawattHoursPerCubicMeter,
     /** */
-    PetawattHoursPerCubicMeter
+    PetawattHoursPerCubicMeter,
+    /** */
+    JoulePerCubicMeter,
+    /** */
+    WattHourPerCubicMeter,
+    /** */
+    KilojoulePerCubicMeter,
+    /** */
+    MegajoulePerCubicMeter,
+    /** */
+    GigajoulePerCubicMeter,
+    /** */
+    TerajoulePerCubicMeter,
+    /** */
+    PetajoulePerCubicMeter,
+    /** */
+    KilowattHourPerCubicMeter,
+    /** */
+    MegawattHourPerCubicMeter,
+    /** */
+    GigawattHourPerCubicMeter,
+    /** */
+    TerawattHourPerCubicMeter,
+    /** */
+    PetawattHourPerCubicMeter
 }
 
 /** Energy density is the amount of energy stored in a substance per unit volume and is measured in J/m³. It is sometimes confused with energy per unit mass which is properly called specific energy. */
@@ -282,28 +306,40 @@ export class EnergyDensity {
         switch (toUnit) {
                 
             case EnergyDensityUnits.JoulesPerCubicMeter:
+            case EnergyDensityUnits.JoulesPerCubicMeter:        
                 return this.value;
             case EnergyDensityUnits.WattHoursPerCubicMeter:
+            case EnergyDensityUnits.WattHoursPerCubicMeter:        
                 return this.value / 3.6e+3;
             case EnergyDensityUnits.KilojoulesPerCubicMeter:
+            case EnergyDensityUnits.KilojoulesPerCubicMeter:        
                 return (this.value) / 1000;
             case EnergyDensityUnits.MegajoulesPerCubicMeter:
+            case EnergyDensityUnits.MegajoulesPerCubicMeter:        
                 return (this.value) / 1000000;
             case EnergyDensityUnits.GigajoulesPerCubicMeter:
+            case EnergyDensityUnits.GigajoulesPerCubicMeter:        
                 return (this.value) / 1000000000;
             case EnergyDensityUnits.TerajoulesPerCubicMeter:
+            case EnergyDensityUnits.TerajoulesPerCubicMeter:        
                 return (this.value) / 1000000000000;
             case EnergyDensityUnits.PetajoulesPerCubicMeter:
+            case EnergyDensityUnits.PetajoulesPerCubicMeter:        
                 return (this.value) / 1000000000000000;
             case EnergyDensityUnits.KilowattHoursPerCubicMeter:
+            case EnergyDensityUnits.KilowattHoursPerCubicMeter:        
                 return (this.value / 3.6e+3) / 1000;
             case EnergyDensityUnits.MegawattHoursPerCubicMeter:
+            case EnergyDensityUnits.MegawattHoursPerCubicMeter:        
                 return (this.value / 3.6e+3) / 1000000;
             case EnergyDensityUnits.GigawattHoursPerCubicMeter:
+            case EnergyDensityUnits.GigawattHoursPerCubicMeter:        
                 return (this.value / 3.6e+3) / 1000000000;
             case EnergyDensityUnits.TerawattHoursPerCubicMeter:
+            case EnergyDensityUnits.TerawattHoursPerCubicMeter:        
                 return (this.value / 3.6e+3) / 1000000000000;
             case EnergyDensityUnits.PetawattHoursPerCubicMeter:
+            case EnergyDensityUnits.PetawattHoursPerCubicMeter:        
                 return (this.value / 3.6e+3) / 1000000000000000;
             default:
                 break;
@@ -315,28 +351,40 @@ export class EnergyDensity {
         switch (fromUnit) {
                 
             case EnergyDensityUnits.JoulesPerCubicMeter:
+            case EnergyDensityUnits.JoulesPerCubicMeter:        
                 return value;
             case EnergyDensityUnits.WattHoursPerCubicMeter:
+            case EnergyDensityUnits.WattHoursPerCubicMeter:        
                 return value * 3.6e+3;
             case EnergyDensityUnits.KilojoulesPerCubicMeter:
+            case EnergyDensityUnits.KilojoulesPerCubicMeter:        
                 return (value) * 1000;
             case EnergyDensityUnits.MegajoulesPerCubicMeter:
+            case EnergyDensityUnits.MegajoulesPerCubicMeter:        
                 return (value) * 1000000;
             case EnergyDensityUnits.GigajoulesPerCubicMeter:
+            case EnergyDensityUnits.GigajoulesPerCubicMeter:        
                 return (value) * 1000000000;
             case EnergyDensityUnits.TerajoulesPerCubicMeter:
+            case EnergyDensityUnits.TerajoulesPerCubicMeter:        
                 return (value) * 1000000000000;
             case EnergyDensityUnits.PetajoulesPerCubicMeter:
+            case EnergyDensityUnits.PetajoulesPerCubicMeter:        
                 return (value) * 1000000000000000;
             case EnergyDensityUnits.KilowattHoursPerCubicMeter:
+            case EnergyDensityUnits.KilowattHoursPerCubicMeter:        
                 return (value * 3.6e+3) * 1000;
             case EnergyDensityUnits.MegawattHoursPerCubicMeter:
+            case EnergyDensityUnits.MegawattHoursPerCubicMeter:        
                 return (value * 3.6e+3) * 1000000;
             case EnergyDensityUnits.GigawattHoursPerCubicMeter:
+            case EnergyDensityUnits.GigawattHoursPerCubicMeter:        
                 return (value * 3.6e+3) * 1000000000;
             case EnergyDensityUnits.TerawattHoursPerCubicMeter:
+            case EnergyDensityUnits.TerawattHoursPerCubicMeter:        
                 return (value * 3.6e+3) * 1000000000000;
             case EnergyDensityUnits.PetawattHoursPerCubicMeter:
+            case EnergyDensityUnits.PetawattHoursPerCubicMeter:        
                 return (value * 3.6e+3) * 1000000000000000;
             default:
                 break;

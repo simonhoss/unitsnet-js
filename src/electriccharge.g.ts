@@ -21,7 +21,29 @@ export enum ElectricChargeUnits {
     /** */
     KiloampereHours,
     /** */
-    MegaampereHours
+    MegaampereHours,
+    /** */
+    Coulomb,
+    /** */
+    AmpereHour,
+    /** */
+    Picocoulomb,
+    /** */
+    Nanocoulomb,
+    /** */
+    Microcoulomb,
+    /** */
+    Millicoulomb,
+    /** */
+    Kilocoulomb,
+    /** */
+    Megacoulomb,
+    /** */
+    MilliampereHour,
+    /** */
+    KiloampereHour,
+    /** */
+    MegaampereHour
 }
 
 /** Electric charge is the physical property of matter that causes it to experience a force when placed in an electromagnetic field. */
@@ -261,26 +283,37 @@ export class ElectricCharge {
         switch (toUnit) {
                 
             case ElectricChargeUnits.Coulombs:
+            case ElectricChargeUnits.Coulombs:        
                 return this.value;
             case ElectricChargeUnits.AmpereHours:
+            case ElectricChargeUnits.AmpereHours:        
                 return this.value * 2.77777777777e-4;
             case ElectricChargeUnits.Picocoulombs:
+            case ElectricChargeUnits.Picocoulombs:        
                 return (this.value) / 1e-12;
             case ElectricChargeUnits.Nanocoulombs:
+            case ElectricChargeUnits.Nanocoulombs:        
                 return (this.value) / 1e-9;
             case ElectricChargeUnits.Microcoulombs:
+            case ElectricChargeUnits.Microcoulombs:        
                 return (this.value) / 0.000001;
             case ElectricChargeUnits.Millicoulombs:
+            case ElectricChargeUnits.Millicoulombs:        
                 return (this.value) / 0.001;
             case ElectricChargeUnits.Kilocoulombs:
+            case ElectricChargeUnits.Kilocoulombs:        
                 return (this.value) / 1000;
             case ElectricChargeUnits.Megacoulombs:
+            case ElectricChargeUnits.Megacoulombs:        
                 return (this.value) / 1000000;
             case ElectricChargeUnits.MilliampereHours:
+            case ElectricChargeUnits.MilliampereHours:        
                 return (this.value * 2.77777777777e-4) / 0.001;
             case ElectricChargeUnits.KiloampereHours:
+            case ElectricChargeUnits.KiloampereHours:        
                 return (this.value * 2.77777777777e-4) / 1000;
             case ElectricChargeUnits.MegaampereHours:
+            case ElectricChargeUnits.MegaampereHours:        
                 return (this.value * 2.77777777777e-4) / 1000000;
             default:
                 break;
@@ -292,26 +325,37 @@ export class ElectricCharge {
         switch (fromUnit) {
                 
             case ElectricChargeUnits.Coulombs:
+            case ElectricChargeUnits.Coulombs:        
                 return value;
             case ElectricChargeUnits.AmpereHours:
+            case ElectricChargeUnits.AmpereHours:        
                 return value / 2.77777777777e-4;
             case ElectricChargeUnits.Picocoulombs:
+            case ElectricChargeUnits.Picocoulombs:        
                 return (value) * 1e-12;
             case ElectricChargeUnits.Nanocoulombs:
+            case ElectricChargeUnits.Nanocoulombs:        
                 return (value) * 1e-9;
             case ElectricChargeUnits.Microcoulombs:
+            case ElectricChargeUnits.Microcoulombs:        
                 return (value) * 0.000001;
             case ElectricChargeUnits.Millicoulombs:
+            case ElectricChargeUnits.Millicoulombs:        
                 return (value) * 0.001;
             case ElectricChargeUnits.Kilocoulombs:
+            case ElectricChargeUnits.Kilocoulombs:        
                 return (value) * 1000;
             case ElectricChargeUnits.Megacoulombs:
+            case ElectricChargeUnits.Megacoulombs:        
                 return (value) * 1000000;
             case ElectricChargeUnits.MilliampereHours:
+            case ElectricChargeUnits.MilliampereHours:        
                 return (value / 2.77777777777e-4) * 0.001;
             case ElectricChargeUnits.KiloampereHours:
+            case ElectricChargeUnits.KiloampereHours:        
                 return (value / 2.77777777777e-4) * 1000;
             case ElectricChargeUnits.MegaampereHours:
+            case ElectricChargeUnits.MegaampereHours:        
                 return (value / 2.77777777777e-4) * 1000000;
             default:
                 break;

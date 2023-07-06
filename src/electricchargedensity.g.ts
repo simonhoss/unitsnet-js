@@ -1,7 +1,9 @@
 /** ElectricChargeDensityUnits enumeration */
 export enum ElectricChargeDensityUnits {
     /** */
-    CoulombsPerCubicMeter
+    CoulombsPerCubicMeter,
+    /** */
+    CoulombPerCubicMeter
 }
 
 /** In electromagnetism, charge density is a measure of the amount of electric charge per volume. */
@@ -51,6 +53,7 @@ export class ElectricChargeDensity {
         switch (toUnit) {
                 
             case ElectricChargeDensityUnits.CoulombsPerCubicMeter:
+            case ElectricChargeDensityUnits.CoulombsPerCubicMeter:        
                 return this.value;
             default:
                 break;
@@ -62,6 +65,7 @@ export class ElectricChargeDensity {
         switch (fromUnit) {
                 
             case ElectricChargeDensityUnits.CoulombsPerCubicMeter:
+            case ElectricChargeDensityUnits.CoulombsPerCubicMeter:        
                 return value;
             default:
                 break;

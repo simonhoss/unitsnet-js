@@ -21,7 +21,25 @@ export enum JerkUnits {
     /** */
     KilometersPerSecondCubed,
     /** */
-    MillistandardGravitiesPerSecond
+    MillistandardGravitiesPerSecond,
+    /** */
+    MeterPerSecondCubed,
+    /** */
+    InchPerSecondCubed,
+    /** */
+    FootPerSecondCubed,
+    /** */
+    NanometerPerSecondCubed,
+    /** */
+    MicrometerPerSecondCubed,
+    /** */
+    MillimeterPerSecondCubed,
+    /** */
+    CentimeterPerSecondCubed,
+    /** */
+    DecimeterPerSecondCubed,
+    /** */
+    KilometerPerSecondCubed
 }
 
 /** Jerk or Jolt, in physics, is the rate at which the acceleration of an object changes over time. The SI unit for jerk is the Meter per second cubed (m/s³). Jerks are vector quantities (they have magnitude and direction) and add according to the parallelogram law. */
@@ -261,26 +279,37 @@ export class Jerk {
         switch (toUnit) {
                 
             case JerkUnits.MetersPerSecondCubed:
+            case JerkUnits.MetersPerSecondCubed:        
                 return this.value;
             case JerkUnits.InchesPerSecondCubed:
+            case JerkUnits.InchesPerSecondCubed:        
                 return this.value / 0.0254;
             case JerkUnits.FeetPerSecondCubed:
+            case JerkUnits.FeetPerSecondCubed:        
                 return this.value / 0.304800;
             case JerkUnits.StandardGravitiesPerSecond:
+                    
                 return this.value / 9.80665;
             case JerkUnits.NanometersPerSecondCubed:
+            case JerkUnits.NanometersPerSecondCubed:        
                 return (this.value) / 1e-9;
             case JerkUnits.MicrometersPerSecondCubed:
+            case JerkUnits.MicrometersPerSecondCubed:        
                 return (this.value) / 0.000001;
             case JerkUnits.MillimetersPerSecondCubed:
+            case JerkUnits.MillimetersPerSecondCubed:        
                 return (this.value) / 0.001;
             case JerkUnits.CentimetersPerSecondCubed:
+            case JerkUnits.CentimetersPerSecondCubed:        
                 return (this.value) / 0.01;
             case JerkUnits.DecimetersPerSecondCubed:
+            case JerkUnits.DecimetersPerSecondCubed:        
                 return (this.value) / 0.1;
             case JerkUnits.KilometersPerSecondCubed:
+            case JerkUnits.KilometersPerSecondCubed:        
                 return (this.value) / 1000;
             case JerkUnits.MillistandardGravitiesPerSecond:
+                    
                 return (this.value / 9.80665) / 0.001;
             default:
                 break;
@@ -292,26 +321,37 @@ export class Jerk {
         switch (fromUnit) {
                 
             case JerkUnits.MetersPerSecondCubed:
+            case JerkUnits.MetersPerSecondCubed:        
                 return value;
             case JerkUnits.InchesPerSecondCubed:
+            case JerkUnits.InchesPerSecondCubed:        
                 return value * 0.0254;
             case JerkUnits.FeetPerSecondCubed:
+            case JerkUnits.FeetPerSecondCubed:        
                 return value * 0.304800;
             case JerkUnits.StandardGravitiesPerSecond:
+                    
                 return value * 9.80665;
             case JerkUnits.NanometersPerSecondCubed:
+            case JerkUnits.NanometersPerSecondCubed:        
                 return (value) * 1e-9;
             case JerkUnits.MicrometersPerSecondCubed:
+            case JerkUnits.MicrometersPerSecondCubed:        
                 return (value) * 0.000001;
             case JerkUnits.MillimetersPerSecondCubed:
+            case JerkUnits.MillimetersPerSecondCubed:        
                 return (value) * 0.001;
             case JerkUnits.CentimetersPerSecondCubed:
+            case JerkUnits.CentimetersPerSecondCubed:        
                 return (value) * 0.01;
             case JerkUnits.DecimetersPerSecondCubed:
+            case JerkUnits.DecimetersPerSecondCubed:        
                 return (value) * 0.1;
             case JerkUnits.KilometersPerSecondCubed:
+            case JerkUnits.KilometersPerSecondCubed:        
                 return (value) * 1000;
             case JerkUnits.MillistandardGravitiesPerSecond:
+                    
                 return (value * 9.80665) * 0.001;
             default:
                 break;

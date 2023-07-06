@@ -1,7 +1,9 @@
 /** SolidAngleUnits enumeration */
 export enum SolidAngleUnits {
     /** */
-    Steradians
+    Steradians,
+    /** */
+    Steradian
 }
 
 /** In geometry, a solid angle is the two-dimensional angle in three-dimensional space that an object subtends at a point. */
@@ -51,6 +53,7 @@ export class SolidAngle {
         switch (toUnit) {
                 
             case SolidAngleUnits.Steradians:
+            case SolidAngleUnits.Steradians:        
                 return this.value;
             default:
                 break;
@@ -62,6 +65,7 @@ export class SolidAngle {
         switch (fromUnit) {
                 
             case SolidAngleUnits.Steradians:
+            case SolidAngleUnits.Steradians:        
                 return value;
             default:
                 break;

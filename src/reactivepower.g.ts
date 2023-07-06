@@ -7,7 +7,15 @@ export enum ReactivePowerUnits {
     /** */
     MegavoltamperesReactive,
     /** */
-    GigavoltamperesReactive
+    GigavoltamperesReactive,
+    /** */
+    VoltampereReactive,
+    /** */
+    KilovoltampereReactive,
+    /** */
+    MegavoltampereReactive,
+    /** */
+    GigavoltampereReactive
 }
 
 /** Volt-ampere reactive (var) is a unit by which reactive power is expressed in an AC electric power system. Reactive power exists in an AC circuit when the current and voltage are not in phase. */
@@ -114,12 +122,16 @@ export class ReactivePower {
         switch (toUnit) {
                 
             case ReactivePowerUnits.VoltamperesReactive:
+            case ReactivePowerUnits.VoltamperesReactive:        
                 return this.value;
             case ReactivePowerUnits.KilovoltamperesReactive:
+            case ReactivePowerUnits.KilovoltamperesReactive:        
                 return (this.value) / 1000;
             case ReactivePowerUnits.MegavoltamperesReactive:
+            case ReactivePowerUnits.MegavoltamperesReactive:        
                 return (this.value) / 1000000;
             case ReactivePowerUnits.GigavoltamperesReactive:
+            case ReactivePowerUnits.GigavoltamperesReactive:        
                 return (this.value) / 1000000000;
             default:
                 break;
@@ -131,12 +143,16 @@ export class ReactivePower {
         switch (fromUnit) {
                 
             case ReactivePowerUnits.VoltamperesReactive:
+            case ReactivePowerUnits.VoltamperesReactive:        
                 return value;
             case ReactivePowerUnits.KilovoltamperesReactive:
+            case ReactivePowerUnits.KilovoltamperesReactive:        
                 return (value) * 1000;
             case ReactivePowerUnits.MegavoltamperesReactive:
+            case ReactivePowerUnits.MegavoltamperesReactive:        
                 return (value) * 1000000;
             case ReactivePowerUnits.GigavoltamperesReactive:
+            case ReactivePowerUnits.GigavoltamperesReactive:        
                 return (value) * 1000000000;
             default:
                 break;

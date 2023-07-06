@@ -3,7 +3,11 @@ export enum VolumeFlowPerAreaUnits {
     /** */
     CubicMetersPerSecondPerSquareMeter,
     /** */
-    CubicFeetPerMinutePerSquareFoot
+    CubicFeetPerMinutePerSquareFoot,
+    /** */
+    CubicMeterPerSecondPerSquareMeter,
+    /** */
+    CubicFootPerMinutePerSquareFoot
 }
 
 /** The volumetric flow rate per area is the volume of fluid which passes through a given unit surface area per unit time. */
@@ -72,8 +76,10 @@ export class VolumeFlowPerArea {
         switch (toUnit) {
                 
             case VolumeFlowPerAreaUnits.CubicMetersPerSecondPerSquareMeter:
+            case VolumeFlowPerAreaUnits.CubicMetersPerSecondPerSquareMeter:        
                 return this.value;
             case VolumeFlowPerAreaUnits.CubicFeetPerMinutePerSquareFoot:
+            case VolumeFlowPerAreaUnits.CubicFeetPerMinutePerSquareFoot:        
                 return this.value * 196.850394;
             default:
                 break;
@@ -85,8 +91,10 @@ export class VolumeFlowPerArea {
         switch (fromUnit) {
                 
             case VolumeFlowPerAreaUnits.CubicMetersPerSecondPerSquareMeter:
+            case VolumeFlowPerAreaUnits.CubicMetersPerSecondPerSquareMeter:        
                 return value;
             case VolumeFlowPerAreaUnits.CubicFeetPerMinutePerSquareFoot:
+            case VolumeFlowPerAreaUnits.CubicFeetPerMinutePerSquareFoot:        
                 return value / 196.850394;
             default:
                 break;

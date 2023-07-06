@@ -13,7 +13,21 @@ export enum EntropyUnits {
     /** */
     KilocaloriesPerKelvin,
     /** */
-    KilojoulesPerDegreeCelsius
+    KilojoulesPerDegreeCelsius,
+    /** */
+    JoulePerKelvin,
+    /** */
+    CaloriePerKelvin,
+    /** */
+    JoulePerDegreeCelsius,
+    /** */
+    KilojoulePerKelvin,
+    /** */
+    MegajoulePerKelvin,
+    /** */
+    KilocaloriePerKelvin,
+    /** */
+    KilojoulePerDegreeCelsius
 }
 
 /** Entropy is an important concept in the branch of science known as thermodynamics. The idea of "irreversibility" is central to the understanding of entropy.  It is often said that entropy is an expression of the disorder, or randomness of a system, or of our lack of information about it. Entropy is an extensive property. It has the dimension of energy divided by temperature, which has a unit of joules per kelvin (J/K) in the International System of Units */
@@ -177,18 +191,25 @@ export class Entropy {
         switch (toUnit) {
                 
             case EntropyUnits.JoulesPerKelvin:
+            case EntropyUnits.JoulesPerKelvin:        
                 return this.value;
             case EntropyUnits.CaloriesPerKelvin:
+            case EntropyUnits.CaloriesPerKelvin:        
                 return this.value / 4.184;
             case EntropyUnits.JoulesPerDegreeCelsius:
+            case EntropyUnits.JoulesPerDegreeCelsius:        
                 return this.value;
             case EntropyUnits.KilojoulesPerKelvin:
+            case EntropyUnits.KilojoulesPerKelvin:        
                 return (this.value) / 1000;
             case EntropyUnits.MegajoulesPerKelvin:
+            case EntropyUnits.MegajoulesPerKelvin:        
                 return (this.value) / 1000000;
             case EntropyUnits.KilocaloriesPerKelvin:
+            case EntropyUnits.KilocaloriesPerKelvin:        
                 return (this.value / 4.184) / 1000;
             case EntropyUnits.KilojoulesPerDegreeCelsius:
+            case EntropyUnits.KilojoulesPerDegreeCelsius:        
                 return (this.value) / 1000;
             default:
                 break;
@@ -200,18 +221,25 @@ export class Entropy {
         switch (fromUnit) {
                 
             case EntropyUnits.JoulesPerKelvin:
+            case EntropyUnits.JoulesPerKelvin:        
                 return value;
             case EntropyUnits.CaloriesPerKelvin:
+            case EntropyUnits.CaloriesPerKelvin:        
                 return value * 4.184;
             case EntropyUnits.JoulesPerDegreeCelsius:
+            case EntropyUnits.JoulesPerDegreeCelsius:        
                 return value;
             case EntropyUnits.KilojoulesPerKelvin:
+            case EntropyUnits.KilojoulesPerKelvin:        
                 return (value) * 1000;
             case EntropyUnits.MegajoulesPerKelvin:
+            case EntropyUnits.MegajoulesPerKelvin:        
                 return (value) * 1000000;
             case EntropyUnits.KilocaloriesPerKelvin:
+            case EntropyUnits.KilocaloriesPerKelvin:        
                 return (value * 4.184) * 1000;
             case EntropyUnits.KilojoulesPerDegreeCelsius:
+            case EntropyUnits.KilojoulesPerDegreeCelsius:        
                 return (value) * 1000;
             default:
                 break;

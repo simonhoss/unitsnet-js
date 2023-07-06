@@ -5,7 +5,13 @@ export enum ElectricSurfaceChargeDensityUnits {
     /** */
     CoulombsPerSquareCentimeter,
     /** */
-    CoulombsPerSquareInch
+    CoulombsPerSquareInch,
+    /** */
+    CoulombPerSquareMeter,
+    /** */
+    CoulombPerSquareCentimeter,
+    /** */
+    CoulombPerSquareInch
 }
 
 /** In electromagnetism, surface charge density is a measure of the amount of electric charge per surface area. */
@@ -93,10 +99,13 @@ export class ElectricSurfaceChargeDensity {
         switch (toUnit) {
                 
             case ElectricSurfaceChargeDensityUnits.CoulombsPerSquareMeter:
+            case ElectricSurfaceChargeDensityUnits.CoulombsPerSquareMeter:        
                 return this.value;
             case ElectricSurfaceChargeDensityUnits.CoulombsPerSquareCentimeter:
+            case ElectricSurfaceChargeDensityUnits.CoulombsPerSquareCentimeter:        
                 return this.value / 1.0e4;
             case ElectricSurfaceChargeDensityUnits.CoulombsPerSquareInch:
+            case ElectricSurfaceChargeDensityUnits.CoulombsPerSquareInch:        
                 return this.value / 1.5500031000062000e3;
             default:
                 break;
@@ -108,10 +117,13 @@ export class ElectricSurfaceChargeDensity {
         switch (fromUnit) {
                 
             case ElectricSurfaceChargeDensityUnits.CoulombsPerSquareMeter:
+            case ElectricSurfaceChargeDensityUnits.CoulombsPerSquareMeter:        
                 return value;
             case ElectricSurfaceChargeDensityUnits.CoulombsPerSquareCentimeter:
+            case ElectricSurfaceChargeDensityUnits.CoulombsPerSquareCentimeter:        
                 return value * 1.0e4;
             case ElectricSurfaceChargeDensityUnits.CoulombsPerSquareInch:
+            case ElectricSurfaceChargeDensityUnits.CoulombsPerSquareInch:        
                 return value * 1.5500031000062000e3;
             default:
                 break;

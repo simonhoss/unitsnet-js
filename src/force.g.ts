@@ -29,7 +29,35 @@ export enum ForceUnits {
     /** */
     Meganewtons,
     /** */
-    KilopoundsForce
+    KilopoundsForce,
+    /** */
+    Dyn,
+    /** */
+    KilogramForce,
+    /** */
+    TonneForce,
+    /** */
+    Newton,
+    /** */
+    KiloPond,
+    /** */
+    Poundal,
+    /** */
+    PoundForce,
+    /** The short ton-force is a unit of force equal to 2,000 pounds-force (907.18474 kgf), that is most commonly used in the United States – known there simply as the ton or US ton. */
+    ShortTonForce,
+    /** */
+    Micronewton,
+    /** */
+    Millinewton,
+    /** */
+    Decanewton,
+    /** */
+    Kilonewton,
+    /** */
+    Meganewton,
+    /** */
+    KilopoundForce
 }
 
 /** In physics, a force is any influence that causes an object to undergo a certain change, either concerning its movement, direction, or geometrical construction. In other words, a force can cause an object with mass to change its velocity (which includes to begin moving from a state of rest), i.e., to accelerate, or a flexible object to deform, or both. Force can also be described by intuitive concepts such as a push or a pull. A force has both magnitude and direction, making it a vector quantity. It is measured in the SI unit of newtons and represented by the symbol F. */
@@ -345,34 +373,49 @@ export class Force {
         switch (toUnit) {
                 
             case ForceUnits.Dyne:
+            case ForceUnits.Dyne:        
                 return this.value * 1e5;
             case ForceUnits.KilogramsForce:
+            case ForceUnits.KilogramsForce:        
                 return this.value / 9.80665002864;
             case ForceUnits.TonnesForce:
+            case ForceUnits.TonnesForce:        
                 return this.value / 9.80665002864e3;
             case ForceUnits.Newtons:
+            case ForceUnits.Newtons:        
                 return this.value;
             case ForceUnits.KiloPonds:
+            case ForceUnits.KiloPonds:        
                 return this.value / 9.80665002864;
             case ForceUnits.Poundals:
+            case ForceUnits.Poundals:        
                 return this.value / 0.13825502798973041652092282466083;
             case ForceUnits.PoundsForce:
+            case ForceUnits.PoundsForce:        
                 return this.value / 4.4482216152605095551842641431421;
             case ForceUnits.OunceForce:
+                    
                 return this.value / 2.780138509537812e-1;
             case ForceUnits.ShortTonsForce:
+            case ForceUnits.ShortTonsForce:        
                 return this.value / 8.896443230521e3;
             case ForceUnits.Micronewtons:
+            case ForceUnits.Micronewtons:        
                 return (this.value) / 0.000001;
             case ForceUnits.Millinewtons:
+            case ForceUnits.Millinewtons:        
                 return (this.value) / 0.001;
             case ForceUnits.Decanewtons:
+            case ForceUnits.Decanewtons:        
                 return (this.value) / 10;
             case ForceUnits.Kilonewtons:
+            case ForceUnits.Kilonewtons:        
                 return (this.value) / 1000;
             case ForceUnits.Meganewtons:
+            case ForceUnits.Meganewtons:        
                 return (this.value) / 1000000;
             case ForceUnits.KilopoundsForce:
+            case ForceUnits.KilopoundsForce:        
                 return (this.value / 4.4482216152605095551842641431421) / 1000;
             default:
                 break;
@@ -384,34 +427,49 @@ export class Force {
         switch (fromUnit) {
                 
             case ForceUnits.Dyne:
+            case ForceUnits.Dyne:        
                 return value / 1e5;
             case ForceUnits.KilogramsForce:
+            case ForceUnits.KilogramsForce:        
                 return value * 9.80665002864;
             case ForceUnits.TonnesForce:
+            case ForceUnits.TonnesForce:        
                 return value * 9.80665002864e3;
             case ForceUnits.Newtons:
+            case ForceUnits.Newtons:        
                 return value;
             case ForceUnits.KiloPonds:
+            case ForceUnits.KiloPonds:        
                 return value * 9.80665002864;
             case ForceUnits.Poundals:
+            case ForceUnits.Poundals:        
                 return value * 0.13825502798973041652092282466083;
             case ForceUnits.PoundsForce:
+            case ForceUnits.PoundsForce:        
                 return value * 4.4482216152605095551842641431421;
             case ForceUnits.OunceForce:
+                    
                 return value * 2.780138509537812e-1;
             case ForceUnits.ShortTonsForce:
+            case ForceUnits.ShortTonsForce:        
                 return value * 8.896443230521e3;
             case ForceUnits.Micronewtons:
+            case ForceUnits.Micronewtons:        
                 return (value) * 0.000001;
             case ForceUnits.Millinewtons:
+            case ForceUnits.Millinewtons:        
                 return (value) * 0.001;
             case ForceUnits.Decanewtons:
+            case ForceUnits.Decanewtons:        
                 return (value) * 10;
             case ForceUnits.Kilonewtons:
+            case ForceUnits.Kilonewtons:        
                 return (value) * 1000;
             case ForceUnits.Meganewtons:
+            case ForceUnits.Meganewtons:        
                 return (value) * 1000000;
             case ForceUnits.KilopoundsForce:
+            case ForceUnits.KilopoundsForce:        
                 return (value * 4.4482216152605095551842641431421) * 1000;
             default:
                 break;

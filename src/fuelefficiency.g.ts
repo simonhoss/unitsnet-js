@@ -7,7 +7,15 @@ export enum FuelEfficiencyUnits {
     /** */
     MilesPerUkGallon,
     /** */
-    KilometersPerLiters
+    KilometersPerLiters,
+    /** */
+    LiterPer100Kilometers,
+    /** */
+    MilePerUsGallon,
+    /** */
+    MilePerUkGallon,
+    /** */
+    KilometerPerLiter
 }
 
 /** Fuel efficiency is a form of thermal efficiency, meaning the ratio from effort to result of a process that converts chemical potential energy contained in a carrier (fuel) into kinetic energy or work. Fuel economy is stated as "fuel consumption" in liters per 100 kilometers (L/100 km). In countries using non-metric system, fuel economy is expressed in miles per gallon (mpg) (imperial galon or US galon). */
@@ -114,12 +122,16 @@ export class FuelEfficiency {
         switch (toUnit) {
                 
             case FuelEfficiencyUnits.LitersPer100Kilometers:
+            case FuelEfficiencyUnits.LitersPer100Kilometers:        
                 return this.value;
             case FuelEfficiencyUnits.MilesPerUsGallon:
+            case FuelEfficiencyUnits.MilesPerUsGallon:        
                 return (100 * 3.785411784) / (1.609344 * this.value);
             case FuelEfficiencyUnits.MilesPerUkGallon:
+            case FuelEfficiencyUnits.MilesPerUkGallon:        
                 return (100 * 4.54609188) / (1.609344 * this.value);
             case FuelEfficiencyUnits.KilometersPerLiters:
+            case FuelEfficiencyUnits.KilometersPerLiters:        
                 return 100 / this.value;
             default:
                 break;
@@ -131,12 +143,16 @@ export class FuelEfficiency {
         switch (fromUnit) {
                 
             case FuelEfficiencyUnits.LitersPer100Kilometers:
+            case FuelEfficiencyUnits.LitersPer100Kilometers:        
                 return value;
             case FuelEfficiencyUnits.MilesPerUsGallon:
+            case FuelEfficiencyUnits.MilesPerUsGallon:        
                 return (100 * 3.785411784) / (1.609344 * value);
             case FuelEfficiencyUnits.MilesPerUkGallon:
+            case FuelEfficiencyUnits.MilesPerUkGallon:        
                 return (100 * 4.54609188) / (1.609344 * value);
             case FuelEfficiencyUnits.KilometersPerLiters:
+            case FuelEfficiencyUnits.KilometersPerLiters:        
                 return 100 / value;
             default:
                 break;

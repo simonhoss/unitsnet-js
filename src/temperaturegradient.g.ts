@@ -7,7 +7,15 @@ export enum TemperatureGradientUnits {
     /** */
     DegreesFahrenheitPerFoot,
     /** */
-    DegreesCelciusPerKilometer
+    DegreesCelciusPerKilometer,
+    /** */
+    KelvinPerMeter,
+    /** */
+    DegreeCelsiusPerMeter,
+    /** */
+    DegreeFahrenheitPerFoot,
+    /** */
+    DegreeCelsiusPerKilometer
 }
 
 /** The rate of change of temperature with displacement in a given direction (as with increase of height) */
@@ -114,12 +122,16 @@ export class TemperatureGradient {
         switch (toUnit) {
                 
             case TemperatureGradientUnits.KelvinsPerMeter:
+            case TemperatureGradientUnits.KelvinsPerMeter:        
                 return this.value;
             case TemperatureGradientUnits.DegreesCelciusPerMeter:
+            case TemperatureGradientUnits.DegreesCelciusPerMeter:        
                 return this.value;
             case TemperatureGradientUnits.DegreesFahrenheitPerFoot:
+            case TemperatureGradientUnits.DegreesFahrenheitPerFoot:        
                 return (this.value * 0.3048) * 9 / 5;
             case TemperatureGradientUnits.DegreesCelciusPerKilometer:
+            case TemperatureGradientUnits.DegreesCelciusPerKilometer:        
                 return this.value * 1e3;
             default:
                 break;
@@ -131,12 +143,16 @@ export class TemperatureGradient {
         switch (fromUnit) {
                 
             case TemperatureGradientUnits.KelvinsPerMeter:
+            case TemperatureGradientUnits.KelvinsPerMeter:        
                 return value;
             case TemperatureGradientUnits.DegreesCelciusPerMeter:
+            case TemperatureGradientUnits.DegreesCelciusPerMeter:        
                 return value;
             case TemperatureGradientUnits.DegreesFahrenheitPerFoot:
+            case TemperatureGradientUnits.DegreesFahrenheitPerFoot:        
                 return (value / 0.3048) * 5 / 9;
             case TemperatureGradientUnits.DegreesCelciusPerKilometer:
+            case TemperatureGradientUnits.DegreesCelciusPerKilometer:        
                 return value / 1e3;
             default:
                 break;

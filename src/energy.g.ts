@@ -75,7 +75,83 @@ export enum EnergyUnits {
     /** */
     DecathermsUs,
     /** */
-    DecathermsImperial
+    DecathermsImperial,
+    /** */
+    Joule,
+    /** */
+    Calorie,
+    /** */
+    BritishThermalUnit,
+    /** */
+    ElectronVolt,
+    /** */
+    FootPound,
+    /** */
+    Erg,
+    /** */
+    WattHour,
+    /** */
+    WattDay,
+    /** */
+    ThermEc,
+    /** */
+    ThermUs,
+    /** */
+    ThermImperial,
+    /** */
+    HorsepowerHour,
+    /** */
+    Millijoule,
+    /** */
+    Kilojoule,
+    /** */
+    Megajoule,
+    /** */
+    Gigajoule,
+    /** */
+    Terajoule,
+    /** */
+    Petajoule,
+    /** */
+    Kilocalorie,
+    /** */
+    Megacalorie,
+    /** */
+    KilobritishThermalUnit,
+    /** */
+    MegabritishThermalUnit,
+    /** */
+    GigabritishThermalUnit,
+    /** */
+    KiloelectronVolt,
+    /** */
+    MegaelectronVolt,
+    /** */
+    GigaelectronVolt,
+    /** */
+    TeraelectronVolt,
+    /** */
+    KilowattHour,
+    /** */
+    MegawattHour,
+    /** */
+    GigawattHour,
+    /** */
+    TerawattHour,
+    /** */
+    KilowattDay,
+    /** */
+    MegawattDay,
+    /** */
+    GigawattDay,
+    /** */
+    TerawattDay,
+    /** */
+    DecathermEc,
+    /** */
+    DecathermUs,
+    /** */
+    DecathermImperial
 }
 
 /** The joule, symbol J, is a derived unit of energy, work, or amount of heat in the International System of Units. It is equal to the energy transferred (or work done) when applying a force of one newton through a distance of one metre (1 newton metre or N·m), or in passing an electric current of one ampere through a resistance of one ohm for one second. Many other units of energy are included. Please do not confuse this definition of the calorie with the one colloquially used by the food industry, the large calorie, which is equivalent to 1 kcal. Thermochemical definition of the calorie is used. For BTU, the IT definition is used. */
@@ -828,80 +904,118 @@ export class Energy {
         switch (toUnit) {
                 
             case EnergyUnits.Joules:
+            case EnergyUnits.Joules:        
                 return this.value;
             case EnergyUnits.Calories:
+            case EnergyUnits.Calories:        
                 return this.value / 4.184;
             case EnergyUnits.BritishThermalUnits:
+            case EnergyUnits.BritishThermalUnits:        
                 return this.value / 1055.05585262;
             case EnergyUnits.ElectronVolts:
+            case EnergyUnits.ElectronVolts:        
                 return this.value / 1.602176565e-19;
             case EnergyUnits.FootPounds:
+            case EnergyUnits.FootPounds:        
                 return this.value / 1.355817948;
             case EnergyUnits.Ergs:
+            case EnergyUnits.Ergs:        
                 return this.value / 1e-7;
             case EnergyUnits.WattHours:
+            case EnergyUnits.WattHours:        
                 return this.value / 3600;
             case EnergyUnits.WattDays:
+            case EnergyUnits.WattDays:        
                 return this.value / (24 * 3600);
             case EnergyUnits.ThermsEc:
+            case EnergyUnits.ThermsEc:        
                 return this.value / 1.05505585262e8;
             case EnergyUnits.ThermsUs:
+            case EnergyUnits.ThermsUs:        
                 return this.value / 1.054804e8;
             case EnergyUnits.ThermsImperial:
+            case EnergyUnits.ThermsImperial:        
                 return this.value / 1.05505585257348e8;
             case EnergyUnits.HorsepowerHours:
+            case EnergyUnits.HorsepowerHours:        
                 return this.value / 2.6845195377e6;
             case EnergyUnits.Millijoules:
+            case EnergyUnits.Millijoules:        
                 return (this.value) / 0.001;
             case EnergyUnits.Kilojoules:
+            case EnergyUnits.Kilojoules:        
                 return (this.value) / 1000;
             case EnergyUnits.Megajoules:
+            case EnergyUnits.Megajoules:        
                 return (this.value) / 1000000;
             case EnergyUnits.Gigajoules:
+            case EnergyUnits.Gigajoules:        
                 return (this.value) / 1000000000;
             case EnergyUnits.Terajoules:
+            case EnergyUnits.Terajoules:        
                 return (this.value) / 1000000000000;
             case EnergyUnits.Petajoules:
+            case EnergyUnits.Petajoules:        
                 return (this.value) / 1000000000000000;
             case EnergyUnits.Kilocalories:
+            case EnergyUnits.Kilocalories:        
                 return (this.value / 4.184) / 1000;
             case EnergyUnits.Megacalories:
+            case EnergyUnits.Megacalories:        
                 return (this.value / 4.184) / 1000000;
             case EnergyUnits.KilobritishThermalUnits:
+            case EnergyUnits.KilobritishThermalUnits:        
                 return (this.value / 1055.05585262) / 1000;
             case EnergyUnits.MegabritishThermalUnits:
+            case EnergyUnits.MegabritishThermalUnits:        
                 return (this.value / 1055.05585262) / 1000000;
             case EnergyUnits.GigabritishThermalUnits:
+            case EnergyUnits.GigabritishThermalUnits:        
                 return (this.value / 1055.05585262) / 1000000000;
             case EnergyUnits.KiloelectronVolts:
+            case EnergyUnits.KiloelectronVolts:        
                 return (this.value / 1.602176565e-19) / 1000;
             case EnergyUnits.MegaelectronVolts:
+            case EnergyUnits.MegaelectronVolts:        
                 return (this.value / 1.602176565e-19) / 1000000;
             case EnergyUnits.GigaelectronVolts:
+            case EnergyUnits.GigaelectronVolts:        
                 return (this.value / 1.602176565e-19) / 1000000000;
             case EnergyUnits.TeraelectronVolts:
+            case EnergyUnits.TeraelectronVolts:        
                 return (this.value / 1.602176565e-19) / 1000000000000;
             case EnergyUnits.KilowattHours:
+            case EnergyUnits.KilowattHours:        
                 return (this.value / 3600) / 1000;
             case EnergyUnits.MegawattHours:
+            case EnergyUnits.MegawattHours:        
                 return (this.value / 3600) / 1000000;
             case EnergyUnits.GigawattHours:
+            case EnergyUnits.GigawattHours:        
                 return (this.value / 3600) / 1000000000;
             case EnergyUnits.TerawattHours:
+            case EnergyUnits.TerawattHours:        
                 return (this.value / 3600) / 1000000000000;
             case EnergyUnits.KilowattDays:
+            case EnergyUnits.KilowattDays:        
                 return (this.value / (24 * 3600)) / 1000;
             case EnergyUnits.MegawattDays:
+            case EnergyUnits.MegawattDays:        
                 return (this.value / (24 * 3600)) / 1000000;
             case EnergyUnits.GigawattDays:
+            case EnergyUnits.GigawattDays:        
                 return (this.value / (24 * 3600)) / 1000000000;
             case EnergyUnits.TerawattDays:
+            case EnergyUnits.TerawattDays:        
                 return (this.value / (24 * 3600)) / 1000000000000;
             case EnergyUnits.DecathermsEc:
+            case EnergyUnits.DecathermsEc:        
                 return (this.value / 1.05505585262e8) / 10;
             case EnergyUnits.DecathermsUs:
+            case EnergyUnits.DecathermsUs:        
                 return (this.value / 1.054804e8) / 10;
             case EnergyUnits.DecathermsImperial:
+            case EnergyUnits.DecathermsImperial:        
                 return (this.value / 1.05505585257348e8) / 10;
             default:
                 break;
@@ -913,80 +1027,118 @@ export class Energy {
         switch (fromUnit) {
                 
             case EnergyUnits.Joules:
+            case EnergyUnits.Joules:        
                 return value;
             case EnergyUnits.Calories:
+            case EnergyUnits.Calories:        
                 return value * 4.184;
             case EnergyUnits.BritishThermalUnits:
+            case EnergyUnits.BritishThermalUnits:        
                 return value * 1055.05585262;
             case EnergyUnits.ElectronVolts:
+            case EnergyUnits.ElectronVolts:        
                 return value * 1.602176565e-19;
             case EnergyUnits.FootPounds:
+            case EnergyUnits.FootPounds:        
                 return value * 1.355817948;
             case EnergyUnits.Ergs:
+            case EnergyUnits.Ergs:        
                 return value * 1e-7;
             case EnergyUnits.WattHours:
+            case EnergyUnits.WattHours:        
                 return value * 3600;
             case EnergyUnits.WattDays:
+            case EnergyUnits.WattDays:        
                 return value * 24 * 3600;
             case EnergyUnits.ThermsEc:
+            case EnergyUnits.ThermsEc:        
                 return value * 1.05505585262e8;
             case EnergyUnits.ThermsUs:
+            case EnergyUnits.ThermsUs:        
                 return value * 1.054804e8;
             case EnergyUnits.ThermsImperial:
+            case EnergyUnits.ThermsImperial:        
                 return value * 1.05505585257348e8;
             case EnergyUnits.HorsepowerHours:
+            case EnergyUnits.HorsepowerHours:        
                 return value * 2.6845195377e6;
             case EnergyUnits.Millijoules:
+            case EnergyUnits.Millijoules:        
                 return (value) * 0.001;
             case EnergyUnits.Kilojoules:
+            case EnergyUnits.Kilojoules:        
                 return (value) * 1000;
             case EnergyUnits.Megajoules:
+            case EnergyUnits.Megajoules:        
                 return (value) * 1000000;
             case EnergyUnits.Gigajoules:
+            case EnergyUnits.Gigajoules:        
                 return (value) * 1000000000;
             case EnergyUnits.Terajoules:
+            case EnergyUnits.Terajoules:        
                 return (value) * 1000000000000;
             case EnergyUnits.Petajoules:
+            case EnergyUnits.Petajoules:        
                 return (value) * 1000000000000000;
             case EnergyUnits.Kilocalories:
+            case EnergyUnits.Kilocalories:        
                 return (value * 4.184) * 1000;
             case EnergyUnits.Megacalories:
+            case EnergyUnits.Megacalories:        
                 return (value * 4.184) * 1000000;
             case EnergyUnits.KilobritishThermalUnits:
+            case EnergyUnits.KilobritishThermalUnits:        
                 return (value * 1055.05585262) * 1000;
             case EnergyUnits.MegabritishThermalUnits:
+            case EnergyUnits.MegabritishThermalUnits:        
                 return (value * 1055.05585262) * 1000000;
             case EnergyUnits.GigabritishThermalUnits:
+            case EnergyUnits.GigabritishThermalUnits:        
                 return (value * 1055.05585262) * 1000000000;
             case EnergyUnits.KiloelectronVolts:
+            case EnergyUnits.KiloelectronVolts:        
                 return (value * 1.602176565e-19) * 1000;
             case EnergyUnits.MegaelectronVolts:
+            case EnergyUnits.MegaelectronVolts:        
                 return (value * 1.602176565e-19) * 1000000;
             case EnergyUnits.GigaelectronVolts:
+            case EnergyUnits.GigaelectronVolts:        
                 return (value * 1.602176565e-19) * 1000000000;
             case EnergyUnits.TeraelectronVolts:
+            case EnergyUnits.TeraelectronVolts:        
                 return (value * 1.602176565e-19) * 1000000000000;
             case EnergyUnits.KilowattHours:
+            case EnergyUnits.KilowattHours:        
                 return (value * 3600) * 1000;
             case EnergyUnits.MegawattHours:
+            case EnergyUnits.MegawattHours:        
                 return (value * 3600) * 1000000;
             case EnergyUnits.GigawattHours:
+            case EnergyUnits.GigawattHours:        
                 return (value * 3600) * 1000000000;
             case EnergyUnits.TerawattHours:
+            case EnergyUnits.TerawattHours:        
                 return (value * 3600) * 1000000000000;
             case EnergyUnits.KilowattDays:
+            case EnergyUnits.KilowattDays:        
                 return (value * 24 * 3600) * 1000;
             case EnergyUnits.MegawattDays:
+            case EnergyUnits.MegawattDays:        
                 return (value * 24 * 3600) * 1000000;
             case EnergyUnits.GigawattDays:
+            case EnergyUnits.GigawattDays:        
                 return (value * 24 * 3600) * 1000000000;
             case EnergyUnits.TerawattDays:
+            case EnergyUnits.TerawattDays:        
                 return (value * 24 * 3600) * 1000000000000;
             case EnergyUnits.DecathermsEc:
+            case EnergyUnits.DecathermsEc:        
                 return (value * 1.05505585262e8) * 10;
             case EnergyUnits.DecathermsUs:
+            case EnergyUnits.DecathermsUs:        
                 return (value * 1.054804e8) * 10;
             case EnergyUnits.DecathermsImperial:
+            case EnergyUnits.DecathermsImperial:        
                 return (value * 1.05505585257348e8) * 10;
             default:
                 break;

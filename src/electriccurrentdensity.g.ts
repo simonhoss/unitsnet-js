@@ -5,7 +5,13 @@ export enum ElectricCurrentDensityUnits {
     /** */
     AmperesPerSquareInch,
     /** */
-    AmperesPerSquareFoot
+    AmperesPerSquareFoot,
+    /** */
+    AmperePerSquareMeter,
+    /** */
+    AmperePerSquareInch,
+    /** */
+    AmperePerSquareFoot
 }
 
 /** In electromagnetism, current density is the electric current per unit area of cross section. */
@@ -93,10 +99,13 @@ export class ElectricCurrentDensity {
         switch (toUnit) {
                 
             case ElectricCurrentDensityUnits.AmperesPerSquareMeter:
+            case ElectricCurrentDensityUnits.AmperesPerSquareMeter:        
                 return this.value;
             case ElectricCurrentDensityUnits.AmperesPerSquareInch:
+            case ElectricCurrentDensityUnits.AmperesPerSquareInch:        
                 return this.value / 1.5500031000062000e3;
             case ElectricCurrentDensityUnits.AmperesPerSquareFoot:
+            case ElectricCurrentDensityUnits.AmperesPerSquareFoot:        
                 return this.value / 1.0763910416709722e1;
             default:
                 break;
@@ -108,10 +117,13 @@ export class ElectricCurrentDensity {
         switch (fromUnit) {
                 
             case ElectricCurrentDensityUnits.AmperesPerSquareMeter:
+            case ElectricCurrentDensityUnits.AmperesPerSquareMeter:        
                 return value;
             case ElectricCurrentDensityUnits.AmperesPerSquareInch:
+            case ElectricCurrentDensityUnits.AmperesPerSquareInch:        
                 return value * 1.5500031000062000e3;
             case ElectricCurrentDensityUnits.AmperesPerSquareFoot:
+            case ElectricCurrentDensityUnits.AmperesPerSquareFoot:        
                 return value * 1.0763910416709722e1;
             default:
                 break;

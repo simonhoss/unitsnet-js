@@ -1,7 +1,9 @@
 /** MagneticFluxUnits enumeration */
 export enum MagneticFluxUnits {
     /** */
-    Webers
+    Webers,
+    /** */
+    Weber
 }
 
 /** In physics, specifically electromagnetism, the magnetic flux through a surface is the surface integral of the normal component of the magnetic field B passing through that surface. */
@@ -51,6 +53,7 @@ export class MagneticFlux {
         switch (toUnit) {
                 
             case MagneticFluxUnits.Webers:
+            case MagneticFluxUnits.Webers:        
                 return this.value;
             default:
                 break;
@@ -62,6 +65,7 @@ export class MagneticFlux {
         switch (fromUnit) {
                 
             case MagneticFluxUnits.Webers:
+            case MagneticFluxUnits.Webers:        
                 return value;
             default:
                 break;

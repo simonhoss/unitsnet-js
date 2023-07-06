@@ -9,7 +9,17 @@ export enum HeatTransferCoefficientUnits {
     /** */
     CaloriesPerHourSquareMeterDegreeCelsius,
     /** */
-    KilocaloriesPerHourSquareMeterDegreeCelsius
+    KilocaloriesPerHourSquareMeterDegreeCelsius,
+    /** */
+    WattPerSquareMeterKelvin,
+    /** */
+    WattPerSquareMeterCelsius,
+    /** */
+    BtuPerHourSquareFootDegreeFahrenheit,
+    /** */
+    CaloriePerHourSquareMeterDegreeCelsius,
+    /** */
+    KilocaloriePerHourSquareMeterDegreeCelsius
 }
 
 /** The heat transfer coefficient or film coefficient, or film effectiveness, in thermodynamics and in mechanics is the proportionality constant between the heat flux and the thermodynamic driving force for the flow of heat (i.e., the temperature difference, ΔT) */
@@ -135,14 +145,19 @@ export class HeatTransferCoefficient {
         switch (toUnit) {
                 
             case HeatTransferCoefficientUnits.WattsPerSquareMeterKelvin:
+            case HeatTransferCoefficientUnits.WattsPerSquareMeterKelvin:        
                 return this.value;
             case HeatTransferCoefficientUnits.WattsPerSquareMeterCelsius:
+            case HeatTransferCoefficientUnits.WattsPerSquareMeterCelsius:        
                 return this.value;
             case HeatTransferCoefficientUnits.BtusPerHourSquareFootDegreeFahrenheit:
+            case HeatTransferCoefficientUnits.BtusPerHourSquareFootDegreeFahrenheit:        
                 return this.value / 5.6782633411134878;
             case HeatTransferCoefficientUnits.CaloriesPerHourSquareMeterDegreeCelsius:
+            case HeatTransferCoefficientUnits.CaloriesPerHourSquareMeterDegreeCelsius:        
                 return (this.value / 4.1868) * 3600;
             case HeatTransferCoefficientUnits.KilocaloriesPerHourSquareMeterDegreeCelsius:
+            case HeatTransferCoefficientUnits.KilocaloriesPerHourSquareMeterDegreeCelsius:        
                 return ((this.value / 4.1868) * 3600) / 1000;
             default:
                 break;
@@ -154,14 +169,19 @@ export class HeatTransferCoefficient {
         switch (fromUnit) {
                 
             case HeatTransferCoefficientUnits.WattsPerSquareMeterKelvin:
+            case HeatTransferCoefficientUnits.WattsPerSquareMeterKelvin:        
                 return value;
             case HeatTransferCoefficientUnits.WattsPerSquareMeterCelsius:
+            case HeatTransferCoefficientUnits.WattsPerSquareMeterCelsius:        
                 return value;
             case HeatTransferCoefficientUnits.BtusPerHourSquareFootDegreeFahrenheit:
+            case HeatTransferCoefficientUnits.BtusPerHourSquareFootDegreeFahrenheit:        
                 return value * 5.6782633411134878;
             case HeatTransferCoefficientUnits.CaloriesPerHourSquareMeterDegreeCelsius:
+            case HeatTransferCoefficientUnits.CaloriesPerHourSquareMeterDegreeCelsius:        
                 return (value * 4.1868) / 3600;
             case HeatTransferCoefficientUnits.KilocaloriesPerHourSquareMeterDegreeCelsius:
+            case HeatTransferCoefficientUnits.KilocaloriesPerHourSquareMeterDegreeCelsius:        
                 return ((value * 4.1868) / 3600) * 1000;
             default:
                 break;

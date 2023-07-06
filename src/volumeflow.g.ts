@@ -133,7 +133,141 @@ export enum VolumeFlowUnits {
     /** */
     MegaukGallonsPerDay,
     /** */
-    MegaukGallonsPerSecond
+    MegaukGallonsPerSecond,
+    /** */
+    CubicMeterPerSecond,
+    /** */
+    CubicMeterPerMinute,
+    /** */
+    CubicMeterPerHour,
+    /** */
+    CubicMeterPerDay,
+    /** */
+    CubicFootPerSecond,
+    /** */
+    CubicFootPerMinute,
+    /** */
+    CubicFootPerHour,
+    /** */
+    CubicYardPerSecond,
+    /** */
+    CubicYardPerMinute,
+    /** */
+    CubicYardPerHour,
+    /** */
+    CubicYardPerDay,
+    /** */
+    MillionUsGallonPerDay,
+    /** */
+    UsGallonPerDay,
+    /** */
+    LiterPerSecond,
+    /** */
+    LiterPerMinute,
+    /** */
+    LiterPerHour,
+    /** */
+    LiterPerDay,
+    /** */
+    UsGallonPerSecond,
+    /** */
+    UsGallonPerMinute,
+    /** */
+    UkGallonPerDay,
+    /** */
+    UkGallonPerHour,
+    /** */
+    UkGallonPerMinute,
+    /** */
+    UkGallonPerSecond,
+    /** */
+    KilousGallonPerMinute,
+    /** */
+    UsGallonPerHour,
+    /** */
+    CubicDecimeterPerMinute,
+    /** */
+    OilBarrelPerDay,
+    /** */
+    OilBarrelPerMinute,
+    /** */
+    OilBarrelPerHour,
+    /** */
+    OilBarrelPerSecond,
+    /** */
+    CubicMillimeterPerSecond,
+    /** */
+    AcreFootPerSecond,
+    /** */
+    AcreFootPerMinute,
+    /** */
+    AcreFootPerHour,
+    /** */
+    AcreFootPerDay,
+    /** */
+    CubicCentimeterPerMinute,
+    /** */
+    MegausGallonPerDay,
+    /** */
+    NanoliterPerSecond,
+    /** */
+    MicroliterPerSecond,
+    /** */
+    MilliliterPerSecond,
+    /** */
+    CentiliterPerSecond,
+    /** */
+    DeciliterPerSecond,
+    /** */
+    KiloliterPerSecond,
+    /** */
+    MegaliterPerSecond,
+    /** */
+    NanoliterPerMinute,
+    /** */
+    MicroliterPerMinute,
+    /** */
+    MilliliterPerMinute,
+    /** */
+    CentiliterPerMinute,
+    /** */
+    DeciliterPerMinute,
+    /** */
+    KiloliterPerMinute,
+    /** */
+    MegaliterPerMinute,
+    /** */
+    NanoliterPerHour,
+    /** */
+    MicroliterPerHour,
+    /** */
+    MilliliterPerHour,
+    /** */
+    CentiliterPerHour,
+    /** */
+    DeciliterPerHour,
+    /** */
+    KiloliterPerHour,
+    /** */
+    MegaliterPerHour,
+    /** */
+    NanoliterPerDay,
+    /** */
+    MicroliterPerDay,
+    /** */
+    MilliliterPerDay,
+    /** */
+    CentiliterPerDay,
+    /** */
+    DeciliterPerDay,
+    /** */
+    KiloliterPerDay,
+    /** */
+    MegaliterPerDay,
+    /** */
+    MegaukGallonPerDay,
+    /** */
+    MegaukGallonPerSecond
 }
 
 /** In physics and engineering, in particular fluid dynamics and hydrometry, the volumetric flow rate, (also known as volume flow rate, rate of fluid flow or volume velocity) is the volume of fluid which passes through a given surface per unit time. The SI unit is m³/s (cubic meters per second). In US Customary Units and British Imperial Units, volumetric flow rate is often expressed as ft³/s (cubic feet per second). It is usually represented by the symbol Q. */
@@ -1437,138 +1571,205 @@ export class VolumeFlow {
         switch (toUnit) {
                 
             case VolumeFlowUnits.CubicMetersPerSecond:
+            case VolumeFlowUnits.CubicMetersPerSecond:        
                 return this.value;
             case VolumeFlowUnits.CubicMetersPerMinute:
+            case VolumeFlowUnits.CubicMetersPerMinute:        
                 return this.value * 60;
             case VolumeFlowUnits.CubicMetersPerHour:
+            case VolumeFlowUnits.CubicMetersPerHour:        
                 return this.value * 3600;
             case VolumeFlowUnits.CubicMetersPerDay:
+            case VolumeFlowUnits.CubicMetersPerDay:        
                 return this.value * 86400;
             case VolumeFlowUnits.CubicFeetPerSecond:
+            case VolumeFlowUnits.CubicFeetPerSecond:        
                 return this.value * 35.314666721;
             case VolumeFlowUnits.CubicFeetPerMinute:
+            case VolumeFlowUnits.CubicFeetPerMinute:        
                 return this.value * 2118.88000326;
             case VolumeFlowUnits.CubicFeetPerHour:
+            case VolumeFlowUnits.CubicFeetPerHour:        
                 return this.value / 7.8657907199999087346816086183876e-6;
             case VolumeFlowUnits.CubicYardsPerSecond:
+            case VolumeFlowUnits.CubicYardsPerSecond:        
                 return this.value / 0.764554857984;
             case VolumeFlowUnits.CubicYardsPerMinute:
+            case VolumeFlowUnits.CubicYardsPerMinute:        
                 return this.value / 0.0127425809664;
             case VolumeFlowUnits.CubicYardsPerHour:
+            case VolumeFlowUnits.CubicYardsPerHour:        
                 return this.value / 2.1237634944E-4;
             case VolumeFlowUnits.CubicYardsPerDay:
+            case VolumeFlowUnits.CubicYardsPerDay:        
                 return this.value * 113007;
             case VolumeFlowUnits.MillionUsGallonsPerDay:
+            case VolumeFlowUnits.MillionUsGallonsPerDay:        
                 return this.value * 22.824465227;
             case VolumeFlowUnits.UsGallonsPerDay:
+            case VolumeFlowUnits.UsGallonsPerDay:        
                 return this.value * 22824465.227;
             case VolumeFlowUnits.LitersPerSecond:
+            case VolumeFlowUnits.LitersPerSecond:        
                 return this.value * 1000;
             case VolumeFlowUnits.LitersPerMinute:
+            case VolumeFlowUnits.LitersPerMinute:        
                 return this.value * 60000.00000;
             case VolumeFlowUnits.LitersPerHour:
+            case VolumeFlowUnits.LitersPerHour:        
                 return this.value * 3600000.000;
             case VolumeFlowUnits.LitersPerDay:
+            case VolumeFlowUnits.LitersPerDay:        
                 return this.value * 86400000;
             case VolumeFlowUnits.UsGallonsPerSecond:
+            case VolumeFlowUnits.UsGallonsPerSecond:        
                 return this.value * 264.1720523581484;
             case VolumeFlowUnits.UsGallonsPerMinute:
+            case VolumeFlowUnits.UsGallonsPerMinute:        
                 return this.value * 15850.323141489;
             case VolumeFlowUnits.UkGallonsPerDay:
+            case VolumeFlowUnits.UkGallonsPerDay:        
                 return this.value * 19005304;
             case VolumeFlowUnits.UkGallonsPerHour:
+            case VolumeFlowUnits.UkGallonsPerHour:        
                 return this.value * 791887.667;
             case VolumeFlowUnits.UkGallonsPerMinute:
+            case VolumeFlowUnits.UkGallonsPerMinute:        
                 return this.value * 13198.2;
             case VolumeFlowUnits.UkGallonsPerSecond:
+            case VolumeFlowUnits.UkGallonsPerSecond:        
                 return this.value * 219.969;
             case VolumeFlowUnits.KilousGallonsPerMinute:
+            case VolumeFlowUnits.KilousGallonsPerMinute:        
                 return this.value * 15.850323141489;
             case VolumeFlowUnits.UsGallonsPerHour:
+            case VolumeFlowUnits.UsGallonsPerHour:        
                 return this.value * 951019.38848933424;
             case VolumeFlowUnits.CubicDecimetersPerMinute:
+            case VolumeFlowUnits.CubicDecimetersPerMinute:        
                 return this.value * 60000.00000;
             case VolumeFlowUnits.OilBarrelsPerDay:
+            case VolumeFlowUnits.OilBarrelsPerDay:        
                 return this.value / 1.8401307283333333333333333333333e-6;
             case VolumeFlowUnits.OilBarrelsPerMinute:
+            case VolumeFlowUnits.OilBarrelsPerMinute:        
                 return this.value / 2.64978825e-3;
             case VolumeFlowUnits.OilBarrelsPerHour:
+            case VolumeFlowUnits.OilBarrelsPerHour:        
                 return this.value / 4.41631375e-5;
             case VolumeFlowUnits.OilBarrelsPerSecond:
+            case VolumeFlowUnits.OilBarrelsPerSecond:        
                 return this.value * 6.28981;
             case VolumeFlowUnits.CubicMillimetersPerSecond:
+            case VolumeFlowUnits.CubicMillimetersPerSecond:        
                 return this.value / 1e-9;
             case VolumeFlowUnits.AcreFeetPerSecond:
+            case VolumeFlowUnits.AcreFeetPerSecond:        
                 return this.value * 0.000810713194;
             case VolumeFlowUnits.AcreFeetPerMinute:
+            case VolumeFlowUnits.AcreFeetPerMinute:        
                 return this.value * 0.0486427916;
             case VolumeFlowUnits.AcreFeetPerHour:
+            case VolumeFlowUnits.AcreFeetPerHour:        
                 return this.value * 2.91857;
             case VolumeFlowUnits.AcreFeetPerDay:
+            case VolumeFlowUnits.AcreFeetPerDay:        
                 return this.value * 70.0457;
             case VolumeFlowUnits.CubicCentimetersPerMinute:
+            case VolumeFlowUnits.CubicCentimetersPerMinute:        
                 return this.value / 1.6666666666667e-8;
             case VolumeFlowUnits.MegausGallonsPerDay:
+            case VolumeFlowUnits.MegausGallonsPerDay:        
                 return (this.value * 22824465.227) / 1000000;
             case VolumeFlowUnits.NanolitersPerSecond:
+            case VolumeFlowUnits.NanolitersPerSecond:        
                 return (this.value * 1000) / 1e-9;
             case VolumeFlowUnits.MicrolitersPerSecond:
+            case VolumeFlowUnits.MicrolitersPerSecond:        
                 return (this.value * 1000) / 0.000001;
             case VolumeFlowUnits.MillilitersPerSecond:
+            case VolumeFlowUnits.MillilitersPerSecond:        
                 return (this.value * 1000) / 0.001;
             case VolumeFlowUnits.CentilitersPerSecond:
+            case VolumeFlowUnits.CentilitersPerSecond:        
                 return (this.value * 1000) / 0.01;
             case VolumeFlowUnits.DecilitersPerSecond:
+            case VolumeFlowUnits.DecilitersPerSecond:        
                 return (this.value * 1000) / 0.1;
             case VolumeFlowUnits.KilolitersPerSecond:
+            case VolumeFlowUnits.KilolitersPerSecond:        
                 return (this.value * 1000) / 1000;
             case VolumeFlowUnits.MegalitersPerSecond:
+            case VolumeFlowUnits.MegalitersPerSecond:        
                 return (this.value * 1000) / 1000000;
             case VolumeFlowUnits.NanolitersPerMinute:
+            case VolumeFlowUnits.NanolitersPerMinute:        
                 return (this.value * 60000.00000) / 1e-9;
             case VolumeFlowUnits.MicrolitersPerMinute:
+            case VolumeFlowUnits.MicrolitersPerMinute:        
                 return (this.value * 60000.00000) / 0.000001;
             case VolumeFlowUnits.MillilitersPerMinute:
+            case VolumeFlowUnits.MillilitersPerMinute:        
                 return (this.value * 60000.00000) / 0.001;
             case VolumeFlowUnits.CentilitersPerMinute:
+            case VolumeFlowUnits.CentilitersPerMinute:        
                 return (this.value * 60000.00000) / 0.01;
             case VolumeFlowUnits.DecilitersPerMinute:
+            case VolumeFlowUnits.DecilitersPerMinute:        
                 return (this.value * 60000.00000) / 0.1;
             case VolumeFlowUnits.KilolitersPerMinute:
+            case VolumeFlowUnits.KilolitersPerMinute:        
                 return (this.value * 60000.00000) / 1000;
             case VolumeFlowUnits.MegalitersPerMinute:
+            case VolumeFlowUnits.MegalitersPerMinute:        
                 return (this.value * 60000.00000) / 1000000;
             case VolumeFlowUnits.NanolitersPerHour:
+            case VolumeFlowUnits.NanolitersPerHour:        
                 return (this.value * 3600000.000) / 1e-9;
             case VolumeFlowUnits.MicrolitersPerHour:
+            case VolumeFlowUnits.MicrolitersPerHour:        
                 return (this.value * 3600000.000) / 0.000001;
             case VolumeFlowUnits.MillilitersPerHour:
+            case VolumeFlowUnits.MillilitersPerHour:        
                 return (this.value * 3600000.000) / 0.001;
             case VolumeFlowUnits.CentilitersPerHour:
+            case VolumeFlowUnits.CentilitersPerHour:        
                 return (this.value * 3600000.000) / 0.01;
             case VolumeFlowUnits.DecilitersPerHour:
+            case VolumeFlowUnits.DecilitersPerHour:        
                 return (this.value * 3600000.000) / 0.1;
             case VolumeFlowUnits.KilolitersPerHour:
+            case VolumeFlowUnits.KilolitersPerHour:        
                 return (this.value * 3600000.000) / 1000;
             case VolumeFlowUnits.MegalitersPerHour:
+            case VolumeFlowUnits.MegalitersPerHour:        
                 return (this.value * 3600000.000) / 1000000;
             case VolumeFlowUnits.NanolitersPerDay:
+            case VolumeFlowUnits.NanolitersPerDay:        
                 return (this.value * 86400000) / 1e-9;
             case VolumeFlowUnits.MicrolitersPerDay:
+            case VolumeFlowUnits.MicrolitersPerDay:        
                 return (this.value * 86400000) / 0.000001;
             case VolumeFlowUnits.MillilitersPerDay:
+            case VolumeFlowUnits.MillilitersPerDay:        
                 return (this.value * 86400000) / 0.001;
             case VolumeFlowUnits.CentilitersPerDay:
+            case VolumeFlowUnits.CentilitersPerDay:        
                 return (this.value * 86400000) / 0.01;
             case VolumeFlowUnits.DecilitersPerDay:
+            case VolumeFlowUnits.DecilitersPerDay:        
                 return (this.value * 86400000) / 0.1;
             case VolumeFlowUnits.KilolitersPerDay:
+            case VolumeFlowUnits.KilolitersPerDay:        
                 return (this.value * 86400000) / 1000;
             case VolumeFlowUnits.MegalitersPerDay:
+            case VolumeFlowUnits.MegalitersPerDay:        
                 return (this.value * 86400000) / 1000000;
             case VolumeFlowUnits.MegaukGallonsPerDay:
+            case VolumeFlowUnits.MegaukGallonsPerDay:        
                 return (this.value * 19005304) / 1000000;
             case VolumeFlowUnits.MegaukGallonsPerSecond:
+            case VolumeFlowUnits.MegaukGallonsPerSecond:        
                 return (this.value * 219.969) / 1000000;
             default:
                 break;
@@ -1580,138 +1781,205 @@ export class VolumeFlow {
         switch (fromUnit) {
                 
             case VolumeFlowUnits.CubicMetersPerSecond:
+            case VolumeFlowUnits.CubicMetersPerSecond:        
                 return value;
             case VolumeFlowUnits.CubicMetersPerMinute:
+            case VolumeFlowUnits.CubicMetersPerMinute:        
                 return value / 60;
             case VolumeFlowUnits.CubicMetersPerHour:
+            case VolumeFlowUnits.CubicMetersPerHour:        
                 return value / 3600;
             case VolumeFlowUnits.CubicMetersPerDay:
+            case VolumeFlowUnits.CubicMetersPerDay:        
                 return value / 86400;
             case VolumeFlowUnits.CubicFeetPerSecond:
+            case VolumeFlowUnits.CubicFeetPerSecond:        
                 return value / 35.314666721;
             case VolumeFlowUnits.CubicFeetPerMinute:
+            case VolumeFlowUnits.CubicFeetPerMinute:        
                 return value / 2118.88000326;
             case VolumeFlowUnits.CubicFeetPerHour:
+            case VolumeFlowUnits.CubicFeetPerHour:        
                 return value * 7.8657907199999087346816086183876e-6;
             case VolumeFlowUnits.CubicYardsPerSecond:
+            case VolumeFlowUnits.CubicYardsPerSecond:        
                 return value * 0.764554857984;
             case VolumeFlowUnits.CubicYardsPerMinute:
+            case VolumeFlowUnits.CubicYardsPerMinute:        
                 return value * 0.0127425809664;
             case VolumeFlowUnits.CubicYardsPerHour:
+            case VolumeFlowUnits.CubicYardsPerHour:        
                 return value * 2.1237634944E-4;
             case VolumeFlowUnits.CubicYardsPerDay:
+            case VolumeFlowUnits.CubicYardsPerDay:        
                 return value / 113007;
             case VolumeFlowUnits.MillionUsGallonsPerDay:
+            case VolumeFlowUnits.MillionUsGallonsPerDay:        
                 return value / 22.824465227;
             case VolumeFlowUnits.UsGallonsPerDay:
+            case VolumeFlowUnits.UsGallonsPerDay:        
                 return value / 22824465.227;
             case VolumeFlowUnits.LitersPerSecond:
+            case VolumeFlowUnits.LitersPerSecond:        
                 return value / 1000;
             case VolumeFlowUnits.LitersPerMinute:
+            case VolumeFlowUnits.LitersPerMinute:        
                 return value / 60000.00000;
             case VolumeFlowUnits.LitersPerHour:
+            case VolumeFlowUnits.LitersPerHour:        
                 return value / 3600000.000;
             case VolumeFlowUnits.LitersPerDay:
+            case VolumeFlowUnits.LitersPerDay:        
                 return value / 86400000;
             case VolumeFlowUnits.UsGallonsPerSecond:
+            case VolumeFlowUnits.UsGallonsPerSecond:        
                 return value / 264.1720523581484;
             case VolumeFlowUnits.UsGallonsPerMinute:
+            case VolumeFlowUnits.UsGallonsPerMinute:        
                 return value / 15850.323141489;
             case VolumeFlowUnits.UkGallonsPerDay:
+            case VolumeFlowUnits.UkGallonsPerDay:        
                 return value / 19005304;
             case VolumeFlowUnits.UkGallonsPerHour:
+            case VolumeFlowUnits.UkGallonsPerHour:        
                 return value / 791887.667;
             case VolumeFlowUnits.UkGallonsPerMinute:
+            case VolumeFlowUnits.UkGallonsPerMinute:        
                 return value / 13198.2;
             case VolumeFlowUnits.UkGallonsPerSecond:
+            case VolumeFlowUnits.UkGallonsPerSecond:        
                 return value / 219.969;
             case VolumeFlowUnits.KilousGallonsPerMinute:
+            case VolumeFlowUnits.KilousGallonsPerMinute:        
                 return value / 15.850323141489;
             case VolumeFlowUnits.UsGallonsPerHour:
+            case VolumeFlowUnits.UsGallonsPerHour:        
                 return value / 951019.38848933424;
             case VolumeFlowUnits.CubicDecimetersPerMinute:
+            case VolumeFlowUnits.CubicDecimetersPerMinute:        
                 return value / 60000.00000;
             case VolumeFlowUnits.OilBarrelsPerDay:
+            case VolumeFlowUnits.OilBarrelsPerDay:        
                 return value * 1.8401307283333333333333333333333e-6;
             case VolumeFlowUnits.OilBarrelsPerMinute:
+            case VolumeFlowUnits.OilBarrelsPerMinute:        
                 return value * 2.64978825e-3;
             case VolumeFlowUnits.OilBarrelsPerHour:
+            case VolumeFlowUnits.OilBarrelsPerHour:        
                 return value * 4.41631375e-5;
             case VolumeFlowUnits.OilBarrelsPerSecond:
+            case VolumeFlowUnits.OilBarrelsPerSecond:        
                 return value / 6.28981;
             case VolumeFlowUnits.CubicMillimetersPerSecond:
+            case VolumeFlowUnits.CubicMillimetersPerSecond:        
                 return value * 1e-9;
             case VolumeFlowUnits.AcreFeetPerSecond:
+            case VolumeFlowUnits.AcreFeetPerSecond:        
                 return value / 0.000810713194;
             case VolumeFlowUnits.AcreFeetPerMinute:
+            case VolumeFlowUnits.AcreFeetPerMinute:        
                 return value / 0.0486427916;
             case VolumeFlowUnits.AcreFeetPerHour:
+            case VolumeFlowUnits.AcreFeetPerHour:        
                 return value / 2.91857;
             case VolumeFlowUnits.AcreFeetPerDay:
+            case VolumeFlowUnits.AcreFeetPerDay:        
                 return value / 70.0457;
             case VolumeFlowUnits.CubicCentimetersPerMinute:
+            case VolumeFlowUnits.CubicCentimetersPerMinute:        
                 return value * 1.6666666666667e-8;
             case VolumeFlowUnits.MegausGallonsPerDay:
+            case VolumeFlowUnits.MegausGallonsPerDay:        
                 return (value / 22824465.227) * 1000000;
             case VolumeFlowUnits.NanolitersPerSecond:
+            case VolumeFlowUnits.NanolitersPerSecond:        
                 return (value / 1000) * 1e-9;
             case VolumeFlowUnits.MicrolitersPerSecond:
+            case VolumeFlowUnits.MicrolitersPerSecond:        
                 return (value / 1000) * 0.000001;
             case VolumeFlowUnits.MillilitersPerSecond:
+            case VolumeFlowUnits.MillilitersPerSecond:        
                 return (value / 1000) * 0.001;
             case VolumeFlowUnits.CentilitersPerSecond:
+            case VolumeFlowUnits.CentilitersPerSecond:        
                 return (value / 1000) * 0.01;
             case VolumeFlowUnits.DecilitersPerSecond:
+            case VolumeFlowUnits.DecilitersPerSecond:        
                 return (value / 1000) * 0.1;
             case VolumeFlowUnits.KilolitersPerSecond:
+            case VolumeFlowUnits.KilolitersPerSecond:        
                 return (value / 1000) * 1000;
             case VolumeFlowUnits.MegalitersPerSecond:
+            case VolumeFlowUnits.MegalitersPerSecond:        
                 return (value / 1000) * 1000000;
             case VolumeFlowUnits.NanolitersPerMinute:
+            case VolumeFlowUnits.NanolitersPerMinute:        
                 return (value / 60000.00000) * 1e-9;
             case VolumeFlowUnits.MicrolitersPerMinute:
+            case VolumeFlowUnits.MicrolitersPerMinute:        
                 return (value / 60000.00000) * 0.000001;
             case VolumeFlowUnits.MillilitersPerMinute:
+            case VolumeFlowUnits.MillilitersPerMinute:        
                 return (value / 60000.00000) * 0.001;
             case VolumeFlowUnits.CentilitersPerMinute:
+            case VolumeFlowUnits.CentilitersPerMinute:        
                 return (value / 60000.00000) * 0.01;
             case VolumeFlowUnits.DecilitersPerMinute:
+            case VolumeFlowUnits.DecilitersPerMinute:        
                 return (value / 60000.00000) * 0.1;
             case VolumeFlowUnits.KilolitersPerMinute:
+            case VolumeFlowUnits.KilolitersPerMinute:        
                 return (value / 60000.00000) * 1000;
             case VolumeFlowUnits.MegalitersPerMinute:
+            case VolumeFlowUnits.MegalitersPerMinute:        
                 return (value / 60000.00000) * 1000000;
             case VolumeFlowUnits.NanolitersPerHour:
+            case VolumeFlowUnits.NanolitersPerHour:        
                 return (value / 3600000.000) * 1e-9;
             case VolumeFlowUnits.MicrolitersPerHour:
+            case VolumeFlowUnits.MicrolitersPerHour:        
                 return (value / 3600000.000) * 0.000001;
             case VolumeFlowUnits.MillilitersPerHour:
+            case VolumeFlowUnits.MillilitersPerHour:        
                 return (value / 3600000.000) * 0.001;
             case VolumeFlowUnits.CentilitersPerHour:
+            case VolumeFlowUnits.CentilitersPerHour:        
                 return (value / 3600000.000) * 0.01;
             case VolumeFlowUnits.DecilitersPerHour:
+            case VolumeFlowUnits.DecilitersPerHour:        
                 return (value / 3600000.000) * 0.1;
             case VolumeFlowUnits.KilolitersPerHour:
+            case VolumeFlowUnits.KilolitersPerHour:        
                 return (value / 3600000.000) * 1000;
             case VolumeFlowUnits.MegalitersPerHour:
+            case VolumeFlowUnits.MegalitersPerHour:        
                 return (value / 3600000.000) * 1000000;
             case VolumeFlowUnits.NanolitersPerDay:
+            case VolumeFlowUnits.NanolitersPerDay:        
                 return (value / 86400000) * 1e-9;
             case VolumeFlowUnits.MicrolitersPerDay:
+            case VolumeFlowUnits.MicrolitersPerDay:        
                 return (value / 86400000) * 0.000001;
             case VolumeFlowUnits.MillilitersPerDay:
+            case VolumeFlowUnits.MillilitersPerDay:        
                 return (value / 86400000) * 0.001;
             case VolumeFlowUnits.CentilitersPerDay:
+            case VolumeFlowUnits.CentilitersPerDay:        
                 return (value / 86400000) * 0.01;
             case VolumeFlowUnits.DecilitersPerDay:
+            case VolumeFlowUnits.DecilitersPerDay:        
                 return (value / 86400000) * 0.1;
             case VolumeFlowUnits.KilolitersPerDay:
+            case VolumeFlowUnits.KilolitersPerDay:        
                 return (value / 86400000) * 1000;
             case VolumeFlowUnits.MegalitersPerDay:
+            case VolumeFlowUnits.MegalitersPerDay:        
                 return (value / 86400000) * 1000000;
             case VolumeFlowUnits.MegaukGallonsPerDay:
+            case VolumeFlowUnits.MegaukGallonsPerDay:        
                 return (value / 19005304) * 1000000;
             case VolumeFlowUnits.MegaukGallonsPerSecond:
+            case VolumeFlowUnits.MegaukGallonsPerSecond:        
                 return (value / 219.969) * 1000000;
             default:
                 break;

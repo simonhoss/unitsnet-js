@@ -5,7 +5,13 @@ export enum ReactiveEnergyUnits {
     /** */
     KilovoltampereReactiveHours,
     /** */
-    MegavoltampereReactiveHours
+    MegavoltampereReactiveHours,
+    /** */
+    VoltampereReactiveHour,
+    /** */
+    KilovoltampereReactiveHour,
+    /** */
+    MegavoltampereReactiveHour
 }
 
 /** The Volt-ampere reactive hour (expressed as varh) is the reactive power of one Volt-ampere reactive produced in one hour. */
@@ -93,10 +99,13 @@ export class ReactiveEnergy {
         switch (toUnit) {
                 
             case ReactiveEnergyUnits.VoltampereReactiveHours:
+            case ReactiveEnergyUnits.VoltampereReactiveHours:        
                 return this.value;
             case ReactiveEnergyUnits.KilovoltampereReactiveHours:
+            case ReactiveEnergyUnits.KilovoltampereReactiveHours:        
                 return (this.value) / 1000;
             case ReactiveEnergyUnits.MegavoltampereReactiveHours:
+            case ReactiveEnergyUnits.MegavoltampereReactiveHours:        
                 return (this.value) / 1000000;
             default:
                 break;
@@ -108,10 +117,13 @@ export class ReactiveEnergy {
         switch (fromUnit) {
                 
             case ReactiveEnergyUnits.VoltampereReactiveHours:
+            case ReactiveEnergyUnits.VoltampereReactiveHours:        
                 return value;
             case ReactiveEnergyUnits.KilovoltampereReactiveHours:
+            case ReactiveEnergyUnits.KilovoltampereReactiveHours:        
                 return (value) * 1000;
             case ReactiveEnergyUnits.MegavoltampereReactiveHours:
+            case ReactiveEnergyUnits.MegavoltampereReactiveHours:        
                 return (value) * 1000000;
             default:
                 break;

@@ -19,7 +19,23 @@ export enum DynamicViscosityUnits {
     /** */
     MicropascalSeconds,
     /** */
-    Centipoise
+    Centipoise,
+    /** */
+    NewtonSecondPerMeterSquared,
+    /** */
+    PascalSecond,
+    /** */
+    Reyn,
+    /** */
+    PoundForceSecondPerSquareInch,
+    /** */
+    PoundForceSecondPerSquareFoot,
+    /** */
+    PoundPerFootSecond,
+    /** */
+    MillipascalSecond,
+    /** */
+    MicropascalSecond
 }
 
 /** The dynamic (shear) viscosity of a fluid expresses its resistance to shearing flows, where adjacent layers move parallel to each other with different speeds */
@@ -240,24 +256,34 @@ export class DynamicViscosity {
         switch (toUnit) {
                 
             case DynamicViscosityUnits.NewtonSecondsPerMeterSquared:
+            case DynamicViscosityUnits.NewtonSecondsPerMeterSquared:        
                 return this.value;
             case DynamicViscosityUnits.PascalSeconds:
+            case DynamicViscosityUnits.PascalSeconds:        
                 return this.value;
             case DynamicViscosityUnits.Poise:
+                    
                 return this.value * 10;
             case DynamicViscosityUnits.Reyns:
+            case DynamicViscosityUnits.Reyns:        
                 return this.value / 6.8947572931683613e3;
             case DynamicViscosityUnits.PoundsForceSecondPerSquareInch:
+            case DynamicViscosityUnits.PoundsForceSecondPerSquareInch:        
                 return this.value / 6.8947572931683613e3;
             case DynamicViscosityUnits.PoundsForceSecondPerSquareFoot:
+            case DynamicViscosityUnits.PoundsForceSecondPerSquareFoot:        
                 return this.value / 4.7880258980335843e1;
             case DynamicViscosityUnits.PoundsPerFootSecond:
+            case DynamicViscosityUnits.PoundsPerFootSecond:        
                 return this.value / 1.4881639;
             case DynamicViscosityUnits.MillipascalSeconds:
+            case DynamicViscosityUnits.MillipascalSeconds:        
                 return (this.value) / 0.001;
             case DynamicViscosityUnits.MicropascalSeconds:
+            case DynamicViscosityUnits.MicropascalSeconds:        
                 return (this.value) / 0.000001;
             case DynamicViscosityUnits.Centipoise:
+                    
                 return (this.value * 10) / 0.01;
             default:
                 break;
@@ -269,24 +295,34 @@ export class DynamicViscosity {
         switch (fromUnit) {
                 
             case DynamicViscosityUnits.NewtonSecondsPerMeterSquared:
+            case DynamicViscosityUnits.NewtonSecondsPerMeterSquared:        
                 return value;
             case DynamicViscosityUnits.PascalSeconds:
+            case DynamicViscosityUnits.PascalSeconds:        
                 return value;
             case DynamicViscosityUnits.Poise:
+                    
                 return value / 10;
             case DynamicViscosityUnits.Reyns:
+            case DynamicViscosityUnits.Reyns:        
                 return value * 6.8947572931683613e3;
             case DynamicViscosityUnits.PoundsForceSecondPerSquareInch:
+            case DynamicViscosityUnits.PoundsForceSecondPerSquareInch:        
                 return value * 6.8947572931683613e3;
             case DynamicViscosityUnits.PoundsForceSecondPerSquareFoot:
+            case DynamicViscosityUnits.PoundsForceSecondPerSquareFoot:        
                 return value * 4.7880258980335843e1;
             case DynamicViscosityUnits.PoundsPerFootSecond:
+            case DynamicViscosityUnits.PoundsPerFootSecond:        
                 return value * 1.4881639;
             case DynamicViscosityUnits.MillipascalSeconds:
+            case DynamicViscosityUnits.MillipascalSeconds:        
                 return (value) * 0.001;
             case DynamicViscosityUnits.MicropascalSeconds:
+            case DynamicViscosityUnits.MicropascalSeconds:        
                 return (value) * 0.000001;
             case DynamicViscosityUnits.Centipoise:
+                    
                 return (value / 10) * 0.01;
             default:
                 break;

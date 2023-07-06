@@ -3,7 +3,11 @@ export enum PowerRatioUnits {
     /** */
     DecibelWatts,
     /** */
-    DecibelMilliwatts
+    DecibelMilliwatts,
+    /** */
+    DecibelWatt,
+    /** */
+    DecibelMilliwatt
 }
 
 /** The strength of a signal expressed in decibels (dB) relative to one watt. */
@@ -72,8 +76,10 @@ export class PowerRatio {
         switch (toUnit) {
                 
             case PowerRatioUnits.DecibelWatts:
+            case PowerRatioUnits.DecibelWatts:        
                 return this.value;
             case PowerRatioUnits.DecibelMilliwatts:
+            case PowerRatioUnits.DecibelMilliwatts:        
                 return this.value + 30;
             default:
                 break;
@@ -85,8 +91,10 @@ export class PowerRatio {
         switch (fromUnit) {
                 
             case PowerRatioUnits.DecibelWatts:
+            case PowerRatioUnits.DecibelWatts:        
                 return value;
             case PowerRatioUnits.DecibelMilliwatts:
+            case PowerRatioUnits.DecibelMilliwatts:        
                 return value - 30;
             default:
                 break;

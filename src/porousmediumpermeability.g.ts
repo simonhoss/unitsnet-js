@@ -9,7 +9,17 @@ export enum PorousMediumPermeabilityUnits {
     /** */
     Microdarcys,
     /** */
-    Millidarcys
+    Millidarcys,
+    /** */
+    Darcy,
+    /** */
+    SquareMeter,
+    /** */
+    SquareCentimeter,
+    /** */
+    Microdarcy,
+    /** */
+    Millidarcy
 }
 
 /** In fluid mechanics, permeability is the measure of the ability of a porous material to allow fluids to pass through it. */
@@ -135,14 +145,19 @@ export class PorousMediumPermeability {
         switch (toUnit) {
                 
             case PorousMediumPermeabilityUnits.Darcys:
+            case PorousMediumPermeabilityUnits.Darcys:        
                 return this.value / 9.869233e-13;
             case PorousMediumPermeabilityUnits.SquareMeters:
+            case PorousMediumPermeabilityUnits.SquareMeters:        
                 return this.value;
             case PorousMediumPermeabilityUnits.SquareCentimeters:
+            case PorousMediumPermeabilityUnits.SquareCentimeters:        
                 return this.value / 1e-4;
             case PorousMediumPermeabilityUnits.Microdarcys:
+            case PorousMediumPermeabilityUnits.Microdarcys:        
                 return (this.value / 9.869233e-13) / 0.000001;
             case PorousMediumPermeabilityUnits.Millidarcys:
+            case PorousMediumPermeabilityUnits.Millidarcys:        
                 return (this.value / 9.869233e-13) / 0.001;
             default:
                 break;
@@ -154,14 +169,19 @@ export class PorousMediumPermeability {
         switch (fromUnit) {
                 
             case PorousMediumPermeabilityUnits.Darcys:
+            case PorousMediumPermeabilityUnits.Darcys:        
                 return value * 9.869233e-13;
             case PorousMediumPermeabilityUnits.SquareMeters:
+            case PorousMediumPermeabilityUnits.SquareMeters:        
                 return value;
             case PorousMediumPermeabilityUnits.SquareCentimeters:
+            case PorousMediumPermeabilityUnits.SquareCentimeters:        
                 return value * 1e-4;
             case PorousMediumPermeabilityUnits.Microdarcys:
+            case PorousMediumPermeabilityUnits.Microdarcys:        
                 return (value * 9.869233e-13) * 0.000001;
             case PorousMediumPermeabilityUnits.Millidarcys:
+            case PorousMediumPermeabilityUnits.Millidarcys:        
                 return (value * 9.869233e-13) * 0.001;
             default:
                 break;

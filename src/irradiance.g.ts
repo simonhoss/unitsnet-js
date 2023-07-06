@@ -27,7 +27,35 @@ export enum IrradianceUnits {
     /** */
     KilowattsPerSquareCentimeter,
     /** */
-    MegawattsPerSquareCentimeter
+    MegawattsPerSquareCentimeter,
+    /** */
+    WattPerSquareMeter,
+    /** */
+    WattPerSquareCentimeter,
+    /** */
+    PicowattPerSquareMeter,
+    /** */
+    NanowattPerSquareMeter,
+    /** */
+    MicrowattPerSquareMeter,
+    /** */
+    MilliwattPerSquareMeter,
+    /** */
+    KilowattPerSquareMeter,
+    /** */
+    MegawattPerSquareMeter,
+    /** */
+    PicowattPerSquareCentimeter,
+    /** */
+    NanowattPerSquareCentimeter,
+    /** */
+    MicrowattPerSquareCentimeter,
+    /** */
+    MilliwattPerSquareCentimeter,
+    /** */
+    KilowattPerSquareCentimeter,
+    /** */
+    MegawattPerSquareCentimeter
 }
 
 /** Irradiance is the intensity of ultraviolet (UV) or visible light incident on a surface. */
@@ -324,32 +352,46 @@ export class Irradiance {
         switch (toUnit) {
                 
             case IrradianceUnits.WattsPerSquareMeter:
+            case IrradianceUnits.WattsPerSquareMeter:        
                 return this.value;
             case IrradianceUnits.WattsPerSquareCentimeter:
+            case IrradianceUnits.WattsPerSquareCentimeter:        
                 return this.value * 0.0001;
             case IrradianceUnits.PicowattsPerSquareMeter:
+            case IrradianceUnits.PicowattsPerSquareMeter:        
                 return (this.value) / 1e-12;
             case IrradianceUnits.NanowattsPerSquareMeter:
+            case IrradianceUnits.NanowattsPerSquareMeter:        
                 return (this.value) / 1e-9;
             case IrradianceUnits.MicrowattsPerSquareMeter:
+            case IrradianceUnits.MicrowattsPerSquareMeter:        
                 return (this.value) / 0.000001;
             case IrradianceUnits.MilliwattsPerSquareMeter:
+            case IrradianceUnits.MilliwattsPerSquareMeter:        
                 return (this.value) / 0.001;
             case IrradianceUnits.KilowattsPerSquareMeter:
+            case IrradianceUnits.KilowattsPerSquareMeter:        
                 return (this.value) / 1000;
             case IrradianceUnits.MegawattsPerSquareMeter:
+            case IrradianceUnits.MegawattsPerSquareMeter:        
                 return (this.value) / 1000000;
             case IrradianceUnits.PicowattsPerSquareCentimeter:
+            case IrradianceUnits.PicowattsPerSquareCentimeter:        
                 return (this.value * 0.0001) / 1e-12;
             case IrradianceUnits.NanowattsPerSquareCentimeter:
+            case IrradianceUnits.NanowattsPerSquareCentimeter:        
                 return (this.value * 0.0001) / 1e-9;
             case IrradianceUnits.MicrowattsPerSquareCentimeter:
+            case IrradianceUnits.MicrowattsPerSquareCentimeter:        
                 return (this.value * 0.0001) / 0.000001;
             case IrradianceUnits.MilliwattsPerSquareCentimeter:
+            case IrradianceUnits.MilliwattsPerSquareCentimeter:        
                 return (this.value * 0.0001) / 0.001;
             case IrradianceUnits.KilowattsPerSquareCentimeter:
+            case IrradianceUnits.KilowattsPerSquareCentimeter:        
                 return (this.value * 0.0001) / 1000;
             case IrradianceUnits.MegawattsPerSquareCentimeter:
+            case IrradianceUnits.MegawattsPerSquareCentimeter:        
                 return (this.value * 0.0001) / 1000000;
             default:
                 break;
@@ -361,32 +403,46 @@ export class Irradiance {
         switch (fromUnit) {
                 
             case IrradianceUnits.WattsPerSquareMeter:
+            case IrradianceUnits.WattsPerSquareMeter:        
                 return value;
             case IrradianceUnits.WattsPerSquareCentimeter:
+            case IrradianceUnits.WattsPerSquareCentimeter:        
                 return value * 10000;
             case IrradianceUnits.PicowattsPerSquareMeter:
+            case IrradianceUnits.PicowattsPerSquareMeter:        
                 return (value) * 1e-12;
             case IrradianceUnits.NanowattsPerSquareMeter:
+            case IrradianceUnits.NanowattsPerSquareMeter:        
                 return (value) * 1e-9;
             case IrradianceUnits.MicrowattsPerSquareMeter:
+            case IrradianceUnits.MicrowattsPerSquareMeter:        
                 return (value) * 0.000001;
             case IrradianceUnits.MilliwattsPerSquareMeter:
+            case IrradianceUnits.MilliwattsPerSquareMeter:        
                 return (value) * 0.001;
             case IrradianceUnits.KilowattsPerSquareMeter:
+            case IrradianceUnits.KilowattsPerSquareMeter:        
                 return (value) * 1000;
             case IrradianceUnits.MegawattsPerSquareMeter:
+            case IrradianceUnits.MegawattsPerSquareMeter:        
                 return (value) * 1000000;
             case IrradianceUnits.PicowattsPerSquareCentimeter:
+            case IrradianceUnits.PicowattsPerSquareCentimeter:        
                 return (value * 10000) * 1e-12;
             case IrradianceUnits.NanowattsPerSquareCentimeter:
+            case IrradianceUnits.NanowattsPerSquareCentimeter:        
                 return (value * 10000) * 1e-9;
             case IrradianceUnits.MicrowattsPerSquareCentimeter:
+            case IrradianceUnits.MicrowattsPerSquareCentimeter:        
                 return (value * 10000) * 0.000001;
             case IrradianceUnits.MilliwattsPerSquareCentimeter:
+            case IrradianceUnits.MilliwattsPerSquareCentimeter:        
                 return (value * 10000) * 0.001;
             case IrradianceUnits.KilowattsPerSquareCentimeter:
+            case IrradianceUnits.KilowattsPerSquareCentimeter:        
                 return (value * 10000) * 1000;
             case IrradianceUnits.MegawattsPerSquareCentimeter:
+            case IrradianceUnits.MegawattsPerSquareCentimeter:        
                 return (value * 10000) * 1000000;
             default:
                 break;

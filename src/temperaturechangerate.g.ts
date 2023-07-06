@@ -19,7 +19,27 @@ export enum TemperatureChangeRateUnits {
     /** */
     HectodegreesCelsiusPerSecond,
     /** */
-    KilodegreesCelsiusPerSecond
+    KilodegreesCelsiusPerSecond,
+    /** */
+    DegreeCelsiusPerSecond,
+    /** */
+    DegreeCelsiusPerMinute,
+    /** */
+    NanodegreeCelsiusPerSecond,
+    /** */
+    MicrodegreeCelsiusPerSecond,
+    /** */
+    MillidegreeCelsiusPerSecond,
+    /** */
+    CentidegreeCelsiusPerSecond,
+    /** */
+    DecidegreeCelsiusPerSecond,
+    /** */
+    DecadegreeCelsiusPerSecond,
+    /** */
+    HectodegreeCelsiusPerSecond,
+    /** */
+    KilodegreeCelsiusPerSecond
 }
 
 /** Temperature change rate is the ratio of the temperature change to the time during which the change occurred (value of temperature changes per unit time). */
@@ -240,24 +260,34 @@ export class TemperatureChangeRate {
         switch (toUnit) {
                 
             case TemperatureChangeRateUnits.DegreesCelsiusPerSecond:
+            case TemperatureChangeRateUnits.DegreesCelsiusPerSecond:        
                 return this.value;
             case TemperatureChangeRateUnits.DegreesCelsiusPerMinute:
+            case TemperatureChangeRateUnits.DegreesCelsiusPerMinute:        
                 return this.value * 60;
             case TemperatureChangeRateUnits.NanodegreesCelsiusPerSecond:
+            case TemperatureChangeRateUnits.NanodegreesCelsiusPerSecond:        
                 return (this.value) / 1e-9;
             case TemperatureChangeRateUnits.MicrodegreesCelsiusPerSecond:
+            case TemperatureChangeRateUnits.MicrodegreesCelsiusPerSecond:        
                 return (this.value) / 0.000001;
             case TemperatureChangeRateUnits.MillidegreesCelsiusPerSecond:
+            case TemperatureChangeRateUnits.MillidegreesCelsiusPerSecond:        
                 return (this.value) / 0.001;
             case TemperatureChangeRateUnits.CentidegreesCelsiusPerSecond:
+            case TemperatureChangeRateUnits.CentidegreesCelsiusPerSecond:        
                 return (this.value) / 0.01;
             case TemperatureChangeRateUnits.DecidegreesCelsiusPerSecond:
+            case TemperatureChangeRateUnits.DecidegreesCelsiusPerSecond:        
                 return (this.value) / 0.1;
             case TemperatureChangeRateUnits.DecadegreesCelsiusPerSecond:
+            case TemperatureChangeRateUnits.DecadegreesCelsiusPerSecond:        
                 return (this.value) / 10;
             case TemperatureChangeRateUnits.HectodegreesCelsiusPerSecond:
+            case TemperatureChangeRateUnits.HectodegreesCelsiusPerSecond:        
                 return (this.value) / 100;
             case TemperatureChangeRateUnits.KilodegreesCelsiusPerSecond:
+            case TemperatureChangeRateUnits.KilodegreesCelsiusPerSecond:        
                 return (this.value) / 1000;
             default:
                 break;
@@ -269,24 +299,34 @@ export class TemperatureChangeRate {
         switch (fromUnit) {
                 
             case TemperatureChangeRateUnits.DegreesCelsiusPerSecond:
+            case TemperatureChangeRateUnits.DegreesCelsiusPerSecond:        
                 return value;
             case TemperatureChangeRateUnits.DegreesCelsiusPerMinute:
+            case TemperatureChangeRateUnits.DegreesCelsiusPerMinute:        
                 return value / 60;
             case TemperatureChangeRateUnits.NanodegreesCelsiusPerSecond:
+            case TemperatureChangeRateUnits.NanodegreesCelsiusPerSecond:        
                 return (value) * 1e-9;
             case TemperatureChangeRateUnits.MicrodegreesCelsiusPerSecond:
+            case TemperatureChangeRateUnits.MicrodegreesCelsiusPerSecond:        
                 return (value) * 0.000001;
             case TemperatureChangeRateUnits.MillidegreesCelsiusPerSecond:
+            case TemperatureChangeRateUnits.MillidegreesCelsiusPerSecond:        
                 return (value) * 0.001;
             case TemperatureChangeRateUnits.CentidegreesCelsiusPerSecond:
+            case TemperatureChangeRateUnits.CentidegreesCelsiusPerSecond:        
                 return (value) * 0.01;
             case TemperatureChangeRateUnits.DecidegreesCelsiusPerSecond:
+            case TemperatureChangeRateUnits.DecidegreesCelsiusPerSecond:        
                 return (value) * 0.1;
             case TemperatureChangeRateUnits.DecadegreesCelsiusPerSecond:
+            case TemperatureChangeRateUnits.DecadegreesCelsiusPerSecond:        
                 return (value) * 10;
             case TemperatureChangeRateUnits.HectodegreesCelsiusPerSecond:
+            case TemperatureChangeRateUnits.HectodegreesCelsiusPerSecond:        
                 return (value) * 100;
             case TemperatureChangeRateUnits.KilodegreesCelsiusPerSecond:
+            case TemperatureChangeRateUnits.KilodegreesCelsiusPerSecond:        
                 return (value) * 1000;
             default:
                 break;

@@ -25,7 +25,33 @@ export enum ImpulseUnits {
     /** */
     KilonewtonSeconds,
     /** */
-    MeganewtonSeconds
+    MeganewtonSeconds,
+    /** */
+    KilogramMeterPerSecond,
+    /** */
+    NewtonSecond,
+    /** */
+    PoundFootPerSecond,
+    /** */
+    PoundForceSecond,
+    /** */
+    SlugFootPerSecond,
+    /** */
+    NanonewtonSecond,
+    /** */
+    MicronewtonSecond,
+    /** */
+    MillinewtonSecond,
+    /** */
+    CentinewtonSecond,
+    /** */
+    DecinewtonSecond,
+    /** */
+    DecanewtonSecond,
+    /** */
+    KilonewtonSecond,
+    /** */
+    MeganewtonSecond
 }
 
 /** In classical mechanics, impulse is the integral of a force, F, over the time interval, t, for which it acts. Impulse applied to an object produces an equivalent vector change in its linear momentum, also in the resultant direction. */
@@ -303,30 +329,43 @@ export class Impulse {
         switch (toUnit) {
                 
             case ImpulseUnits.KilogramMetersPerSecond:
+            case ImpulseUnits.KilogramMetersPerSecond:        
                 return this.value;
             case ImpulseUnits.NewtonSeconds:
+            case ImpulseUnits.NewtonSeconds:        
                 return this.value;
             case ImpulseUnits.PoundFeetPerSecond:
+            case ImpulseUnits.PoundFeetPerSecond:        
                 return this.value * 7.230657989877;
             case ImpulseUnits.PoundForceSeconds:
+            case ImpulseUnits.PoundForceSeconds:        
                 return this.value * 0.2248089430997;
             case ImpulseUnits.SlugFeetPerSecond:
+            case ImpulseUnits.SlugFeetPerSecond:        
                 return this.value * 0.224735720691;
             case ImpulseUnits.NanonewtonSeconds:
+            case ImpulseUnits.NanonewtonSeconds:        
                 return (this.value) / 1e-9;
             case ImpulseUnits.MicronewtonSeconds:
+            case ImpulseUnits.MicronewtonSeconds:        
                 return (this.value) / 0.000001;
             case ImpulseUnits.MillinewtonSeconds:
+            case ImpulseUnits.MillinewtonSeconds:        
                 return (this.value) / 0.001;
             case ImpulseUnits.CentinewtonSeconds:
+            case ImpulseUnits.CentinewtonSeconds:        
                 return (this.value) / 0.01;
             case ImpulseUnits.DecinewtonSeconds:
+            case ImpulseUnits.DecinewtonSeconds:        
                 return (this.value) / 0.1;
             case ImpulseUnits.DecanewtonSeconds:
+            case ImpulseUnits.DecanewtonSeconds:        
                 return (this.value) / 10;
             case ImpulseUnits.KilonewtonSeconds:
+            case ImpulseUnits.KilonewtonSeconds:        
                 return (this.value) / 1000;
             case ImpulseUnits.MeganewtonSeconds:
+            case ImpulseUnits.MeganewtonSeconds:        
                 return (this.value) / 1000000;
             default:
                 break;
@@ -338,30 +377,43 @@ export class Impulse {
         switch (fromUnit) {
                 
             case ImpulseUnits.KilogramMetersPerSecond:
+            case ImpulseUnits.KilogramMetersPerSecond:        
                 return value;
             case ImpulseUnits.NewtonSeconds:
+            case ImpulseUnits.NewtonSeconds:        
                 return value;
             case ImpulseUnits.PoundFeetPerSecond:
+            case ImpulseUnits.PoundFeetPerSecond:        
                 return value / 7.230657989877;
             case ImpulseUnits.PoundForceSeconds:
+            case ImpulseUnits.PoundForceSeconds:        
                 return value / 0.2248089430997;
             case ImpulseUnits.SlugFeetPerSecond:
+            case ImpulseUnits.SlugFeetPerSecond:        
                 return value / 0.224735720691;
             case ImpulseUnits.NanonewtonSeconds:
+            case ImpulseUnits.NanonewtonSeconds:        
                 return (value) * 1e-9;
             case ImpulseUnits.MicronewtonSeconds:
+            case ImpulseUnits.MicronewtonSeconds:        
                 return (value) * 0.000001;
             case ImpulseUnits.MillinewtonSeconds:
+            case ImpulseUnits.MillinewtonSeconds:        
                 return (value) * 0.001;
             case ImpulseUnits.CentinewtonSeconds:
+            case ImpulseUnits.CentinewtonSeconds:        
                 return (value) * 0.01;
             case ImpulseUnits.DecinewtonSeconds:
+            case ImpulseUnits.DecinewtonSeconds:        
                 return (value) * 0.1;
             case ImpulseUnits.DecanewtonSeconds:
+            case ImpulseUnits.DecanewtonSeconds:        
                 return (value) * 10;
             case ImpulseUnits.KilonewtonSeconds:
+            case ImpulseUnits.KilonewtonSeconds:        
                 return (value) * 1000;
             case ImpulseUnits.MeganewtonSeconds:
+            case ImpulseUnits.MeganewtonSeconds:        
                 return (value) * 1000000;
             default:
                 break;

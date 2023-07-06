@@ -11,7 +11,19 @@ export enum ElectricPotentialUnits {
     /** */
     Kilovolts,
     /** */
-    Megavolts
+    Megavolts,
+    /** */
+    Volt,
+    /** */
+    Nanovolt,
+    /** */
+    Microvolt,
+    /** */
+    Millivolt,
+    /** */
+    Kilovolt,
+    /** */
+    Megavolt
 }
 
 /** In classical electromagnetism, the electric potential (a scalar quantity denoted by Φ, ΦE or V and also called the electric field potential or the electrostatic potential) at a point is the amount of electric potential energy that a unitary point charge would have when located at that point. */
@@ -156,16 +168,22 @@ export class ElectricPotential {
         switch (toUnit) {
                 
             case ElectricPotentialUnits.Volts:
+            case ElectricPotentialUnits.Volts:        
                 return this.value;
             case ElectricPotentialUnits.Nanovolts:
+            case ElectricPotentialUnits.Nanovolts:        
                 return (this.value) / 1e-9;
             case ElectricPotentialUnits.Microvolts:
+            case ElectricPotentialUnits.Microvolts:        
                 return (this.value) / 0.000001;
             case ElectricPotentialUnits.Millivolts:
+            case ElectricPotentialUnits.Millivolts:        
                 return (this.value) / 0.001;
             case ElectricPotentialUnits.Kilovolts:
+            case ElectricPotentialUnits.Kilovolts:        
                 return (this.value) / 1000;
             case ElectricPotentialUnits.Megavolts:
+            case ElectricPotentialUnits.Megavolts:        
                 return (this.value) / 1000000;
             default:
                 break;
@@ -177,16 +195,22 @@ export class ElectricPotential {
         switch (fromUnit) {
                 
             case ElectricPotentialUnits.Volts:
+            case ElectricPotentialUnits.Volts:        
                 return value;
             case ElectricPotentialUnits.Nanovolts:
+            case ElectricPotentialUnits.Nanovolts:        
                 return (value) * 1e-9;
             case ElectricPotentialUnits.Microvolts:
+            case ElectricPotentialUnits.Microvolts:        
                 return (value) * 0.000001;
             case ElectricPotentialUnits.Millivolts:
+            case ElectricPotentialUnits.Millivolts:        
                 return (value) * 0.001;
             case ElectricPotentialUnits.Kilovolts:
+            case ElectricPotentialUnits.Kilovolts:        
                 return (value) * 1000;
             case ElectricPotentialUnits.Megavolts:
+            case ElectricPotentialUnits.Megavolts:        
                 return (value) * 1000000;
             default:
                 break;

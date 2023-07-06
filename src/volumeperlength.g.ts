@@ -17,7 +17,25 @@ export enum VolumePerLengthUnits {
     /** */
     UsGallonsPerMile,
     /** */
-    ImperialGallonsPerMile
+    ImperialGallonsPerMile,
+    /** */
+    CubicMeterPerMeter,
+    /** */
+    LiterPerMeter,
+    /** */
+    LiterPerKilometer,
+    /** */
+    LiterPerMillimeter,
+    /** */
+    OilBarrelPerFoot,
+    /** */
+    CubicYardPerFoot,
+    /** */
+    CubicYardPerUsSurveyFoot,
+    /** */
+    UsGallonPerMile,
+    /** */
+    ImperialGallonPerMile
 }
 
 /** Volume, typically of fluid, that a container can hold within a unit of length. */
@@ -219,22 +237,31 @@ export class VolumePerLength {
         switch (toUnit) {
                 
             case VolumePerLengthUnits.CubicMetersPerMeter:
+            case VolumePerLengthUnits.CubicMetersPerMeter:        
                 return this.value;
             case VolumePerLengthUnits.LitersPerMeter:
+            case VolumePerLengthUnits.LitersPerMeter:        
                 return this.value * 1000;
             case VolumePerLengthUnits.LitersPerKilometer:
+            case VolumePerLengthUnits.LitersPerKilometer:        
                 return this.value * 1e6;
             case VolumePerLengthUnits.LitersPerMillimeter:
+            case VolumePerLengthUnits.LitersPerMillimeter:        
                 return this.value;
             case VolumePerLengthUnits.OilBarrelsPerFoot:
+            case VolumePerLengthUnits.OilBarrelsPerFoot:        
                 return this.value * 1.91713408;
             case VolumePerLengthUnits.CubicYardsPerFoot:
+            case VolumePerLengthUnits.CubicYardsPerFoot:        
                 return this.value / 2.50838208;
             case VolumePerLengthUnits.CubicYardsPerUsSurveyFoot:
+            case VolumePerLengthUnits.CubicYardsPerUsSurveyFoot:        
                 return this.value / 2.50837706323584;
             case VolumePerLengthUnits.UsGallonsPerMile:
+            case VolumePerLengthUnits.UsGallonsPerMile:        
                 return this.value * (1000 * 1609.344 / 3.785411784);
             case VolumePerLengthUnits.ImperialGallonsPerMile:
+            case VolumePerLengthUnits.ImperialGallonsPerMile:        
                 return this.value * (1000 * 1609.344 / 4.54609);
             default:
                 break;
@@ -246,22 +273,31 @@ export class VolumePerLength {
         switch (fromUnit) {
                 
             case VolumePerLengthUnits.CubicMetersPerMeter:
+            case VolumePerLengthUnits.CubicMetersPerMeter:        
                 return value;
             case VolumePerLengthUnits.LitersPerMeter:
+            case VolumePerLengthUnits.LitersPerMeter:        
                 return value / 1000;
             case VolumePerLengthUnits.LitersPerKilometer:
+            case VolumePerLengthUnits.LitersPerKilometer:        
                 return value / 1e6;
             case VolumePerLengthUnits.LitersPerMillimeter:
+            case VolumePerLengthUnits.LitersPerMillimeter:        
                 return value;
             case VolumePerLengthUnits.OilBarrelsPerFoot:
+            case VolumePerLengthUnits.OilBarrelsPerFoot:        
                 return value / 1.91713408;
             case VolumePerLengthUnits.CubicYardsPerFoot:
+            case VolumePerLengthUnits.CubicYardsPerFoot:        
                 return value * 2.50838208;
             case VolumePerLengthUnits.CubicYardsPerUsSurveyFoot:
+            case VolumePerLengthUnits.CubicYardsPerUsSurveyFoot:        
                 return value * 2.50837706323584;
             case VolumePerLengthUnits.UsGallonsPerMile:
+            case VolumePerLengthUnits.UsGallonsPerMile:        
                 return value / (1000 * 1609.344 / 3.785411784);
             case VolumePerLengthUnits.ImperialGallonsPerMile:
+            case VolumePerLengthUnits.ImperialGallonsPerMile:        
                 return value / (1000 * 1609.344 / 4.54609);
             default:
                 break;

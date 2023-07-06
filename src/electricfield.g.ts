@@ -1,7 +1,9 @@
 /** ElectricFieldUnits enumeration */
 export enum ElectricFieldUnits {
     /** */
-    VoltsPerMeter
+    VoltsPerMeter,
+    /** */
+    VoltPerMeter
 }
 
 /** An electric field is a force field that surrounds electric charges that attracts or repels other electric charges. */
@@ -51,6 +53,7 @@ export class ElectricField {
         switch (toUnit) {
                 
             case ElectricFieldUnits.VoltsPerMeter:
+            case ElectricFieldUnits.VoltsPerMeter:        
                 return this.value;
             default:
                 break;
@@ -62,6 +65,7 @@ export class ElectricField {
         switch (fromUnit) {
                 
             case ElectricFieldUnits.VoltsPerMeter:
+            case ElectricFieldUnits.VoltsPerMeter:        
                 return value;
             default:
                 break;

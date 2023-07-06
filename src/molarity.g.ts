@@ -21,7 +21,29 @@ export enum MolarityUnits {
     /** */
     CentimolesPerLiter,
     /** */
-    DecimolesPerLiter
+    DecimolesPerLiter,
+    /** */
+    MolePerCubicMeter,
+    /** */
+    MolePerLiter,
+    /** */
+    PoundMolePerCubicFoot,
+    /** */
+    KilomolePerCubicMeter,
+    /** */
+    FemtomolePerLiter,
+    /** */
+    PicomolePerLiter,
+    /** */
+    NanomolePerLiter,
+    /** */
+    MicromolePerLiter,
+    /** */
+    MillimolePerLiter,
+    /** */
+    CentimolePerLiter,
+    /** */
+    DecimolePerLiter
 }
 
 /** Molar concentration, also called molarity, amount concentration or substance concentration, is a measure of the concentration of a solute in a solution, or of any chemical species, in terms of amount of substance in a given volume. */
@@ -261,26 +283,37 @@ export class Molarity {
         switch (toUnit) {
                 
             case MolarityUnits.MolesPerCubicMeter:
+            case MolarityUnits.MolesPerCubicMeter:        
                 return this.value;
             case MolarityUnits.MolesPerLiter:
+            case MolarityUnits.MolesPerLiter:        
                 return this.value * 1e-3;
             case MolarityUnits.PoundMolesPerCubicFoot:
+            case MolarityUnits.PoundMolesPerCubicFoot:        
                 return this.value * 6.2427960576144611956325455827221e-5;
             case MolarityUnits.KilomolesPerCubicMeter:
+            case MolarityUnits.KilomolesPerCubicMeter:        
                 return (this.value) / 1000;
             case MolarityUnits.FemtomolesPerLiter:
+            case MolarityUnits.FemtomolesPerLiter:        
                 return (this.value * 1e-3) / 1e-15;
             case MolarityUnits.PicomolesPerLiter:
+            case MolarityUnits.PicomolesPerLiter:        
                 return (this.value * 1e-3) / 1e-12;
             case MolarityUnits.NanomolesPerLiter:
+            case MolarityUnits.NanomolesPerLiter:        
                 return (this.value * 1e-3) / 1e-9;
             case MolarityUnits.MicromolesPerLiter:
+            case MolarityUnits.MicromolesPerLiter:        
                 return (this.value * 1e-3) / 0.000001;
             case MolarityUnits.MillimolesPerLiter:
+            case MolarityUnits.MillimolesPerLiter:        
                 return (this.value * 1e-3) / 0.001;
             case MolarityUnits.CentimolesPerLiter:
+            case MolarityUnits.CentimolesPerLiter:        
                 return (this.value * 1e-3) / 0.01;
             case MolarityUnits.DecimolesPerLiter:
+            case MolarityUnits.DecimolesPerLiter:        
                 return (this.value * 1e-3) / 0.1;
             default:
                 break;
@@ -292,26 +325,37 @@ export class Molarity {
         switch (fromUnit) {
                 
             case MolarityUnits.MolesPerCubicMeter:
+            case MolarityUnits.MolesPerCubicMeter:        
                 return value;
             case MolarityUnits.MolesPerLiter:
+            case MolarityUnits.MolesPerLiter:        
                 return value / 1e-3;
             case MolarityUnits.PoundMolesPerCubicFoot:
+            case MolarityUnits.PoundMolesPerCubicFoot:        
                 return value / 6.2427960576144611956325455827221e-5;
             case MolarityUnits.KilomolesPerCubicMeter:
+            case MolarityUnits.KilomolesPerCubicMeter:        
                 return (value) * 1000;
             case MolarityUnits.FemtomolesPerLiter:
+            case MolarityUnits.FemtomolesPerLiter:        
                 return (value / 1e-3) * 1e-15;
             case MolarityUnits.PicomolesPerLiter:
+            case MolarityUnits.PicomolesPerLiter:        
                 return (value / 1e-3) * 1e-12;
             case MolarityUnits.NanomolesPerLiter:
+            case MolarityUnits.NanomolesPerLiter:        
                 return (value / 1e-3) * 1e-9;
             case MolarityUnits.MicromolesPerLiter:
+            case MolarityUnits.MicromolesPerLiter:        
                 return (value / 1e-3) * 0.000001;
             case MolarityUnits.MillimolesPerLiter:
+            case MolarityUnits.MillimolesPerLiter:        
                 return (value / 1e-3) * 0.001;
             case MolarityUnits.CentimolesPerLiter:
+            case MolarityUnits.CentimolesPerLiter:        
                 return (value / 1e-3) * 0.01;
             case MolarityUnits.DecimolesPerLiter:
+            case MolarityUnits.DecimolesPerLiter:        
                 return (value / 1e-3) * 0.1;
             default:
                 break;

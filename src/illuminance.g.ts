@@ -114,12 +114,16 @@ export class Illuminance {
         switch (toUnit) {
                 
             case IlluminanceUnits.Lux:
+                    
                 return this.value;
             case IlluminanceUnits.Millilux:
+                    
                 return (this.value) / 0.001;
             case IlluminanceUnits.Kilolux:
+                    
                 return (this.value) / 1000;
             case IlluminanceUnits.Megalux:
+                    
                 return (this.value) / 1000000;
             default:
                 break;
@@ -131,12 +135,16 @@ export class Illuminance {
         switch (fromUnit) {
                 
             case IlluminanceUnits.Lux:
+                    
                 return value;
             case IlluminanceUnits.Millilux:
+                    
                 return (value) * 0.001;
             case IlluminanceUnits.Kilolux:
+                    
                 return (value) * 1000;
             case IlluminanceUnits.Megalux:
+                    
                 return (value) * 1000000;
             default:
                 break;

@@ -101,7 +101,109 @@ export enum DensityUnits {
     /** */
     CentigramsPerMilliliter,
     /** */
-    DecigramsPerMilliliter
+    DecigramsPerMilliliter,
+    /** */
+    GramPerCubicMillimeter,
+    /** */
+    GramPerCubicCentimeter,
+    /** */
+    GramPerCubicMeter,
+    /** */
+    PoundPerCubicInch,
+    /** */
+    PoundPerCubicFoot,
+    /** */
+    TonnePerCubicMillimeter,
+    /** */
+    TonnePerCubicCentimeter,
+    /** */
+    TonnePerCubicMeter,
+    /** */
+    SlugPerCubicFoot,
+    /** */
+    GramPerLiter,
+    /** */
+    GramPerDeciliter,
+    /** */
+    GramPerMilliliter,
+    /** */
+    PoundPerUSGallon,
+    /** */
+    PoundPerImperialGallon,
+    /** */
+    KilogramPerLiter,
+    /** */
+    TonnePerCubicFoot,
+    /** */
+    TonnePerCubicInch,
+    /** */
+    GramPerCubicFoot,
+    /** */
+    GramPerCubicInch,
+    /** */
+    PoundPerCubicMeter,
+    /** */
+    PoundPerCubicCentimeter,
+    /** */
+    PoundPerCubicMillimeter,
+    /** */
+    SlugPerCubicMeter,
+    /** */
+    SlugPerCubicCentimeter,
+    /** */
+    SlugPerCubicMillimeter,
+    /** */
+    SlugPerCubicInch,
+    /** */
+    KilogramPerCubicMillimeter,
+    /** */
+    KilogramPerCubicCentimeter,
+    /** */
+    KilogramPerCubicMeter,
+    /** */
+    MilligramPerCubicMeter,
+    /** */
+    MicrogramPerCubicMeter,
+    /** */
+    KilopoundPerCubicInch,
+    /** */
+    KilopoundPerCubicFoot,
+    /** */
+    PicogramPerLiter,
+    /** */
+    NanogramPerLiter,
+    /** */
+    MicrogramPerLiter,
+    /** */
+    MilligramPerLiter,
+    /** */
+    CentigramPerLiter,
+    /** */
+    DecigramPerLiter,
+    /** */
+    PicogramPerDeciliter,
+    /** */
+    NanogramPerDeciliter,
+    /** */
+    MicrogramPerDeciliter,
+    /** */
+    MilligramPerDeciliter,
+    /** */
+    CentigramPerDeciliter,
+    /** */
+    DecigramPerDeciliter,
+    /** */
+    PicogramPerMilliliter,
+    /** */
+    NanogramPerMilliliter,
+    /** */
+    MicrogramPerMilliliter,
+    /** */
+    MilligramPerMilliliter,
+    /** */
+    CentigramPerMilliliter,
+    /** */
+    DecigramPerMilliliter
 }
 
 /** The density, or more precisely, the volumetric mass density, of a substance is its mass per unit volume. */
@@ -1101,106 +1203,157 @@ export class Density {
         switch (toUnit) {
                 
             case DensityUnits.GramsPerCubicMillimeter:
+            case DensityUnits.GramsPerCubicMillimeter:        
                 return this.value * 1e-6;
             case DensityUnits.GramsPerCubicCentimeter:
+            case DensityUnits.GramsPerCubicCentimeter:        
                 return this.value * 1e-3;
             case DensityUnits.GramsPerCubicMeter:
+            case DensityUnits.GramsPerCubicMeter:        
                 return this.value * 1e3;
             case DensityUnits.PoundsPerCubicInch:
+            case DensityUnits.PoundsPerCubicInch:        
                 return this.value * 3.6127298147753e-5;
             case DensityUnits.PoundsPerCubicFoot:
+            case DensityUnits.PoundsPerCubicFoot:        
                 return this.value * 0.062427961;
             case DensityUnits.TonnesPerCubicMillimeter:
+            case DensityUnits.TonnesPerCubicMillimeter:        
                 return this.value * 1e-12;
             case DensityUnits.TonnesPerCubicCentimeter:
+            case DensityUnits.TonnesPerCubicCentimeter:        
                 return this.value * 1e-9;
             case DensityUnits.TonnesPerCubicMeter:
+            case DensityUnits.TonnesPerCubicMeter:        
                 return this.value * 0.001;
             case DensityUnits.SlugsPerCubicFoot:
+            case DensityUnits.SlugsPerCubicFoot:        
                 return this.value * 0.00194032033;
             case DensityUnits.GramsPerLiter:
+            case DensityUnits.GramsPerLiter:        
                 return this.value * 1;
             case DensityUnits.GramsPerDeciLiter:
+            case DensityUnits.GramsPerDeciLiter:        
                 return this.value * 1e-1;
             case DensityUnits.GramsPerMilliliter:
+            case DensityUnits.GramsPerMilliliter:        
                 return this.value * 1e-3;
             case DensityUnits.PoundsPerUSGallon:
+            case DensityUnits.PoundsPerUSGallon:        
                 return this.value / 1.19826427e2;
             case DensityUnits.PoundsPerImperialGallon:
+            case DensityUnits.PoundsPerImperialGallon:        
                 return this.value / 9.9776398e1;
             case DensityUnits.KilogramsPerLiter:
+            case DensityUnits.KilogramsPerLiter:        
                 return this.value / 1e3;
             case DensityUnits.TonnesPerCubicFoot:
+            case DensityUnits.TonnesPerCubicFoot:        
                 return this.value / 3.53146667214886e4;
             case DensityUnits.TonnesPerCubicInch:
+            case DensityUnits.TonnesPerCubicInch:        
                 return this.value / 6.10237440947323e7;
             case DensityUnits.GramsPerCubicFoot:
+            case DensityUnits.GramsPerCubicFoot:        
                 return this.value / 0.0353146667214886;
             case DensityUnits.GramsPerCubicInch:
+            case DensityUnits.GramsPerCubicInch:        
                 return this.value / 61.0237440947323;
             case DensityUnits.PoundsPerCubicMeter:
+            case DensityUnits.PoundsPerCubicMeter:        
                 return this.value * 2.204622621848775;
             case DensityUnits.PoundsPerCubicCentimeter:
+            case DensityUnits.PoundsPerCubicCentimeter:        
                 return this.value * 2.204622621848775e-6;
             case DensityUnits.PoundsPerCubicMillimeter:
+            case DensityUnits.PoundsPerCubicMillimeter:        
                 return this.value * 2.204622621848775e-9;
             case DensityUnits.SlugsPerCubicMeter:
+            case DensityUnits.SlugsPerCubicMeter:        
                 return this.value / 14.5939;
             case DensityUnits.SlugsPerCubicCentimeter:
+            case DensityUnits.SlugsPerCubicCentimeter:        
                 return this.value / 14593903;
             case DensityUnits.SlugsPerCubicMillimeter:
+            case DensityUnits.SlugsPerCubicMillimeter:        
                 return this.value / 14593903000;
             case DensityUnits.SlugsPerCubicInch:
+            case DensityUnits.SlugsPerCubicInch:        
                 return this.value / 890574.60201535;
             case DensityUnits.KilogramsPerCubicMillimeter:
+            case DensityUnits.KilogramsPerCubicMillimeter:        
                 return (this.value * 1e-6) / 1000;
             case DensityUnits.KilogramsPerCubicCentimeter:
+            case DensityUnits.KilogramsPerCubicCentimeter:        
                 return (this.value * 1e-3) / 1000;
             case DensityUnits.KilogramsPerCubicMeter:
+            case DensityUnits.KilogramsPerCubicMeter:        
                 return (this.value * 1e3) / 1000;
             case DensityUnits.MilligramsPerCubicMeter:
+            case DensityUnits.MilligramsPerCubicMeter:        
                 return (this.value * 1e3) / 0.001;
             case DensityUnits.MicrogramsPerCubicMeter:
+            case DensityUnits.MicrogramsPerCubicMeter:        
                 return (this.value * 1e3) / 0.000001;
             case DensityUnits.KilopoundsPerCubicInch:
+            case DensityUnits.KilopoundsPerCubicInch:        
                 return (this.value * 3.6127298147753e-5) / 1000;
             case DensityUnits.KilopoundsPerCubicFoot:
+            case DensityUnits.KilopoundsPerCubicFoot:        
                 return (this.value * 0.062427961) / 1000;
             case DensityUnits.PicogramsPerLiter:
+            case DensityUnits.PicogramsPerLiter:        
                 return (this.value * 1) / 1e-12;
             case DensityUnits.NanogramsPerLiter:
+            case DensityUnits.NanogramsPerLiter:        
                 return (this.value * 1) / 1e-9;
             case DensityUnits.MicrogramsPerLiter:
+            case DensityUnits.MicrogramsPerLiter:        
                 return (this.value * 1) / 0.000001;
             case DensityUnits.MilligramsPerLiter:
+            case DensityUnits.MilligramsPerLiter:        
                 return (this.value * 1) / 0.001;
             case DensityUnits.CentigramsPerLiter:
+            case DensityUnits.CentigramsPerLiter:        
                 return (this.value * 1) / 0.01;
             case DensityUnits.DecigramsPerLiter:
+            case DensityUnits.DecigramsPerLiter:        
                 return (this.value * 1) / 0.1;
             case DensityUnits.PicogramsPerDeciLiter:
+            case DensityUnits.PicogramsPerDeciLiter:        
                 return (this.value * 1e-1) / 1e-12;
             case DensityUnits.NanogramsPerDeciLiter:
+            case DensityUnits.NanogramsPerDeciLiter:        
                 return (this.value * 1e-1) / 1e-9;
             case DensityUnits.MicrogramsPerDeciLiter:
+            case DensityUnits.MicrogramsPerDeciLiter:        
                 return (this.value * 1e-1) / 0.000001;
             case DensityUnits.MilligramsPerDeciLiter:
+            case DensityUnits.MilligramsPerDeciLiter:        
                 return (this.value * 1e-1) / 0.001;
             case DensityUnits.CentigramsPerDeciLiter:
+            case DensityUnits.CentigramsPerDeciLiter:        
                 return (this.value * 1e-1) / 0.01;
             case DensityUnits.DecigramsPerDeciLiter:
+            case DensityUnits.DecigramsPerDeciLiter:        
                 return (this.value * 1e-1) / 0.1;
             case DensityUnits.PicogramsPerMilliliter:
+            case DensityUnits.PicogramsPerMilliliter:        
                 return (this.value * 1e-3) / 1e-12;
             case DensityUnits.NanogramsPerMilliliter:
+            case DensityUnits.NanogramsPerMilliliter:        
                 return (this.value * 1e-3) / 1e-9;
             case DensityUnits.MicrogramsPerMilliliter:
+            case DensityUnits.MicrogramsPerMilliliter:        
                 return (this.value * 1e-3) / 0.000001;
             case DensityUnits.MilligramsPerMilliliter:
+            case DensityUnits.MilligramsPerMilliliter:        
                 return (this.value * 1e-3) / 0.001;
             case DensityUnits.CentigramsPerMilliliter:
+            case DensityUnits.CentigramsPerMilliliter:        
                 return (this.value * 1e-3) / 0.01;
             case DensityUnits.DecigramsPerMilliliter:
+            case DensityUnits.DecigramsPerMilliliter:        
                 return (this.value * 1e-3) / 0.1;
             default:
                 break;
@@ -1212,106 +1365,157 @@ export class Density {
         switch (fromUnit) {
                 
             case DensityUnits.GramsPerCubicMillimeter:
+            case DensityUnits.GramsPerCubicMillimeter:        
                 return value / 1e-6;
             case DensityUnits.GramsPerCubicCentimeter:
+            case DensityUnits.GramsPerCubicCentimeter:        
                 return value / 1e-3;
             case DensityUnits.GramsPerCubicMeter:
+            case DensityUnits.GramsPerCubicMeter:        
                 return value / 1e3;
             case DensityUnits.PoundsPerCubicInch:
+            case DensityUnits.PoundsPerCubicInch:        
                 return value / 3.6127298147753e-5;
             case DensityUnits.PoundsPerCubicFoot:
+            case DensityUnits.PoundsPerCubicFoot:        
                 return value / 0.062427961;
             case DensityUnits.TonnesPerCubicMillimeter:
+            case DensityUnits.TonnesPerCubicMillimeter:        
                 return value / 1e-12;
             case DensityUnits.TonnesPerCubicCentimeter:
+            case DensityUnits.TonnesPerCubicCentimeter:        
                 return value / 1e-9;
             case DensityUnits.TonnesPerCubicMeter:
+            case DensityUnits.TonnesPerCubicMeter:        
                 return value / 0.001;
             case DensityUnits.SlugsPerCubicFoot:
+            case DensityUnits.SlugsPerCubicFoot:        
                 return value * 515.378818;
             case DensityUnits.GramsPerLiter:
+            case DensityUnits.GramsPerLiter:        
                 return value / 1;
             case DensityUnits.GramsPerDeciLiter:
+            case DensityUnits.GramsPerDeciLiter:        
                 return value / 1e-1;
             case DensityUnits.GramsPerMilliliter:
+            case DensityUnits.GramsPerMilliliter:        
                 return value / 1e-3;
             case DensityUnits.PoundsPerUSGallon:
+            case DensityUnits.PoundsPerUSGallon:        
                 return value * 1.19826427e2;
             case DensityUnits.PoundsPerImperialGallon:
+            case DensityUnits.PoundsPerImperialGallon:        
                 return value * 9.9776398e1;
             case DensityUnits.KilogramsPerLiter:
+            case DensityUnits.KilogramsPerLiter:        
                 return value * 1e3;
             case DensityUnits.TonnesPerCubicFoot:
+            case DensityUnits.TonnesPerCubicFoot:        
                 return value * 3.53146667214886e4;
             case DensityUnits.TonnesPerCubicInch:
+            case DensityUnits.TonnesPerCubicInch:        
                 return value * 6.10237440947323e7;
             case DensityUnits.GramsPerCubicFoot:
+            case DensityUnits.GramsPerCubicFoot:        
                 return value * 0.0353146667214886;
             case DensityUnits.GramsPerCubicInch:
+            case DensityUnits.GramsPerCubicInch:        
                 return value * 61.0237440947323;
             case DensityUnits.PoundsPerCubicMeter:
+            case DensityUnits.PoundsPerCubicMeter:        
                 return value / 2.204622621848775;
             case DensityUnits.PoundsPerCubicCentimeter:
+            case DensityUnits.PoundsPerCubicCentimeter:        
                 return value / 2.204622621848775e-6;
             case DensityUnits.PoundsPerCubicMillimeter:
+            case DensityUnits.PoundsPerCubicMillimeter:        
                 return value / 2.204622621848775e-9;
             case DensityUnits.SlugsPerCubicMeter:
+            case DensityUnits.SlugsPerCubicMeter:        
                 return value * 14.5939;
             case DensityUnits.SlugsPerCubicCentimeter:
+            case DensityUnits.SlugsPerCubicCentimeter:        
                 return value * 14593903;
             case DensityUnits.SlugsPerCubicMillimeter:
+            case DensityUnits.SlugsPerCubicMillimeter:        
                 return value * 14593903000;
             case DensityUnits.SlugsPerCubicInch:
+            case DensityUnits.SlugsPerCubicInch:        
                 return value * 890574.60201535;
             case DensityUnits.KilogramsPerCubicMillimeter:
+            case DensityUnits.KilogramsPerCubicMillimeter:        
                 return (value / 1e-6) * 1000;
             case DensityUnits.KilogramsPerCubicCentimeter:
+            case DensityUnits.KilogramsPerCubicCentimeter:        
                 return (value / 1e-3) * 1000;
             case DensityUnits.KilogramsPerCubicMeter:
+            case DensityUnits.KilogramsPerCubicMeter:        
                 return (value / 1e3) * 1000;
             case DensityUnits.MilligramsPerCubicMeter:
+            case DensityUnits.MilligramsPerCubicMeter:        
                 return (value / 1e3) * 0.001;
             case DensityUnits.MicrogramsPerCubicMeter:
+            case DensityUnits.MicrogramsPerCubicMeter:        
                 return (value / 1e3) * 0.000001;
             case DensityUnits.KilopoundsPerCubicInch:
+            case DensityUnits.KilopoundsPerCubicInch:        
                 return (value / 3.6127298147753e-5) * 1000;
             case DensityUnits.KilopoundsPerCubicFoot:
+            case DensityUnits.KilopoundsPerCubicFoot:        
                 return (value / 0.062427961) * 1000;
             case DensityUnits.PicogramsPerLiter:
+            case DensityUnits.PicogramsPerLiter:        
                 return (value / 1) * 1e-12;
             case DensityUnits.NanogramsPerLiter:
+            case DensityUnits.NanogramsPerLiter:        
                 return (value / 1) * 1e-9;
             case DensityUnits.MicrogramsPerLiter:
+            case DensityUnits.MicrogramsPerLiter:        
                 return (value / 1) * 0.000001;
             case DensityUnits.MilligramsPerLiter:
+            case DensityUnits.MilligramsPerLiter:        
                 return (value / 1) * 0.001;
             case DensityUnits.CentigramsPerLiter:
+            case DensityUnits.CentigramsPerLiter:        
                 return (value / 1) * 0.01;
             case DensityUnits.DecigramsPerLiter:
+            case DensityUnits.DecigramsPerLiter:        
                 return (value / 1) * 0.1;
             case DensityUnits.PicogramsPerDeciLiter:
+            case DensityUnits.PicogramsPerDeciLiter:        
                 return (value / 1e-1) * 1e-12;
             case DensityUnits.NanogramsPerDeciLiter:
+            case DensityUnits.NanogramsPerDeciLiter:        
                 return (value / 1e-1) * 1e-9;
             case DensityUnits.MicrogramsPerDeciLiter:
+            case DensityUnits.MicrogramsPerDeciLiter:        
                 return (value / 1e-1) * 0.000001;
             case DensityUnits.MilligramsPerDeciLiter:
+            case DensityUnits.MilligramsPerDeciLiter:        
                 return (value / 1e-1) * 0.001;
             case DensityUnits.CentigramsPerDeciLiter:
+            case DensityUnits.CentigramsPerDeciLiter:        
                 return (value / 1e-1) * 0.01;
             case DensityUnits.DecigramsPerDeciLiter:
+            case DensityUnits.DecigramsPerDeciLiter:        
                 return (value / 1e-1) * 0.1;
             case DensityUnits.PicogramsPerMilliliter:
+            case DensityUnits.PicogramsPerMilliliter:        
                 return (value / 1e-3) * 1e-12;
             case DensityUnits.NanogramsPerMilliliter:
+            case DensityUnits.NanogramsPerMilliliter:        
                 return (value / 1e-3) * 1e-9;
             case DensityUnits.MicrogramsPerMilliliter:
+            case DensityUnits.MicrogramsPerMilliliter:        
                 return (value / 1e-3) * 0.000001;
             case DensityUnits.MilligramsPerMilliliter:
+            case DensityUnits.MilligramsPerMilliliter:        
                 return (value / 1e-3) * 0.001;
             case DensityUnits.CentigramsPerMilliliter:
+            case DensityUnits.CentigramsPerMilliliter:        
                 return (value / 1e-3) * 0.01;
             case DensityUnits.DecigramsPerMilliliter:
+            case DensityUnits.DecigramsPerMilliliter:        
                 return (value / 1e-3) * 0.1;
             default:
                 break;

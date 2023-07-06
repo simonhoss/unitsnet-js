@@ -3,7 +3,11 @@ export enum LevelUnits {
     /** */
     Decibels,
     /** */
-    Nepers
+    Nepers,
+    /** */
+    Decibel,
+    /** */
+    Neper
 }
 
 /** Level is the logarithm of the ratio of a quantity Q to a reference value of that quantity, Q₀, expressed in dimensionless units. */
@@ -72,8 +76,10 @@ export class Level {
         switch (toUnit) {
                 
             case LevelUnits.Decibels:
+            case LevelUnits.Decibels:        
                 return this.value;
             case LevelUnits.Nepers:
+            case LevelUnits.Nepers:        
                 return 0.115129254 * this.value;
             default:
                 break;
@@ -85,8 +91,10 @@ export class Level {
         switch (fromUnit) {
                 
             case LevelUnits.Decibels:
+            case LevelUnits.Decibels:        
                 return value;
             case LevelUnits.Nepers:
+            case LevelUnits.Nepers:        
                 return (1 / 0.115129254) * value;
             default:
                 break;

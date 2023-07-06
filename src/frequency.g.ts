@@ -25,7 +25,17 @@ export enum FrequencyUnits {
     /** */
     Gigahertz,
     /** */
-    Terahertz
+    Terahertz,
+    /** */
+    RadianPerSecond,
+    /** */
+    CyclePerMinute,
+    /** */
+    CyclePerHour,
+    /** */
+    BeatPerMinute,
+    /** */
+    BUnit
 }
 
 /** The number of occurrences of a repeating event per unit time. */
@@ -303,30 +313,43 @@ export class Frequency {
         switch (toUnit) {
                 
             case FrequencyUnits.Hertz:
+                    
                 return this.value;
             case FrequencyUnits.RadiansPerSecond:
+            case FrequencyUnits.RadiansPerSecond:        
                 return this.value * 6.2831853072;
             case FrequencyUnits.CyclesPerMinute:
+            case FrequencyUnits.CyclesPerMinute:        
                 return this.value * 60;
             case FrequencyUnits.CyclesPerHour:
+            case FrequencyUnits.CyclesPerHour:        
                 return this.value * 3600;
             case FrequencyUnits.BeatsPerMinute:
+            case FrequencyUnits.BeatsPerMinute:        
                 return this.value * 60;
             case FrequencyUnits.PerSecond:
+                    
                 return this.value;
             case FrequencyUnits.BUnits:
+            case FrequencyUnits.BUnits:        
                 return this.value * this.value * 1e-3;
             case FrequencyUnits.Microhertz:
+                    
                 return (this.value) / 0.000001;
             case FrequencyUnits.Millihertz:
+                    
                 return (this.value) / 0.001;
             case FrequencyUnits.Kilohertz:
+                    
                 return (this.value) / 1000;
             case FrequencyUnits.Megahertz:
+                    
                 return (this.value) / 1000000;
             case FrequencyUnits.Gigahertz:
+                    
                 return (this.value) / 1000000000;
             case FrequencyUnits.Terahertz:
+                    
                 return (this.value) / 1000000000000;
             default:
                 break;
@@ -338,30 +361,43 @@ export class Frequency {
         switch (fromUnit) {
                 
             case FrequencyUnits.Hertz:
+                    
                 return value;
             case FrequencyUnits.RadiansPerSecond:
+            case FrequencyUnits.RadiansPerSecond:        
                 return value / 6.2831853072;
             case FrequencyUnits.CyclesPerMinute:
+            case FrequencyUnits.CyclesPerMinute:        
                 return value / 60;
             case FrequencyUnits.CyclesPerHour:
+            case FrequencyUnits.CyclesPerHour:        
                 return value / 3600;
             case FrequencyUnits.BeatsPerMinute:
+            case FrequencyUnits.BeatsPerMinute:        
                 return value / 60;
             case FrequencyUnits.PerSecond:
+                    
                 return value;
             case FrequencyUnits.BUnits:
+            case FrequencyUnits.BUnits:        
                 return Math.sqrt(value * 1e3);
             case FrequencyUnits.Microhertz:
+                    
                 return (value) * 0.000001;
             case FrequencyUnits.Millihertz:
+                    
                 return (value) * 0.001;
             case FrequencyUnits.Kilohertz:
+                    
                 return (value) * 1000;
             case FrequencyUnits.Megahertz:
+                    
                 return (value) * 1000000;
             case FrequencyUnits.Gigahertz:
+                    
                 return (value) * 1000000000;
             case FrequencyUnits.Terahertz:
+                    
                 return (value) * 1000000000000;
             default:
                 break;

@@ -31,7 +31,39 @@ export enum AbsorbedDoseOfIonizingRadiationUnits {
     /** */
     Kilorads,
     /** */
-    Megarads
+    Megarads,
+    /** The gray is the unit of ionizing radiation dose in the SI, defined as the absorption of one joule of radiation energy per kilogram of matter. */
+    Gray,
+    /** The rad is a unit of absorbed radiation dose, defined as 1 rad = 0.01 Gy = 0.01 J/kg. */
+    Rad,
+    /** */
+    Femtogray,
+    /** */
+    Picogray,
+    /** */
+    Nanogray,
+    /** */
+    Microgray,
+    /** */
+    Milligray,
+    /** */
+    Centigray,
+    /** */
+    Kilogray,
+    /** */
+    Megagray,
+    /** */
+    Gigagray,
+    /** */
+    Teragray,
+    /** */
+    Petagray,
+    /** */
+    Millirad,
+    /** */
+    Kilorad,
+    /** */
+    Megarad
 }
 
 /** Absorbed dose is a dose quantity which is the measure of the energy deposited in matter by ionizing radiation per unit mass. */
@@ -366,36 +398,52 @@ export class AbsorbedDoseOfIonizingRadiation {
         switch (toUnit) {
                 
             case AbsorbedDoseOfIonizingRadiationUnits.Grays:
+            case AbsorbedDoseOfIonizingRadiationUnits.Grays:        
                 return this.value;
             case AbsorbedDoseOfIonizingRadiationUnits.Rads:
+            case AbsorbedDoseOfIonizingRadiationUnits.Rads:        
                 return this.value * 100;
             case AbsorbedDoseOfIonizingRadiationUnits.Femtograys:
+            case AbsorbedDoseOfIonizingRadiationUnits.Femtograys:        
                 return (this.value) / 1e-15;
             case AbsorbedDoseOfIonizingRadiationUnits.Picograys:
+            case AbsorbedDoseOfIonizingRadiationUnits.Picograys:        
                 return (this.value) / 1e-12;
             case AbsorbedDoseOfIonizingRadiationUnits.Nanograys:
+            case AbsorbedDoseOfIonizingRadiationUnits.Nanograys:        
                 return (this.value) / 1e-9;
             case AbsorbedDoseOfIonizingRadiationUnits.Micrograys:
+            case AbsorbedDoseOfIonizingRadiationUnits.Micrograys:        
                 return (this.value) / 0.000001;
             case AbsorbedDoseOfIonizingRadiationUnits.Milligrays:
+            case AbsorbedDoseOfIonizingRadiationUnits.Milligrays:        
                 return (this.value) / 0.001;
             case AbsorbedDoseOfIonizingRadiationUnits.Centigrays:
+            case AbsorbedDoseOfIonizingRadiationUnits.Centigrays:        
                 return (this.value) / 0.01;
             case AbsorbedDoseOfIonizingRadiationUnits.Kilograys:
+            case AbsorbedDoseOfIonizingRadiationUnits.Kilograys:        
                 return (this.value) / 1000;
             case AbsorbedDoseOfIonizingRadiationUnits.Megagrays:
+            case AbsorbedDoseOfIonizingRadiationUnits.Megagrays:        
                 return (this.value) / 1000000;
             case AbsorbedDoseOfIonizingRadiationUnits.Gigagrays:
+            case AbsorbedDoseOfIonizingRadiationUnits.Gigagrays:        
                 return (this.value) / 1000000000;
             case AbsorbedDoseOfIonizingRadiationUnits.Teragrays:
+            case AbsorbedDoseOfIonizingRadiationUnits.Teragrays:        
                 return (this.value) / 1000000000000;
             case AbsorbedDoseOfIonizingRadiationUnits.Petagrays:
+            case AbsorbedDoseOfIonizingRadiationUnits.Petagrays:        
                 return (this.value) / 1000000000000000;
             case AbsorbedDoseOfIonizingRadiationUnits.Millirads:
+            case AbsorbedDoseOfIonizingRadiationUnits.Millirads:        
                 return (this.value * 100) / 0.001;
             case AbsorbedDoseOfIonizingRadiationUnits.Kilorads:
+            case AbsorbedDoseOfIonizingRadiationUnits.Kilorads:        
                 return (this.value * 100) / 1000;
             case AbsorbedDoseOfIonizingRadiationUnits.Megarads:
+            case AbsorbedDoseOfIonizingRadiationUnits.Megarads:        
                 return (this.value * 100) / 1000000;
             default:
                 break;
@@ -407,36 +455,52 @@ export class AbsorbedDoseOfIonizingRadiation {
         switch (fromUnit) {
                 
             case AbsorbedDoseOfIonizingRadiationUnits.Grays:
+            case AbsorbedDoseOfIonizingRadiationUnits.Grays:        
                 return value;
             case AbsorbedDoseOfIonizingRadiationUnits.Rads:
+            case AbsorbedDoseOfIonizingRadiationUnits.Rads:        
                 return value / 100;
             case AbsorbedDoseOfIonizingRadiationUnits.Femtograys:
+            case AbsorbedDoseOfIonizingRadiationUnits.Femtograys:        
                 return (value) * 1e-15;
             case AbsorbedDoseOfIonizingRadiationUnits.Picograys:
+            case AbsorbedDoseOfIonizingRadiationUnits.Picograys:        
                 return (value) * 1e-12;
             case AbsorbedDoseOfIonizingRadiationUnits.Nanograys:
+            case AbsorbedDoseOfIonizingRadiationUnits.Nanograys:        
                 return (value) * 1e-9;
             case AbsorbedDoseOfIonizingRadiationUnits.Micrograys:
+            case AbsorbedDoseOfIonizingRadiationUnits.Micrograys:        
                 return (value) * 0.000001;
             case AbsorbedDoseOfIonizingRadiationUnits.Milligrays:
+            case AbsorbedDoseOfIonizingRadiationUnits.Milligrays:        
                 return (value) * 0.001;
             case AbsorbedDoseOfIonizingRadiationUnits.Centigrays:
+            case AbsorbedDoseOfIonizingRadiationUnits.Centigrays:        
                 return (value) * 0.01;
             case AbsorbedDoseOfIonizingRadiationUnits.Kilograys:
+            case AbsorbedDoseOfIonizingRadiationUnits.Kilograys:        
                 return (value) * 1000;
             case AbsorbedDoseOfIonizingRadiationUnits.Megagrays:
+            case AbsorbedDoseOfIonizingRadiationUnits.Megagrays:        
                 return (value) * 1000000;
             case AbsorbedDoseOfIonizingRadiationUnits.Gigagrays:
+            case AbsorbedDoseOfIonizingRadiationUnits.Gigagrays:        
                 return (value) * 1000000000;
             case AbsorbedDoseOfIonizingRadiationUnits.Teragrays:
+            case AbsorbedDoseOfIonizingRadiationUnits.Teragrays:        
                 return (value) * 1000000000000;
             case AbsorbedDoseOfIonizingRadiationUnits.Petagrays:
+            case AbsorbedDoseOfIonizingRadiationUnits.Petagrays:        
                 return (value) * 1000000000000000;
             case AbsorbedDoseOfIonizingRadiationUnits.Millirads:
+            case AbsorbedDoseOfIonizingRadiationUnits.Millirads:        
                 return (value / 100) * 0.001;
             case AbsorbedDoseOfIonizingRadiationUnits.Kilorads:
+            case AbsorbedDoseOfIonizingRadiationUnits.Kilorads:        
                 return (value / 100) * 1000;
             case AbsorbedDoseOfIonizingRadiationUnits.Megarads:
+            case AbsorbedDoseOfIonizingRadiationUnits.Megarads:        
                 return (value / 100) * 1000000;
             default:
                 break;

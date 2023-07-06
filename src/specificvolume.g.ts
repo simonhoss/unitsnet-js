@@ -5,7 +5,13 @@ export enum SpecificVolumeUnits {
     /** */
     CubicFeetPerPound,
     /** */
-    MillicubicMetersPerKilogram
+    MillicubicMetersPerKilogram,
+    /** */
+    CubicMeterPerKilogram,
+    /** */
+    CubicFootPerPound,
+    /** */
+    MillicubicMeterPerKilogram
 }
 
 /** In thermodynamics, the specific volume of a substance is the ratio of the substance's volume to its mass. It is the reciprocal of density and an intrinsic property of matter as well. */
@@ -93,10 +99,13 @@ export class SpecificVolume {
         switch (toUnit) {
                 
             case SpecificVolumeUnits.CubicMetersPerKilogram:
+            case SpecificVolumeUnits.CubicMetersPerKilogram:        
                 return this.value;
             case SpecificVolumeUnits.CubicFeetPerPound:
+            case SpecificVolumeUnits.CubicFeetPerPound:        
                 return this.value * 16.01846353;
             case SpecificVolumeUnits.MillicubicMetersPerKilogram:
+            case SpecificVolumeUnits.MillicubicMetersPerKilogram:        
                 return (this.value) / 0.001;
             default:
                 break;
@@ -108,10 +117,13 @@ export class SpecificVolume {
         switch (fromUnit) {
                 
             case SpecificVolumeUnits.CubicMetersPerKilogram:
+            case SpecificVolumeUnits.CubicMetersPerKilogram:        
                 return value;
             case SpecificVolumeUnits.CubicFeetPerPound:
+            case SpecificVolumeUnits.CubicFeetPerPound:        
                 return value / 16.01846353;
             case SpecificVolumeUnits.MillicubicMetersPerKilogram:
+            case SpecificVolumeUnits.MillicubicMetersPerKilogram:        
                 return (value) * 0.001;
             default:
                 break;

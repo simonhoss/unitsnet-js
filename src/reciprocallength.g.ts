@@ -19,7 +19,27 @@ export enum ReciprocalLengthUnits {
     /** */
     InverseMils,
     /** */
-    InverseMicroinches
+    InverseMicroinches,
+    /** */
+    InverseMeter,
+    /** */
+    InverseCentimeter,
+    /** */
+    InverseMillimeter,
+    /** */
+    InverseMile,
+    /** */
+    InverseYard,
+    /** */
+    InverseFoot,
+    /** */
+    InverseUsSurveyFoot,
+    /** */
+    InverseInch,
+    /** */
+    InverseMil,
+    /** */
+    InverseMicroinch
 }
 
 /** Reciprocal (Inverse) Length is used in various fields of science and mathematics. It is defined as the inverse value of a length unit. */
@@ -240,24 +260,34 @@ export class ReciprocalLength {
         switch (toUnit) {
                 
             case ReciprocalLengthUnits.InverseMeters:
+            case ReciprocalLengthUnits.InverseMeters:        
                 return this.value;
             case ReciprocalLengthUnits.InverseCentimeters:
+            case ReciprocalLengthUnits.InverseCentimeters:        
                 return this.value / 1e2;
             case ReciprocalLengthUnits.InverseMillimeters:
+            case ReciprocalLengthUnits.InverseMillimeters:        
                 return this.value / 1e3;
             case ReciprocalLengthUnits.InverseMiles:
+            case ReciprocalLengthUnits.InverseMiles:        
                 return this.value * 1609.344;
             case ReciprocalLengthUnits.InverseYards:
+            case ReciprocalLengthUnits.InverseYards:        
                 return this.value * 0.9144;
             case ReciprocalLengthUnits.InverseFeet:
+            case ReciprocalLengthUnits.InverseFeet:        
                 return this.value * 0.3048;
             case ReciprocalLengthUnits.InverseUsSurveyFeet:
+            case ReciprocalLengthUnits.InverseUsSurveyFeet:        
                 return this.value * 1200 / 3937;
             case ReciprocalLengthUnits.InverseInches:
+            case ReciprocalLengthUnits.InverseInches:        
                 return this.value * 2.54e-2;
             case ReciprocalLengthUnits.InverseMils:
+            case ReciprocalLengthUnits.InverseMils:        
                 return this.value * 2.54e-5;
             case ReciprocalLengthUnits.InverseMicroinches:
+            case ReciprocalLengthUnits.InverseMicroinches:        
                 return this.value * 2.54e-8;
             default:
                 break;
@@ -269,24 +299,34 @@ export class ReciprocalLength {
         switch (fromUnit) {
                 
             case ReciprocalLengthUnits.InverseMeters:
+            case ReciprocalLengthUnits.InverseMeters:        
                 return value;
             case ReciprocalLengthUnits.InverseCentimeters:
+            case ReciprocalLengthUnits.InverseCentimeters:        
                 return value * 1e2;
             case ReciprocalLengthUnits.InverseMillimeters:
+            case ReciprocalLengthUnits.InverseMillimeters:        
                 return value * 1e3;
             case ReciprocalLengthUnits.InverseMiles:
+            case ReciprocalLengthUnits.InverseMiles:        
                 return value / 1609.344;
             case ReciprocalLengthUnits.InverseYards:
+            case ReciprocalLengthUnits.InverseYards:        
                 return value / 0.9144;
             case ReciprocalLengthUnits.InverseFeet:
+            case ReciprocalLengthUnits.InverseFeet:        
                 return value / 0.3048;
             case ReciprocalLengthUnits.InverseUsSurveyFeet:
+            case ReciprocalLengthUnits.InverseUsSurveyFeet:        
                 return value * 3937 / 1200;
             case ReciprocalLengthUnits.InverseInches:
+            case ReciprocalLengthUnits.InverseInches:        
                 return value / 2.54e-2;
             case ReciprocalLengthUnits.InverseMils:
+            case ReciprocalLengthUnits.InverseMils:        
                 return value / 2.54e-5;
             case ReciprocalLengthUnits.InverseMicroinches:
+            case ReciprocalLengthUnits.InverseMicroinches:        
                 return value / 2.54e-8;
             default:
                 break;

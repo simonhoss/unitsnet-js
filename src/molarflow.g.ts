@@ -17,7 +17,25 @@ export enum MolarFlowUnits {
     /** */
     KilomolesPerMinute,
     /** */
-    KilomolesPerHour
+    KilomolesPerHour,
+    /** */
+    MolePerSecond,
+    /** */
+    MolePerMinute,
+    /** */
+    MolePerHour,
+    /** */
+    PoundMolePerSecond,
+    /** */
+    PoundMolePerMinute,
+    /** */
+    PoundMolePerHour,
+    /** */
+    KilomolePerSecond,
+    /** */
+    KilomolePerMinute,
+    /** */
+    KilomolePerHour
 }
 
 /** Molar flow is the ratio of the amount of substance change to the time during which the change occurred (value of amount of substance changes per unit time). */
@@ -219,22 +237,31 @@ export class MolarFlow {
         switch (toUnit) {
                 
             case MolarFlowUnits.MolesPerSecond:
+            case MolarFlowUnits.MolesPerSecond:        
                 return this.value;
             case MolarFlowUnits.MolesPerMinute:
+            case MolarFlowUnits.MolesPerMinute:        
                 return this.value * 60;
             case MolarFlowUnits.MolesPerHour:
+            case MolarFlowUnits.MolesPerHour:        
                 return this.value * 3600;
             case MolarFlowUnits.PoundMolesPerSecond:
+            case MolarFlowUnits.PoundMolesPerSecond:        
                 return this.value / 453.59237;
             case MolarFlowUnits.PoundMolesPerMinute:
+            case MolarFlowUnits.PoundMolesPerMinute:        
                 return (this.value / 453.59237) * 60;
             case MolarFlowUnits.PoundMolesPerHour:
+            case MolarFlowUnits.PoundMolesPerHour:        
                 return (this.value / 453.59237) * 3600;
             case MolarFlowUnits.KilomolesPerSecond:
+            case MolarFlowUnits.KilomolesPerSecond:        
                 return (this.value) / 1000;
             case MolarFlowUnits.KilomolesPerMinute:
+            case MolarFlowUnits.KilomolesPerMinute:        
                 return (this.value * 60) / 1000;
             case MolarFlowUnits.KilomolesPerHour:
+            case MolarFlowUnits.KilomolesPerHour:        
                 return (this.value * 3600) / 1000;
             default:
                 break;
@@ -246,22 +273,31 @@ export class MolarFlow {
         switch (fromUnit) {
                 
             case MolarFlowUnits.MolesPerSecond:
+            case MolarFlowUnits.MolesPerSecond:        
                 return value;
             case MolarFlowUnits.MolesPerMinute:
+            case MolarFlowUnits.MolesPerMinute:        
                 return value / 60;
             case MolarFlowUnits.MolesPerHour:
+            case MolarFlowUnits.MolesPerHour:        
                 return value / 3600;
             case MolarFlowUnits.PoundMolesPerSecond:
+            case MolarFlowUnits.PoundMolesPerSecond:        
                 return value * 453.59237;
             case MolarFlowUnits.PoundMolesPerMinute:
+            case MolarFlowUnits.PoundMolesPerMinute:        
                 return (value * 453.59237) / 60;
             case MolarFlowUnits.PoundMolesPerHour:
+            case MolarFlowUnits.PoundMolesPerHour:        
                 return (value * 453.59237) / 3600;
             case MolarFlowUnits.KilomolesPerSecond:
+            case MolarFlowUnits.KilomolesPerSecond:        
                 return (value) * 1000;
             case MolarFlowUnits.KilomolesPerMinute:
+            case MolarFlowUnits.KilomolesPerMinute:        
                 return (value / 60) * 1000;
             case MolarFlowUnits.KilomolesPerHour:
+            case MolarFlowUnits.KilomolesPerHour:        
                 return (value / 3600) * 1000;
             default:
                 break;

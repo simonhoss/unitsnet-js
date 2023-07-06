@@ -9,7 +9,17 @@ export enum ElectricInductanceUnits {
     /** */
     Microhenries,
     /** */
-    Millihenries
+    Millihenries,
+    /** */
+    Henry,
+    /** */
+    Picohenry,
+    /** */
+    Nanohenry,
+    /** */
+    Microhenry,
+    /** */
+    Millihenry
 }
 
 /** Inductance is a property of an electrical conductor which opposes a change in current. */
@@ -135,14 +145,19 @@ export class ElectricInductance {
         switch (toUnit) {
                 
             case ElectricInductanceUnits.Henries:
+            case ElectricInductanceUnits.Henries:        
                 return this.value;
             case ElectricInductanceUnits.Picohenries:
+            case ElectricInductanceUnits.Picohenries:        
                 return (this.value) / 1e-12;
             case ElectricInductanceUnits.Nanohenries:
+            case ElectricInductanceUnits.Nanohenries:        
                 return (this.value) / 1e-9;
             case ElectricInductanceUnits.Microhenries:
+            case ElectricInductanceUnits.Microhenries:        
                 return (this.value) / 0.000001;
             case ElectricInductanceUnits.Millihenries:
+            case ElectricInductanceUnits.Millihenries:        
                 return (this.value) / 0.001;
             default:
                 break;
@@ -154,14 +169,19 @@ export class ElectricInductance {
         switch (fromUnit) {
                 
             case ElectricInductanceUnits.Henries:
+            case ElectricInductanceUnits.Henries:        
                 return value;
             case ElectricInductanceUnits.Picohenries:
+            case ElectricInductanceUnits.Picohenries:        
                 return (value) * 1e-12;
             case ElectricInductanceUnits.Nanohenries:
+            case ElectricInductanceUnits.Nanohenries:        
                 return (value) * 1e-9;
             case ElectricInductanceUnits.Microhenries:
+            case ElectricInductanceUnits.Microhenries:        
                 return (value) * 0.000001;
             case ElectricInductanceUnits.Millihenries:
+            case ElectricInductanceUnits.Millihenries:        
                 return (value) * 0.001;
             default:
                 break;

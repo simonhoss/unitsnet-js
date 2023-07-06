@@ -7,7 +7,15 @@ export enum SpecificFuelConsumptionUnits {
     /** */
     GramsPerKiloNewtonSecond,
     /** */
-    KilogramsPerKiloNewtonSecond
+    KilogramsPerKiloNewtonSecond,
+    /** */
+    PoundMassPerPoundForceHour,
+    /** */
+    KilogramPerKilogramForceHour,
+    /** */
+    GramPerKiloNewtonSecond,
+    /** */
+    KilogramPerKiloNewtonSecond
 }
 
 /** SFC is the fuel efficiency of an engine design with respect to thrust output */
@@ -114,12 +122,16 @@ export class SpecificFuelConsumption {
         switch (toUnit) {
                 
             case SpecificFuelConsumptionUnits.PoundsMassPerPoundForceHour:
+            case SpecificFuelConsumptionUnits.PoundsMassPerPoundForceHour:        
                 return this.value / 28.33;
             case SpecificFuelConsumptionUnits.KilogramsPerKilogramForceHour:
+            case SpecificFuelConsumptionUnits.KilogramsPerKilogramForceHour:        
                 return this.value / 28.33;
             case SpecificFuelConsumptionUnits.GramsPerKiloNewtonSecond:
+            case SpecificFuelConsumptionUnits.GramsPerKiloNewtonSecond:        
                 return this.value;
             case SpecificFuelConsumptionUnits.KilogramsPerKiloNewtonSecond:
+            case SpecificFuelConsumptionUnits.KilogramsPerKiloNewtonSecond:        
                 return (this.value) / 1000;
             default:
                 break;
@@ -131,12 +143,16 @@ export class SpecificFuelConsumption {
         switch (fromUnit) {
                 
             case SpecificFuelConsumptionUnits.PoundsMassPerPoundForceHour:
+            case SpecificFuelConsumptionUnits.PoundsMassPerPoundForceHour:        
                 return value * 28.33;
             case SpecificFuelConsumptionUnits.KilogramsPerKilogramForceHour:
+            case SpecificFuelConsumptionUnits.KilogramsPerKilogramForceHour:        
                 return value * 28.33;
             case SpecificFuelConsumptionUnits.GramsPerKiloNewtonSecond:
+            case SpecificFuelConsumptionUnits.GramsPerKiloNewtonSecond:        
                 return value;
             case SpecificFuelConsumptionUnits.KilogramsPerKiloNewtonSecond:
+            case SpecificFuelConsumptionUnits.KilogramsPerKiloNewtonSecond:        
                 return (value) * 1000;
             default:
                 break;

@@ -135,14 +135,19 @@ export class ElectricConductance {
         switch (toUnit) {
                 
             case ElectricConductanceUnits.Siemens:
+                    
                 return this.value;
             case ElectricConductanceUnits.Nanosiemens:
+                    
                 return (this.value) / 1e-9;
             case ElectricConductanceUnits.Microsiemens:
+                    
                 return (this.value) / 0.000001;
             case ElectricConductanceUnits.Millisiemens:
+                    
                 return (this.value) / 0.001;
             case ElectricConductanceUnits.Kilosiemens:
+                    
                 return (this.value) / 1000;
             default:
                 break;
@@ -154,14 +159,19 @@ export class ElectricConductance {
         switch (fromUnit) {
                 
             case ElectricConductanceUnits.Siemens:
+                    
                 return value;
             case ElectricConductanceUnits.Nanosiemens:
+                    
                 return (value) * 1e-9;
             case ElectricConductanceUnits.Microsiemens:
+                    
                 return (value) * 0.000001;
             case ElectricConductanceUnits.Millisiemens:
+                    
                 return (value) * 0.001;
             case ElectricConductanceUnits.Kilosiemens:
+                    
                 return (value) * 1000;
             default:
                 break;

@@ -51,6 +51,7 @@ export class LuminousIntensity {
         switch (toUnit) {
                 
             case LuminousIntensityUnits.Candela:
+                    
                 return this.value;
             default:
                 break;
@@ -62,6 +63,7 @@ export class LuminousIntensity {
         switch (fromUnit) {
                 
             case LuminousIntensityUnits.Candela:
+                    
                 return value;
             default:
                 break;

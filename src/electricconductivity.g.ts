@@ -156,16 +156,22 @@ export class ElectricConductivity {
         switch (toUnit) {
                 
             case ElectricConductivityUnits.SiemensPerMeter:
+                    
                 return this.value;
             case ElectricConductivityUnits.SiemensPerInch:
+                    
                 return this.value / 3.937007874015748e1;
             case ElectricConductivityUnits.SiemensPerFoot:
+                    
                 return this.value / 3.2808398950131234;
             case ElectricConductivityUnits.SiemensPerCentimeter:
+                    
                 return this.value / 1e2;
             case ElectricConductivityUnits.MicrosiemensPerCentimeter:
+                    
                 return (this.value / 1e2) / 0.000001;
             case ElectricConductivityUnits.MillisiemensPerCentimeter:
+                    
                 return (this.value / 1e2) / 0.001;
             default:
                 break;
@@ -177,16 +183,22 @@ export class ElectricConductivity {
         switch (fromUnit) {
                 
             case ElectricConductivityUnits.SiemensPerMeter:
+                    
                 return value;
             case ElectricConductivityUnits.SiemensPerInch:
+                    
                 return value * 3.937007874015748e1;
             case ElectricConductivityUnits.SiemensPerFoot:
+                    
                 return value * 3.2808398950131234;
             case ElectricConductivityUnits.SiemensPerCentimeter:
+                    
                 return value * 1e2;
             case ElectricConductivityUnits.MicrosiemensPerCentimeter:
+                    
                 return (value * 1e2) * 0.000001;
             case ElectricConductivityUnits.MillisiemensPerCentimeter:
+                    
                 return (value * 1e2) * 0.001;
             default:
                 break;

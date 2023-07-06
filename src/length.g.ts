@@ -73,7 +73,81 @@ export enum LengthUnits {
     /** */
     KilolightYears,
     /** */
-    MegalightYears
+    MegalightYears,
+    /** */
+    Meter,
+    /** The statute mile was standardised between the British Commonwealth and the United States by an international agreement in 1959, when it was formally redefined with respect to SI units as exactly 1,609.344 metres. */
+    Mile,
+    /** The yard (symbol: yd) is an English unit of length in both the British imperial and US customary systems of measurement equalling 3 feet (or 36 inches). Since 1959 the yard has been by international agreement standardized as exactly 0.9144 meter. A distance of 1,760 yards is equal to 1 mile. */
+    Yard,
+    /** */
+    Foot,
+    /** In the United States, the foot was defined as 12 inches, with the inch being defined by the Mendenhall Order of 1893 as 39.37 inches = 1 m. This makes a U.S. survey foot exactly 1200/3937 meters. */
+    UsSurveyFoot,
+    /** */
+    Inch,
+    /** */
+    Mil,
+    /** */
+    NauticalMile,
+    /** */
+    Fathom,
+    /** */
+    Shackle,
+    /** */
+    Microinch,
+    /** */
+    PrinterPoint,
+    /** */
+    DtpPoint,
+    /** */
+    PrinterPica,
+    /** */
+    DtpPica,
+    /** */
+    Twip,
+    /** */
+    Hand,
+    /** One Astronomical Unit is the distance from the solar system Star, the sun, to planet Earth. */
+    AstronomicalUnit,
+    /** A parsec is defined as the distance at which one astronomical unit (AU) subtends an angle of one arcsecond. */
+    Parsec,
+    /** A Light Year (ly) is the distance that light travel during an Earth year, ie 365 days. */
+    LightYear,
+    /** Solar radius is a ratio unit to the radius of the solar system star, the sun. */
+    SolarRadius,
+    /** */
+    Chain,
+    /** Angstrom is a metric unit of length equal to 1e-10 meter */
+    Angstrom,
+    /** In radar-related subjects and in JTIDS, a data mile is a unit of distance equal to 6000 feet (1.8288 kilometres or 0.987 nautical miles). */
+    DataMile,
+    /** */
+    Nanometer,
+    /** */
+    Micrometer,
+    /** */
+    Millimeter,
+    /** */
+    Centimeter,
+    /** */
+    Decimeter,
+    /** */
+    Decameter,
+    /** */
+    Hectometer,
+    /** */
+    Kilometer,
+    /** */
+    Megameter,
+    /** */
+    Kiloparsec,
+    /** */
+    Megaparsec,
+    /** */
+    KilolightYear,
+    /** */
+    MegalightYear
 }
 
 /** Many different units of length have been used around the world. The main units in modern use are U.S. customary units in the United States and the Metric system elsewhere. British Imperial units are still used for some purposes in the United Kingdom and some other countries. The metric system is sub-divided into SI and non-SI units. */
@@ -807,78 +881,115 @@ export class Length {
         switch (toUnit) {
                 
             case LengthUnits.Meters:
+            case LengthUnits.Meters:        
                 return this.value;
             case LengthUnits.Miles:
+            case LengthUnits.Miles:        
                 return this.value / 1609.344;
             case LengthUnits.Yards:
+            case LengthUnits.Yards:        
                 return this.value / 0.9144;
             case LengthUnits.Feet:
+            case LengthUnits.Feet:        
                 return this.value / 0.3048;
             case LengthUnits.UsSurveyFeet:
+            case LengthUnits.UsSurveyFeet:        
                 return this.value * 3937 / 1200;
             case LengthUnits.Inches:
+            case LengthUnits.Inches:        
                 return this.value / 2.54e-2;
             case LengthUnits.Mils:
+            case LengthUnits.Mils:        
                 return this.value / 2.54e-5;
             case LengthUnits.NauticalMiles:
+            case LengthUnits.NauticalMiles:        
                 return this.value / 1852;
             case LengthUnits.Fathoms:
+            case LengthUnits.Fathoms:        
                 return this.value / 1.8288;
             case LengthUnits.Shackles:
+            case LengthUnits.Shackles:        
                 return this.value / 27.432;
             case LengthUnits.Microinches:
+            case LengthUnits.Microinches:        
                 return this.value / 2.54e-8;
             case LengthUnits.PrinterPoints:
+            case LengthUnits.PrinterPoints:        
                 return (this.value / 2.54e-2) * 72.27;
             case LengthUnits.DtpPoints:
+            case LengthUnits.DtpPoints:        
                 return (this.value / 2.54e-2) * 72;
             case LengthUnits.PrinterPicas:
+            case LengthUnits.PrinterPicas:        
                 return this.value * 237.106301584;
             case LengthUnits.DtpPicas:
+            case LengthUnits.DtpPicas:        
                 return this.value * 236.220472441;
             case LengthUnits.Twips:
+            case LengthUnits.Twips:        
                 return this.value * 56692.913385826;
             case LengthUnits.Hands:
+            case LengthUnits.Hands:        
                 return this.value / 1.016e-1;
             case LengthUnits.AstronomicalUnits:
+            case LengthUnits.AstronomicalUnits:        
                 return this.value / 1.4959787070e11;
             case LengthUnits.Parsecs:
+            case LengthUnits.Parsecs:        
                 return this.value / 3.08567758128e16;
             case LengthUnits.LightYears:
+            case LengthUnits.LightYears:        
                 return this.value / 9.46073047258e15;
             case LengthUnits.SolarRadiuses:
+            case LengthUnits.SolarRadiuses:        
                 return this.value / 6.95510000E+08;
             case LengthUnits.Chains:
+            case LengthUnits.Chains:        
                 return this.value / 20.1168;
             case LengthUnits.Angstroms:
+            case LengthUnits.Angstroms:        
                 return this.value / 1e-10;
             case LengthUnits.DataMiles:
+            case LengthUnits.DataMiles:        
                 return this.value / 1828.8;
             case LengthUnits.Nanometers:
+            case LengthUnits.Nanometers:        
                 return (this.value) / 1e-9;
             case LengthUnits.Micrometers:
+            case LengthUnits.Micrometers:        
                 return (this.value) / 0.000001;
             case LengthUnits.Millimeters:
+            case LengthUnits.Millimeters:        
                 return (this.value) / 0.001;
             case LengthUnits.Centimeters:
+            case LengthUnits.Centimeters:        
                 return (this.value) / 0.01;
             case LengthUnits.Decimeters:
+            case LengthUnits.Decimeters:        
                 return (this.value) / 0.1;
             case LengthUnits.Decameters:
+            case LengthUnits.Decameters:        
                 return (this.value) / 10;
             case LengthUnits.Hectometers:
+            case LengthUnits.Hectometers:        
                 return (this.value) / 100;
             case LengthUnits.Kilometers:
+            case LengthUnits.Kilometers:        
                 return (this.value) / 1000;
             case LengthUnits.Megameters:
+            case LengthUnits.Megameters:        
                 return (this.value) / 1000000;
             case LengthUnits.Kiloparsecs:
+            case LengthUnits.Kiloparsecs:        
                 return (this.value / 3.08567758128e16) / 1000;
             case LengthUnits.Megaparsecs:
+            case LengthUnits.Megaparsecs:        
                 return (this.value / 3.08567758128e16) / 1000000;
             case LengthUnits.KilolightYears:
+            case LengthUnits.KilolightYears:        
                 return (this.value / 9.46073047258e15) / 1000;
             case LengthUnits.MegalightYears:
+            case LengthUnits.MegalightYears:        
                 return (this.value / 9.46073047258e15) / 1000000;
             default:
                 break;
@@ -890,78 +1001,115 @@ export class Length {
         switch (fromUnit) {
                 
             case LengthUnits.Meters:
+            case LengthUnits.Meters:        
                 return value;
             case LengthUnits.Miles:
+            case LengthUnits.Miles:        
                 return value * 1609.344;
             case LengthUnits.Yards:
+            case LengthUnits.Yards:        
                 return value * 0.9144;
             case LengthUnits.Feet:
+            case LengthUnits.Feet:        
                 return value * 0.3048;
             case LengthUnits.UsSurveyFeet:
+            case LengthUnits.UsSurveyFeet:        
                 return value * 1200 / 3937;
             case LengthUnits.Inches:
+            case LengthUnits.Inches:        
                 return value * 2.54e-2;
             case LengthUnits.Mils:
+            case LengthUnits.Mils:        
                 return value * 2.54e-5;
             case LengthUnits.NauticalMiles:
+            case LengthUnits.NauticalMiles:        
                 return value * 1852;
             case LengthUnits.Fathoms:
+            case LengthUnits.Fathoms:        
                 return value * 1.8288;
             case LengthUnits.Shackles:
+            case LengthUnits.Shackles:        
                 return value * 27.432;
             case LengthUnits.Microinches:
+            case LengthUnits.Microinches:        
                 return value * 2.54e-8;
             case LengthUnits.PrinterPoints:
+            case LengthUnits.PrinterPoints:        
                 return (value / 72.27) * 2.54e-2;
             case LengthUnits.DtpPoints:
+            case LengthUnits.DtpPoints:        
                 return (value / 72) * 2.54e-2;
             case LengthUnits.PrinterPicas:
+            case LengthUnits.PrinterPicas:        
                 return value / 237.106301584;
             case LengthUnits.DtpPicas:
+            case LengthUnits.DtpPicas:        
                 return value / 236.220472441;
             case LengthUnits.Twips:
+            case LengthUnits.Twips:        
                 return value / 56692.913385826;
             case LengthUnits.Hands:
+            case LengthUnits.Hands:        
                 return value * 1.016e-1;
             case LengthUnits.AstronomicalUnits:
+            case LengthUnits.AstronomicalUnits:        
                 return value * 1.4959787070e11;
             case LengthUnits.Parsecs:
+            case LengthUnits.Parsecs:        
                 return value * 3.08567758128e16;
             case LengthUnits.LightYears:
+            case LengthUnits.LightYears:        
                 return value * 9.46073047258e15;
             case LengthUnits.SolarRadiuses:
+            case LengthUnits.SolarRadiuses:        
                 return value * 6.95510000E+08;
             case LengthUnits.Chains:
+            case LengthUnits.Chains:        
                 return value * 20.1168;
             case LengthUnits.Angstroms:
+            case LengthUnits.Angstroms:        
                 return value * 1e-10;
             case LengthUnits.DataMiles:
+            case LengthUnits.DataMiles:        
                 return value * 1828.8;
             case LengthUnits.Nanometers:
+            case LengthUnits.Nanometers:        
                 return (value) * 1e-9;
             case LengthUnits.Micrometers:
+            case LengthUnits.Micrometers:        
                 return (value) * 0.000001;
             case LengthUnits.Millimeters:
+            case LengthUnits.Millimeters:        
                 return (value) * 0.001;
             case LengthUnits.Centimeters:
+            case LengthUnits.Centimeters:        
                 return (value) * 0.01;
             case LengthUnits.Decimeters:
+            case LengthUnits.Decimeters:        
                 return (value) * 0.1;
             case LengthUnits.Decameters:
+            case LengthUnits.Decameters:        
                 return (value) * 10;
             case LengthUnits.Hectometers:
+            case LengthUnits.Hectometers:        
                 return (value) * 100;
             case LengthUnits.Kilometers:
+            case LengthUnits.Kilometers:        
                 return (value) * 1000;
             case LengthUnits.Megameters:
+            case LengthUnits.Megameters:        
                 return (value) * 1000000;
             case LengthUnits.Kiloparsecs:
+            case LengthUnits.Kiloparsecs:        
                 return (value * 3.08567758128e16) * 1000;
             case LengthUnits.Megaparsecs:
+            case LengthUnits.Megaparsecs:        
                 return (value * 3.08567758128e16) * 1000000;
             case LengthUnits.KilolightYears:
+            case LengthUnits.KilolightYears:        
                 return (value * 9.46073047258e15) * 1000;
             case LengthUnits.MegalightYears:
+            case LengthUnits.MegalightYears:        
                 return (value * 9.46073047258e15) * 1000000;
             default:
                 break;

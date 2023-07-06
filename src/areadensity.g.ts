@@ -5,7 +5,13 @@ export enum AreaDensityUnits {
     /** Also known as grammage for paper industry. In fiber industry used with abbreviation 'gsm'. */
     GramsPerSquareMeter,
     /** */
-    MilligramsPerSquareMeter
+    MilligramsPerSquareMeter,
+    /** */
+    KilogramPerSquareMeter,
+    /** Also known as grammage for paper industry. In fiber industry used with abbreviation 'gsm'. */
+    GramPerSquareMeter,
+    /** */
+    MilligramPerSquareMeter
 }
 
 /** The area density of a two-dimensional object is calculated as the mass per unit area. For paper this is also called grammage. */
@@ -93,10 +99,13 @@ export class AreaDensity {
         switch (toUnit) {
                 
             case AreaDensityUnits.KilogramsPerSquareMeter:
+            case AreaDensityUnits.KilogramsPerSquareMeter:        
                 return this.value;
             case AreaDensityUnits.GramsPerSquareMeter:
+            case AreaDensityUnits.GramsPerSquareMeter:        
                 return this.value * 1000;
             case AreaDensityUnits.MilligramsPerSquareMeter:
+            case AreaDensityUnits.MilligramsPerSquareMeter:        
                 return this.value * 1000000;
             default:
                 break;
@@ -108,10 +117,13 @@ export class AreaDensity {
         switch (fromUnit) {
                 
             case AreaDensityUnits.KilogramsPerSquareMeter:
+            case AreaDensityUnits.KilogramsPerSquareMeter:        
                 return value;
             case AreaDensityUnits.GramsPerSquareMeter:
+            case AreaDensityUnits.GramsPerSquareMeter:        
                 return value / 1000;
             case AreaDensityUnits.MilligramsPerSquareMeter:
+            case AreaDensityUnits.MilligramsPerSquareMeter:        
                 return value / 1000000;
             default:
                 break;

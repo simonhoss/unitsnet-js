@@ -3,7 +3,11 @@ export enum RatioChangeRateUnits {
     /** */
     PercentsPerSecond,
     /** */
-    DecimalFractionsPerSecond
+    DecimalFractionsPerSecond,
+    /** */
+    PercentPerSecond,
+    /** */
+    DecimalFractionPerSecond
 }
 
 /** The change in ratio per unit of time. */
@@ -72,8 +76,10 @@ export class RatioChangeRate {
         switch (toUnit) {
                 
             case RatioChangeRateUnits.PercentsPerSecond:
+            case RatioChangeRateUnits.PercentsPerSecond:        
                 return this.value * 1e2;
             case RatioChangeRateUnits.DecimalFractionsPerSecond:
+            case RatioChangeRateUnits.DecimalFractionsPerSecond:        
                 return this.value;
             default:
                 break;
@@ -85,8 +91,10 @@ export class RatioChangeRate {
         switch (fromUnit) {
                 
             case RatioChangeRateUnits.PercentsPerSecond:
+            case RatioChangeRateUnits.PercentsPerSecond:        
                 return value / 1e2;
             case RatioChangeRateUnits.DecimalFractionsPerSecond:
+            case RatioChangeRateUnits.DecimalFractionsPerSecond:        
                 return value;
             default:
                 break;

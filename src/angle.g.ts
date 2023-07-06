@@ -31,7 +31,37 @@ export enum AngleUnits {
     /** */
     Microdegrees,
     /** */
-    Millidegrees
+    Millidegrees,
+    /** */
+    Radian,
+    /** */
+    Degree,
+    /** */
+    Arcminute,
+    /** */
+    Arcsecond,
+    /** */
+    Gradian,
+    /** */
+    NatoMil,
+    /** */
+    Revolution,
+    /** */
+    Nanoradian,
+    /** */
+    Microradian,
+    /** */
+    Milliradian,
+    /** */
+    Centiradian,
+    /** */
+    Deciradian,
+    /** */
+    Nanodegree,
+    /** */
+    Microdegree,
+    /** */
+    Millidegree
 }
 
 /** In geometry, an angle is the figure formed by two rays, called the sides of the angle, sharing a common endpoint, called the vertex of the angle. */
@@ -366,36 +396,52 @@ export class Angle {
         switch (toUnit) {
                 
             case AngleUnits.Radians:
+            case AngleUnits.Radians:        
                 return this.value / 180 * Math.PI;
             case AngleUnits.Degrees:
+            case AngleUnits.Degrees:        
                 return this.value;
             case AngleUnits.Arcminutes:
+            case AngleUnits.Arcminutes:        
                 return this.value * 60;
             case AngleUnits.Arcseconds:
+            case AngleUnits.Arcseconds:        
                 return this.value * 3600;
             case AngleUnits.Gradians:
+            case AngleUnits.Gradians:        
                 return this.value / 0.9;
             case AngleUnits.NatoMils:
+            case AngleUnits.NatoMils:        
                 return this.value * 160 / 9;
             case AngleUnits.Revolutions:
+            case AngleUnits.Revolutions:        
                 return this.value / 360;
             case AngleUnits.Tilt:
+                    
                 return Math.sin(this.value / 180 * Math.PI);
             case AngleUnits.Nanoradians:
+            case AngleUnits.Nanoradians:        
                 return (this.value / 180 * Math.PI) / 1e-9;
             case AngleUnits.Microradians:
+            case AngleUnits.Microradians:        
                 return (this.value / 180 * Math.PI) / 0.000001;
             case AngleUnits.Milliradians:
+            case AngleUnits.Milliradians:        
                 return (this.value / 180 * Math.PI) / 0.001;
             case AngleUnits.Centiradians:
+            case AngleUnits.Centiradians:        
                 return (this.value / 180 * Math.PI) / 0.01;
             case AngleUnits.Deciradians:
+            case AngleUnits.Deciradians:        
                 return (this.value / 180 * Math.PI) / 0.1;
             case AngleUnits.Nanodegrees:
+            case AngleUnits.Nanodegrees:        
                 return (this.value) / 1e-9;
             case AngleUnits.Microdegrees:
+            case AngleUnits.Microdegrees:        
                 return (this.value) / 0.000001;
             case AngleUnits.Millidegrees:
+            case AngleUnits.Millidegrees:        
                 return (this.value) / 0.001;
             default:
                 break;
@@ -407,36 +453,52 @@ export class Angle {
         switch (fromUnit) {
                 
             case AngleUnits.Radians:
+            case AngleUnits.Radians:        
                 return value * 180 / Math.PI;
             case AngleUnits.Degrees:
+            case AngleUnits.Degrees:        
                 return value;
             case AngleUnits.Arcminutes:
+            case AngleUnits.Arcminutes:        
                 return value / 60;
             case AngleUnits.Arcseconds:
+            case AngleUnits.Arcseconds:        
                 return value / 3600;
             case AngleUnits.Gradians:
+            case AngleUnits.Gradians:        
                 return value * 0.9;
             case AngleUnits.NatoMils:
+            case AngleUnits.NatoMils:        
                 return value * 9 / 160;
             case AngleUnits.Revolutions:
+            case AngleUnits.Revolutions:        
                 return value * 360;
             case AngleUnits.Tilt:
+                    
                 return Math.asin(value) * 180 / Math.PI;
             case AngleUnits.Nanoradians:
+            case AngleUnits.Nanoradians:        
                 return (value * 180 / Math.PI) * 1e-9;
             case AngleUnits.Microradians:
+            case AngleUnits.Microradians:        
                 return (value * 180 / Math.PI) * 0.000001;
             case AngleUnits.Milliradians:
+            case AngleUnits.Milliradians:        
                 return (value * 180 / Math.PI) * 0.001;
             case AngleUnits.Centiradians:
+            case AngleUnits.Centiradians:        
                 return (value * 180 / Math.PI) * 0.01;
             case AngleUnits.Deciradians:
+            case AngleUnits.Deciradians:        
                 return (value * 180 / Math.PI) * 0.1;
             case AngleUnits.Nanodegrees:
+            case AngleUnits.Nanodegrees:        
                 return (value) * 1e-9;
             case AngleUnits.Microdegrees:
+            case AngleUnits.Microdegrees:        
                 return (value) * 0.000001;
             case AngleUnits.Millidegrees:
+            case AngleUnits.Millidegrees:        
                 return (value) * 0.001;
             default:
                 break;

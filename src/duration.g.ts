@@ -21,7 +21,29 @@ export enum DurationUnits {
     /** */
     Microseconds,
     /** */
-    Milliseconds
+    Milliseconds,
+    /** */
+    Year365,
+    /** */
+    Month30,
+    /** */
+    Week,
+    /** */
+    Day,
+    /** */
+    Hour,
+    /** */
+    Minute,
+    /** */
+    Second,
+    /** */
+    JulianYear,
+    /** */
+    Nanosecond,
+    /** */
+    Microsecond,
+    /** */
+    Millisecond
 }
 
 /** Time is a dimension in which events can be ordered from the past through the present into the future, and also the measure of durations of events and the intervals between them. */
@@ -261,26 +283,37 @@ export class Duration {
         switch (toUnit) {
                 
             case DurationUnits.Years365:
+            case DurationUnits.Years365:        
                 return this.value / (365 * 24 * 3600);
             case DurationUnits.Months30:
+            case DurationUnits.Months30:        
                 return this.value / (30 * 24 * 3600);
             case DurationUnits.Weeks:
+            case DurationUnits.Weeks:        
                 return this.value / (7 * 24 * 3600);
             case DurationUnits.Days:
+            case DurationUnits.Days:        
                 return this.value / (24 * 3600);
             case DurationUnits.Hours:
+            case DurationUnits.Hours:        
                 return this.value / 3600;
             case DurationUnits.Minutes:
+            case DurationUnits.Minutes:        
                 return this.value / 60;
             case DurationUnits.Seconds:
+            case DurationUnits.Seconds:        
                 return this.value;
             case DurationUnits.JulianYears:
+            case DurationUnits.JulianYears:        
                 return this.value / (365.25 * 24 * 3600);
             case DurationUnits.Nanoseconds:
+            case DurationUnits.Nanoseconds:        
                 return (this.value) / 1e-9;
             case DurationUnits.Microseconds:
+            case DurationUnits.Microseconds:        
                 return (this.value) / 0.000001;
             case DurationUnits.Milliseconds:
+            case DurationUnits.Milliseconds:        
                 return (this.value) / 0.001;
             default:
                 break;
@@ -292,26 +325,37 @@ export class Duration {
         switch (fromUnit) {
                 
             case DurationUnits.Years365:
+            case DurationUnits.Years365:        
                 return value * 365 * 24 * 3600;
             case DurationUnits.Months30:
+            case DurationUnits.Months30:        
                 return value * 30 * 24 * 3600;
             case DurationUnits.Weeks:
+            case DurationUnits.Weeks:        
                 return value * 7 * 24 * 3600;
             case DurationUnits.Days:
+            case DurationUnits.Days:        
                 return value * 24 * 3600;
             case DurationUnits.Hours:
+            case DurationUnits.Hours:        
                 return value * 3600;
             case DurationUnits.Minutes:
+            case DurationUnits.Minutes:        
                 return value * 60;
             case DurationUnits.Seconds:
+            case DurationUnits.Seconds:        
                 return value;
             case DurationUnits.JulianYears:
+            case DurationUnits.JulianYears:        
                 return value * 365.25 * 24 * 3600;
             case DurationUnits.Nanoseconds:
+            case DurationUnits.Nanoseconds:        
                 return (value) * 1e-9;
             case DurationUnits.Microseconds:
+            case DurationUnits.Microseconds:        
                 return (value) * 0.000001;
             case DurationUnits.Milliseconds:
+            case DurationUnits.Milliseconds:        
                 return (value) * 0.001;
             default:
                 break;

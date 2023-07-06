@@ -33,7 +33,41 @@ export enum SpecificWeightUnits {
     /** */
     KilopoundsForcePerCubicInch,
     /** */
-    KilopoundsForcePerCubicFoot
+    KilopoundsForcePerCubicFoot,
+    /** */
+    NewtonPerCubicMillimeter,
+    /** */
+    NewtonPerCubicCentimeter,
+    /** */
+    NewtonPerCubicMeter,
+    /** */
+    KilogramForcePerCubicMillimeter,
+    /** */
+    KilogramForcePerCubicCentimeter,
+    /** */
+    KilogramForcePerCubicMeter,
+    /** */
+    PoundForcePerCubicInch,
+    /** */
+    PoundForcePerCubicFoot,
+    /** */
+    TonneForcePerCubicMillimeter,
+    /** */
+    TonneForcePerCubicCentimeter,
+    /** */
+    TonneForcePerCubicMeter,
+    /** */
+    KilonewtonPerCubicMillimeter,
+    /** */
+    KilonewtonPerCubicCentimeter,
+    /** */
+    KilonewtonPerCubicMeter,
+    /** */
+    MeganewtonPerCubicMeter,
+    /** */
+    KilopoundForcePerCubicInch,
+    /** */
+    KilopoundForcePerCubicFoot
 }
 
 /** The SpecificWeight, or more precisely, the volumetric weight density, of a substance is its weight per unit volume. */
@@ -387,38 +421,55 @@ export class SpecificWeight {
         switch (toUnit) {
                 
             case SpecificWeightUnits.NewtonsPerCubicMillimeter:
+            case SpecificWeightUnits.NewtonsPerCubicMillimeter:        
                 return this.value * 0.000000001;
             case SpecificWeightUnits.NewtonsPerCubicCentimeter:
+            case SpecificWeightUnits.NewtonsPerCubicCentimeter:        
                 return this.value * 0.000001;
             case SpecificWeightUnits.NewtonsPerCubicMeter:
+            case SpecificWeightUnits.NewtonsPerCubicMeter:        
                 return this.value;
             case SpecificWeightUnits.KilogramsForcePerCubicMillimeter:
+            case SpecificWeightUnits.KilogramsForcePerCubicMillimeter:        
                 return this.value / 9.80665e9;
             case SpecificWeightUnits.KilogramsForcePerCubicCentimeter:
+            case SpecificWeightUnits.KilogramsForcePerCubicCentimeter:        
                 return this.value / 9.80665e6;
             case SpecificWeightUnits.KilogramsForcePerCubicMeter:
+            case SpecificWeightUnits.KilogramsForcePerCubicMeter:        
                 return this.value / 9.80665;
             case SpecificWeightUnits.PoundsForcePerCubicInch:
+            case SpecificWeightUnits.PoundsForcePerCubicInch:        
                 return this.value / 2.714471375263134e5;
             case SpecificWeightUnits.PoundsForcePerCubicFoot:
+            case SpecificWeightUnits.PoundsForcePerCubicFoot:        
                 return this.value / 1.570874638462462e2;
             case SpecificWeightUnits.TonnesForcePerCubicMillimeter:
+            case SpecificWeightUnits.TonnesForcePerCubicMillimeter:        
                 return this.value / 9.80665e12;
             case SpecificWeightUnits.TonnesForcePerCubicCentimeter:
+            case SpecificWeightUnits.TonnesForcePerCubicCentimeter:        
                 return this.value / 9.80665e9;
             case SpecificWeightUnits.TonnesForcePerCubicMeter:
+            case SpecificWeightUnits.TonnesForcePerCubicMeter:        
                 return this.value / 9.80665e3;
             case SpecificWeightUnits.KilonewtonsPerCubicMillimeter:
+            case SpecificWeightUnits.KilonewtonsPerCubicMillimeter:        
                 return (this.value * 0.000000001) / 1000;
             case SpecificWeightUnits.KilonewtonsPerCubicCentimeter:
+            case SpecificWeightUnits.KilonewtonsPerCubicCentimeter:        
                 return (this.value * 0.000001) / 1000;
             case SpecificWeightUnits.KilonewtonsPerCubicMeter:
+            case SpecificWeightUnits.KilonewtonsPerCubicMeter:        
                 return (this.value) / 1000;
             case SpecificWeightUnits.MeganewtonsPerCubicMeter:
+            case SpecificWeightUnits.MeganewtonsPerCubicMeter:        
                 return (this.value) / 1000000;
             case SpecificWeightUnits.KilopoundsForcePerCubicInch:
+            case SpecificWeightUnits.KilopoundsForcePerCubicInch:        
                 return (this.value / 2.714471375263134e5) / 1000;
             case SpecificWeightUnits.KilopoundsForcePerCubicFoot:
+            case SpecificWeightUnits.KilopoundsForcePerCubicFoot:        
                 return (this.value / 1.570874638462462e2) / 1000;
             default:
                 break;
@@ -430,38 +481,55 @@ export class SpecificWeight {
         switch (fromUnit) {
                 
             case SpecificWeightUnits.NewtonsPerCubicMillimeter:
+            case SpecificWeightUnits.NewtonsPerCubicMillimeter:        
                 return value * 1000000000;
             case SpecificWeightUnits.NewtonsPerCubicCentimeter:
+            case SpecificWeightUnits.NewtonsPerCubicCentimeter:        
                 return value * 1000000;
             case SpecificWeightUnits.NewtonsPerCubicMeter:
+            case SpecificWeightUnits.NewtonsPerCubicMeter:        
                 return value;
             case SpecificWeightUnits.KilogramsForcePerCubicMillimeter:
+            case SpecificWeightUnits.KilogramsForcePerCubicMillimeter:        
                 return value * 9.80665e9;
             case SpecificWeightUnits.KilogramsForcePerCubicCentimeter:
+            case SpecificWeightUnits.KilogramsForcePerCubicCentimeter:        
                 return value * 9.80665e6;
             case SpecificWeightUnits.KilogramsForcePerCubicMeter:
+            case SpecificWeightUnits.KilogramsForcePerCubicMeter:        
                 return value * 9.80665;
             case SpecificWeightUnits.PoundsForcePerCubicInch:
+            case SpecificWeightUnits.PoundsForcePerCubicInch:        
                 return value * 2.714471375263134e5;
             case SpecificWeightUnits.PoundsForcePerCubicFoot:
+            case SpecificWeightUnits.PoundsForcePerCubicFoot:        
                 return value * 1.570874638462462e2;
             case SpecificWeightUnits.TonnesForcePerCubicMillimeter:
+            case SpecificWeightUnits.TonnesForcePerCubicMillimeter:        
                 return value * 9.80665e12;
             case SpecificWeightUnits.TonnesForcePerCubicCentimeter:
+            case SpecificWeightUnits.TonnesForcePerCubicCentimeter:        
                 return value * 9.80665e9;
             case SpecificWeightUnits.TonnesForcePerCubicMeter:
+            case SpecificWeightUnits.TonnesForcePerCubicMeter:        
                 return value * 9.80665e3;
             case SpecificWeightUnits.KilonewtonsPerCubicMillimeter:
+            case SpecificWeightUnits.KilonewtonsPerCubicMillimeter:        
                 return (value * 1000000000) * 1000;
             case SpecificWeightUnits.KilonewtonsPerCubicCentimeter:
+            case SpecificWeightUnits.KilonewtonsPerCubicCentimeter:        
                 return (value * 1000000) * 1000;
             case SpecificWeightUnits.KilonewtonsPerCubicMeter:
+            case SpecificWeightUnits.KilonewtonsPerCubicMeter:        
                 return (value) * 1000;
             case SpecificWeightUnits.MeganewtonsPerCubicMeter:
+            case SpecificWeightUnits.MeganewtonsPerCubicMeter:        
                 return (value) * 1000000;
             case SpecificWeightUnits.KilopoundsForcePerCubicInch:
+            case SpecificWeightUnits.KilopoundsForcePerCubicInch:        
                 return (value * 2.714471375263134e5) * 1000;
             case SpecificWeightUnits.KilopoundsForcePerCubicFoot:
+            case SpecificWeightUnits.KilopoundsForcePerCubicFoot:        
                 return (value * 1.570874638462462e2) * 1000;
             default:
                 break;

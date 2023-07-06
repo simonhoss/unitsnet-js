@@ -1,7 +1,9 @@
 /** PermittivityUnits enumeration */
 export enum PermittivityUnits {
     /** */
-    FaradsPerMeter
+    FaradsPerMeter,
+    /** */
+    FaradPerMeter
 }
 
 /** In electromagnetism, permittivity is the measure of resistance that is encountered when forming an electric field in a particular medium. */
@@ -51,6 +53,7 @@ export class Permittivity {
         switch (toUnit) {
                 
             case PermittivityUnits.FaradsPerMeter:
+            case PermittivityUnits.FaradsPerMeter:        
                 return this.value;
             default:
                 break;
@@ -62,6 +65,7 @@ export class Permittivity {
         switch (fromUnit) {
                 
             case PermittivityUnits.FaradsPerMeter:
+            case PermittivityUnits.FaradsPerMeter:        
                 return value;
             default:
                 break;

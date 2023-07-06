@@ -1,7 +1,9 @@
 /** VitaminAUnits enumeration */
 export enum VitaminAUnits {
     /** */
-    InternationalUnits
+    InternationalUnits,
+    /** */
+    InternationalUnit
 }
 
 /** Vitamin A: 1 IU is the biological equivalent of 0.3 µg retinol, or of 0.6 µg beta-carotene. */
@@ -51,6 +53,7 @@ export class VitaminA {
         switch (toUnit) {
                 
             case VitaminAUnits.InternationalUnits:
+            case VitaminAUnits.InternationalUnits:        
                 return this.value;
             default:
                 break;
@@ -62,6 +65,7 @@ export class VitaminA {
         switch (fromUnit) {
                 
             case VitaminAUnits.InternationalUnits:
+            case VitaminAUnits.InternationalUnits:        
                 return value;
             default:
                 break;

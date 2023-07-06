@@ -5,7 +5,13 @@ export enum ApparentEnergyUnits {
     /** */
     KilovoltampereHours,
     /** */
-    MegavoltampereHours
+    MegavoltampereHours,
+    /** */
+    VoltampereHour,
+    /** */
+    KilovoltampereHour,
+    /** */
+    MegavoltampereHour
 }
 
 /** A unit for expressing the integral of apparent power over time, equal to the product of 1 volt-ampere and 1 hour, or to 3600 joules. */
@@ -93,10 +99,13 @@ export class ApparentEnergy {
         switch (toUnit) {
                 
             case ApparentEnergyUnits.VoltampereHours:
+            case ApparentEnergyUnits.VoltampereHours:        
                 return this.value;
             case ApparentEnergyUnits.KilovoltampereHours:
+            case ApparentEnergyUnits.KilovoltampereHours:        
                 return (this.value) / 1000;
             case ApparentEnergyUnits.MegavoltampereHours:
+            case ApparentEnergyUnits.MegavoltampereHours:        
                 return (this.value) / 1000000;
             default:
                 break;
@@ -108,10 +117,13 @@ export class ApparentEnergy {
         switch (fromUnit) {
                 
             case ApparentEnergyUnits.VoltampereHours:
+            case ApparentEnergyUnits.VoltampereHours:        
                 return value;
             case ApparentEnergyUnits.KilovoltampereHours:
+            case ApparentEnergyUnits.KilovoltampereHours:        
                 return (value) * 1000;
             case ApparentEnergyUnits.MegavoltampereHours:
+            case ApparentEnergyUnits.MegavoltampereHours:        
                 return (value) * 1000000;
             default:
                 break;

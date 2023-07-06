@@ -7,7 +7,15 @@ export enum AmplitudeRatioUnits {
     /** */
     DecibelMillivolts,
     /** */
-    DecibelsUnloaded
+    DecibelsUnloaded,
+    /** */
+    DecibelVolt,
+    /** */
+    DecibelMicrovolt,
+    /** */
+    DecibelMillivolt,
+    /** */
+    DecibelUnloaded
 }
 
 /** The strength of a signal expressed in decibels (dB) relative to one volt RMS. */
@@ -114,12 +122,16 @@ export class AmplitudeRatio {
         switch (toUnit) {
                 
             case AmplitudeRatioUnits.DecibelVolts:
+            case AmplitudeRatioUnits.DecibelVolts:        
                 return this.value;
             case AmplitudeRatioUnits.DecibelMicrovolts:
+            case AmplitudeRatioUnits.DecibelMicrovolts:        
                 return this.value + 120;
             case AmplitudeRatioUnits.DecibelMillivolts:
+            case AmplitudeRatioUnits.DecibelMillivolts:        
                 return this.value + 60;
             case AmplitudeRatioUnits.DecibelsUnloaded:
+            case AmplitudeRatioUnits.DecibelsUnloaded:        
                 return this.value + 2.218487499;
             default:
                 break;
@@ -131,12 +143,16 @@ export class AmplitudeRatio {
         switch (fromUnit) {
                 
             case AmplitudeRatioUnits.DecibelVolts:
+            case AmplitudeRatioUnits.DecibelVolts:        
                 return value;
             case AmplitudeRatioUnits.DecibelMicrovolts:
+            case AmplitudeRatioUnits.DecibelMicrovolts:        
                 return value - 120;
             case AmplitudeRatioUnits.DecibelMillivolts:
+            case AmplitudeRatioUnits.DecibelMillivolts:        
                 return value - 60;
             case AmplitudeRatioUnits.DecibelsUnloaded:
+            case AmplitudeRatioUnits.DecibelsUnloaded:        
                 return value - 2.218487499;
             default:
                 break;

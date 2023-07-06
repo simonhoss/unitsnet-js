@@ -11,7 +11,17 @@ export enum RatioUnits {
     /** */
     PartsPerBillion,
     /** */
-    PartsPerTrillion
+    PartsPerTrillion,
+    /** */
+    DecimalFraction,
+    /** */
+    PartPerThousand,
+    /** */
+    PartPerMillion,
+    /** */
+    PartPerBillion,
+    /** */
+    PartPerTrillion
 }
 
 /** In mathematics, a ratio is a relationship between two numbers of the same kind (e.g., objects, persons, students, spoonfuls, units of whatever identical dimension), usually expressed as "a to b" or a:b, sometimes expressed arithmetically as a dimensionless quotient of the two that explicitly indicates how many times the first number contains the second (not necessarily an integer). */
@@ -156,16 +166,22 @@ export class Ratio {
         switch (toUnit) {
                 
             case RatioUnits.DecimalFractions:
+            case RatioUnits.DecimalFractions:        
                 return this.value;
             case RatioUnits.Percent:
+                    
                 return this.value * 1e2;
             case RatioUnits.PartsPerThousand:
+            case RatioUnits.PartsPerThousand:        
                 return this.value * 1e3;
             case RatioUnits.PartsPerMillion:
+            case RatioUnits.PartsPerMillion:        
                 return this.value * 1e6;
             case RatioUnits.PartsPerBillion:
+            case RatioUnits.PartsPerBillion:        
                 return this.value * 1e9;
             case RatioUnits.PartsPerTrillion:
+            case RatioUnits.PartsPerTrillion:        
                 return this.value * 1e12;
             default:
                 break;
@@ -177,16 +193,22 @@ export class Ratio {
         switch (fromUnit) {
                 
             case RatioUnits.DecimalFractions:
+            case RatioUnits.DecimalFractions:        
                 return value;
             case RatioUnits.Percent:
+                    
                 return value / 1e2;
             case RatioUnits.PartsPerThousand:
+            case RatioUnits.PartsPerThousand:        
                 return value / 1e3;
             case RatioUnits.PartsPerMillion:
+            case RatioUnits.PartsPerMillion:        
                 return value / 1e6;
             case RatioUnits.PartsPerBillion:
+            case RatioUnits.PartsPerBillion:        
                 return value / 1e9;
             case RatioUnits.PartsPerTrillion:
+            case RatioUnits.PartsPerTrillion:        
                 return value / 1e12;
             default:
                 break;

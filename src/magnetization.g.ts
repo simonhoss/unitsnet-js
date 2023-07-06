@@ -1,7 +1,9 @@
 /** MagnetizationUnits enumeration */
 export enum MagnetizationUnits {
     /** */
-    AmperesPerMeter
+    AmperesPerMeter,
+    /** */
+    AmperePerMeter
 }
 
 /** In classical electromagnetism, magnetization is the vector field that expresses the density of permanent or induced magnetic dipole moments in a magnetic material. */
@@ -51,6 +53,7 @@ export class Magnetization {
         switch (toUnit) {
                 
             case MagnetizationUnits.AmperesPerMeter:
+            case MagnetizationUnits.AmperesPerMeter:        
                 return this.value;
             default:
                 break;
@@ -62,6 +65,7 @@ export class Magnetization {
         switch (fromUnit) {
                 
             case MagnetizationUnits.AmperesPerMeter:
+            case MagnetizationUnits.AmperesPerMeter:        
                 return value;
             default:
                 break;

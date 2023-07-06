@@ -27,7 +27,35 @@ export enum ElectricResistivityUnits {
     /** */
     KiloohmsCentimeter,
     /** */
-    MegaohmsCentimeter
+    MegaohmsCentimeter,
+    /** */
+    OhmMeter,
+    /** */
+    OhmCentimeter,
+    /** */
+    PicoohmMeter,
+    /** */
+    NanoohmMeter,
+    /** */
+    MicroohmMeter,
+    /** */
+    MilliohmMeter,
+    /** */
+    KiloohmMeter,
+    /** */
+    MegaohmMeter,
+    /** */
+    PicoohmCentimeter,
+    /** */
+    NanoohmCentimeter,
+    /** */
+    MicroohmCentimeter,
+    /** */
+    MilliohmCentimeter,
+    /** */
+    KiloohmCentimeter,
+    /** */
+    MegaohmCentimeter
 }
 
 /** Electrical resistivity (also known as resistivity, specific electrical resistance, or volume resistivity) is a fundamental property that quantifies how strongly a given material opposes the flow of electric current. */
@@ -324,32 +352,46 @@ export class ElectricResistivity {
         switch (toUnit) {
                 
             case ElectricResistivityUnits.OhmMeters:
+            case ElectricResistivityUnits.OhmMeters:        
                 return this.value;
             case ElectricResistivityUnits.OhmsCentimeter:
+            case ElectricResistivityUnits.OhmsCentimeter:        
                 return this.value * 100;
             case ElectricResistivityUnits.PicoohmMeters:
+            case ElectricResistivityUnits.PicoohmMeters:        
                 return (this.value) / 1e-12;
             case ElectricResistivityUnits.NanoohmMeters:
+            case ElectricResistivityUnits.NanoohmMeters:        
                 return (this.value) / 1e-9;
             case ElectricResistivityUnits.MicroohmMeters:
+            case ElectricResistivityUnits.MicroohmMeters:        
                 return (this.value) / 0.000001;
             case ElectricResistivityUnits.MilliohmMeters:
+            case ElectricResistivityUnits.MilliohmMeters:        
                 return (this.value) / 0.001;
             case ElectricResistivityUnits.KiloohmMeters:
+            case ElectricResistivityUnits.KiloohmMeters:        
                 return (this.value) / 1000;
             case ElectricResistivityUnits.MegaohmMeters:
+            case ElectricResistivityUnits.MegaohmMeters:        
                 return (this.value) / 1000000;
             case ElectricResistivityUnits.PicoohmsCentimeter:
+            case ElectricResistivityUnits.PicoohmsCentimeter:        
                 return (this.value * 100) / 1e-12;
             case ElectricResistivityUnits.NanoohmsCentimeter:
+            case ElectricResistivityUnits.NanoohmsCentimeter:        
                 return (this.value * 100) / 1e-9;
             case ElectricResistivityUnits.MicroohmsCentimeter:
+            case ElectricResistivityUnits.MicroohmsCentimeter:        
                 return (this.value * 100) / 0.000001;
             case ElectricResistivityUnits.MilliohmsCentimeter:
+            case ElectricResistivityUnits.MilliohmsCentimeter:        
                 return (this.value * 100) / 0.001;
             case ElectricResistivityUnits.KiloohmsCentimeter:
+            case ElectricResistivityUnits.KiloohmsCentimeter:        
                 return (this.value * 100) / 1000;
             case ElectricResistivityUnits.MegaohmsCentimeter:
+            case ElectricResistivityUnits.MegaohmsCentimeter:        
                 return (this.value * 100) / 1000000;
             default:
                 break;
@@ -361,32 +403,46 @@ export class ElectricResistivity {
         switch (fromUnit) {
                 
             case ElectricResistivityUnits.OhmMeters:
+            case ElectricResistivityUnits.OhmMeters:        
                 return value;
             case ElectricResistivityUnits.OhmsCentimeter:
+            case ElectricResistivityUnits.OhmsCentimeter:        
                 return value / 100;
             case ElectricResistivityUnits.PicoohmMeters:
+            case ElectricResistivityUnits.PicoohmMeters:        
                 return (value) * 1e-12;
             case ElectricResistivityUnits.NanoohmMeters:
+            case ElectricResistivityUnits.NanoohmMeters:        
                 return (value) * 1e-9;
             case ElectricResistivityUnits.MicroohmMeters:
+            case ElectricResistivityUnits.MicroohmMeters:        
                 return (value) * 0.000001;
             case ElectricResistivityUnits.MilliohmMeters:
+            case ElectricResistivityUnits.MilliohmMeters:        
                 return (value) * 0.001;
             case ElectricResistivityUnits.KiloohmMeters:
+            case ElectricResistivityUnits.KiloohmMeters:        
                 return (value) * 1000;
             case ElectricResistivityUnits.MegaohmMeters:
+            case ElectricResistivityUnits.MegaohmMeters:        
                 return (value) * 1000000;
             case ElectricResistivityUnits.PicoohmsCentimeter:
+            case ElectricResistivityUnits.PicoohmsCentimeter:        
                 return (value / 100) * 1e-12;
             case ElectricResistivityUnits.NanoohmsCentimeter:
+            case ElectricResistivityUnits.NanoohmsCentimeter:        
                 return (value / 100) * 1e-9;
             case ElectricResistivityUnits.MicroohmsCentimeter:
+            case ElectricResistivityUnits.MicroohmsCentimeter:        
                 return (value / 100) * 0.000001;
             case ElectricResistivityUnits.MilliohmsCentimeter:
+            case ElectricResistivityUnits.MilliohmsCentimeter:        
                 return (value / 100) * 0.001;
             case ElectricResistivityUnits.KiloohmsCentimeter:
+            case ElectricResistivityUnits.KiloohmsCentimeter:        
                 return (value / 100) * 1000;
             case ElectricResistivityUnits.MegaohmsCentimeter:
+            case ElectricResistivityUnits.MegaohmsCentimeter:        
                 return (value / 100) * 1000000;
             default:
                 break;

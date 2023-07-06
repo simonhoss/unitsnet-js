@@ -19,7 +19,27 @@ export enum LuminanceUnits {
     /** */
     DecicandelasPerSquareMeter,
     /** */
-    KilocandelasPerSquareMeter
+    KilocandelasPerSquareMeter,
+    /** */
+    CandelaPerSquareMeter,
+    /** */
+    CandelaPerSquareFoot,
+    /** */
+    CandelaPerSquareInch,
+    /** */
+    Nit,
+    /** */
+    NanocandelaPerSquareMeter,
+    /** */
+    MicrocandelaPerSquareMeter,
+    /** */
+    MillicandelaPerSquareMeter,
+    /** */
+    CenticandelaPerSquareMeter,
+    /** */
+    DecicandelaPerSquareMeter,
+    /** */
+    KilocandelaPerSquareMeter
 }
 
 /** Luminance is a photometric measure of the luminous intensity per unit area of light travelling in a given direction. */
@@ -240,24 +260,34 @@ export class Luminance {
         switch (toUnit) {
                 
             case LuminanceUnits.CandelasPerSquareMeter:
+            case LuminanceUnits.CandelasPerSquareMeter:        
                 return this.value;
             case LuminanceUnits.CandelasPerSquareFoot:
+            case LuminanceUnits.CandelasPerSquareFoot:        
                 return this.value/ 1.07639e1;
             case LuminanceUnits.CandelasPerSquareInch:
+            case LuminanceUnits.CandelasPerSquareInch:        
                 return this.value/ 1.5500031e3;
             case LuminanceUnits.Nits:
+            case LuminanceUnits.Nits:        
                 return this.value;
             case LuminanceUnits.NanocandelasPerSquareMeter:
+            case LuminanceUnits.NanocandelasPerSquareMeter:        
                 return (this.value) / 1e-9;
             case LuminanceUnits.MicrocandelasPerSquareMeter:
+            case LuminanceUnits.MicrocandelasPerSquareMeter:        
                 return (this.value) / 0.000001;
             case LuminanceUnits.MillicandelasPerSquareMeter:
+            case LuminanceUnits.MillicandelasPerSquareMeter:        
                 return (this.value) / 0.001;
             case LuminanceUnits.CenticandelasPerSquareMeter:
+            case LuminanceUnits.CenticandelasPerSquareMeter:        
                 return (this.value) / 0.01;
             case LuminanceUnits.DecicandelasPerSquareMeter:
+            case LuminanceUnits.DecicandelasPerSquareMeter:        
                 return (this.value) / 0.1;
             case LuminanceUnits.KilocandelasPerSquareMeter:
+            case LuminanceUnits.KilocandelasPerSquareMeter:        
                 return (this.value) / 1000;
             default:
                 break;
@@ -269,24 +299,34 @@ export class Luminance {
         switch (fromUnit) {
                 
             case LuminanceUnits.CandelasPerSquareMeter:
+            case LuminanceUnits.CandelasPerSquareMeter:        
                 return value;
             case LuminanceUnits.CandelasPerSquareFoot:
+            case LuminanceUnits.CandelasPerSquareFoot:        
                 return value* 1.07639e1;
             case LuminanceUnits.CandelasPerSquareInch:
+            case LuminanceUnits.CandelasPerSquareInch:        
                 return value* 1.5500031e3;
             case LuminanceUnits.Nits:
+            case LuminanceUnits.Nits:        
                 return value;
             case LuminanceUnits.NanocandelasPerSquareMeter:
+            case LuminanceUnits.NanocandelasPerSquareMeter:        
                 return (value) * 1e-9;
             case LuminanceUnits.MicrocandelasPerSquareMeter:
+            case LuminanceUnits.MicrocandelasPerSquareMeter:        
                 return (value) * 0.000001;
             case LuminanceUnits.MillicandelasPerSquareMeter:
+            case LuminanceUnits.MillicandelasPerSquareMeter:        
                 return (value) * 0.001;
             case LuminanceUnits.CenticandelasPerSquareMeter:
+            case LuminanceUnits.CenticandelasPerSquareMeter:        
                 return (value) * 0.01;
             case LuminanceUnits.DecicandelasPerSquareMeter:
+            case LuminanceUnits.DecicandelasPerSquareMeter:        
                 return (value) * 0.1;
             case LuminanceUnits.KilocandelasPerSquareMeter:
+            case LuminanceUnits.KilocandelasPerSquareMeter:        
                 return (value) * 1000;
             default:
                 break;

@@ -29,7 +29,37 @@ export enum ForceChangeRateUnits {
     /** */
     KilopoundsForcePerMinute,
     /** */
-    KilopoundsForcePerSecond
+    KilopoundsForcePerSecond,
+    /** */
+    NewtonPerMinute,
+    /** */
+    NewtonPerSecond,
+    /** */
+    PoundForcePerMinute,
+    /** */
+    PoundForcePerSecond,
+    /** */
+    DecanewtonPerMinute,
+    /** */
+    KilonewtonPerMinute,
+    /** */
+    NanonewtonPerSecond,
+    /** */
+    MicronewtonPerSecond,
+    /** */
+    MillinewtonPerSecond,
+    /** */
+    CentinewtonPerSecond,
+    /** */
+    DecinewtonPerSecond,
+    /** */
+    DecanewtonPerSecond,
+    /** */
+    KilonewtonPerSecond,
+    /** */
+    KilopoundForcePerMinute,
+    /** */
+    KilopoundForcePerSecond
 }
 
 /** Force change rate is the ratio of the force change to the time during which the change occurred (value of force changes per unit time). */
@@ -345,34 +375,49 @@ export class ForceChangeRate {
         switch (toUnit) {
                 
             case ForceChangeRateUnits.NewtonsPerMinute:
+            case ForceChangeRateUnits.NewtonsPerMinute:        
                 return this.value * 60;
             case ForceChangeRateUnits.NewtonsPerSecond:
+            case ForceChangeRateUnits.NewtonsPerSecond:        
                 return this.value;
             case ForceChangeRateUnits.PoundsForcePerMinute:
+            case ForceChangeRateUnits.PoundsForcePerMinute:        
                 return this.value / 4.4482216152605095551842641431421 * 60;
             case ForceChangeRateUnits.PoundsForcePerSecond:
+            case ForceChangeRateUnits.PoundsForcePerSecond:        
                 return this.value / 4.4482216152605095551842641431421;
             case ForceChangeRateUnits.DecanewtonsPerMinute:
+            case ForceChangeRateUnits.DecanewtonsPerMinute:        
                 return (this.value * 60) / 10;
             case ForceChangeRateUnits.KilonewtonsPerMinute:
+            case ForceChangeRateUnits.KilonewtonsPerMinute:        
                 return (this.value * 60) / 1000;
             case ForceChangeRateUnits.NanonewtonsPerSecond:
+            case ForceChangeRateUnits.NanonewtonsPerSecond:        
                 return (this.value) / 1e-9;
             case ForceChangeRateUnits.MicronewtonsPerSecond:
+            case ForceChangeRateUnits.MicronewtonsPerSecond:        
                 return (this.value) / 0.000001;
             case ForceChangeRateUnits.MillinewtonsPerSecond:
+            case ForceChangeRateUnits.MillinewtonsPerSecond:        
                 return (this.value) / 0.001;
             case ForceChangeRateUnits.CentinewtonsPerSecond:
+            case ForceChangeRateUnits.CentinewtonsPerSecond:        
                 return (this.value) / 0.01;
             case ForceChangeRateUnits.DecinewtonsPerSecond:
+            case ForceChangeRateUnits.DecinewtonsPerSecond:        
                 return (this.value) / 0.1;
             case ForceChangeRateUnits.DecanewtonsPerSecond:
+            case ForceChangeRateUnits.DecanewtonsPerSecond:        
                 return (this.value) / 10;
             case ForceChangeRateUnits.KilonewtonsPerSecond:
+            case ForceChangeRateUnits.KilonewtonsPerSecond:        
                 return (this.value) / 1000;
             case ForceChangeRateUnits.KilopoundsForcePerMinute:
+            case ForceChangeRateUnits.KilopoundsForcePerMinute:        
                 return (this.value / 4.4482216152605095551842641431421 * 60) / 1000;
             case ForceChangeRateUnits.KilopoundsForcePerSecond:
+            case ForceChangeRateUnits.KilopoundsForcePerSecond:        
                 return (this.value / 4.4482216152605095551842641431421) / 1000;
             default:
                 break;
@@ -384,34 +429,49 @@ export class ForceChangeRate {
         switch (fromUnit) {
                 
             case ForceChangeRateUnits.NewtonsPerMinute:
+            case ForceChangeRateUnits.NewtonsPerMinute:        
                 return value / 60;
             case ForceChangeRateUnits.NewtonsPerSecond:
+            case ForceChangeRateUnits.NewtonsPerSecond:        
                 return value;
             case ForceChangeRateUnits.PoundsForcePerMinute:
+            case ForceChangeRateUnits.PoundsForcePerMinute:        
                 return value * 4.4482216152605095551842641431421 / 60;
             case ForceChangeRateUnits.PoundsForcePerSecond:
+            case ForceChangeRateUnits.PoundsForcePerSecond:        
                 return value * 4.4482216152605095551842641431421;
             case ForceChangeRateUnits.DecanewtonsPerMinute:
+            case ForceChangeRateUnits.DecanewtonsPerMinute:        
                 return (value / 60) * 10;
             case ForceChangeRateUnits.KilonewtonsPerMinute:
+            case ForceChangeRateUnits.KilonewtonsPerMinute:        
                 return (value / 60) * 1000;
             case ForceChangeRateUnits.NanonewtonsPerSecond:
+            case ForceChangeRateUnits.NanonewtonsPerSecond:        
                 return (value) * 1e-9;
             case ForceChangeRateUnits.MicronewtonsPerSecond:
+            case ForceChangeRateUnits.MicronewtonsPerSecond:        
                 return (value) * 0.000001;
             case ForceChangeRateUnits.MillinewtonsPerSecond:
+            case ForceChangeRateUnits.MillinewtonsPerSecond:        
                 return (value) * 0.001;
             case ForceChangeRateUnits.CentinewtonsPerSecond:
+            case ForceChangeRateUnits.CentinewtonsPerSecond:        
                 return (value) * 0.01;
             case ForceChangeRateUnits.DecinewtonsPerSecond:
+            case ForceChangeRateUnits.DecinewtonsPerSecond:        
                 return (value) * 0.1;
             case ForceChangeRateUnits.DecanewtonsPerSecond:
+            case ForceChangeRateUnits.DecanewtonsPerSecond:        
                 return (value) * 10;
             case ForceChangeRateUnits.KilonewtonsPerSecond:
+            case ForceChangeRateUnits.KilonewtonsPerSecond:        
                 return (value) * 1000;
             case ForceChangeRateUnits.KilopoundsForcePerMinute:
+            case ForceChangeRateUnits.KilopoundsForcePerMinute:        
                 return (value * 4.4482216152605095551842641431421 / 60) * 1000;
             case ForceChangeRateUnits.KilopoundsForcePerSecond:
+            case ForceChangeRateUnits.KilopoundsForcePerSecond:        
                 return (value * 4.4482216152605095551842641431421) * 1000;
             default:
                 break;

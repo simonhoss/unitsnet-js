@@ -17,7 +17,25 @@ export enum VolumetricHeatCapacityUnits {
     /** */
     MegajoulesPerCubicMeterDegreeCelsius,
     /** */
-    KilocaloriesPerCubicCentimeterDegreeCelsius
+    KilocaloriesPerCubicCentimeterDegreeCelsius,
+    /** */
+    JoulePerCubicMeterKelvin,
+    /** */
+    JoulePerCubicMeterDegreeCelsius,
+    /** */
+    CaloriePerCubicCentimeterDegreeCelsius,
+    /** */
+    BtuPerCubicFootDegreeFahrenheit,
+    /** */
+    KilojoulePerCubicMeterKelvin,
+    /** */
+    MegajoulePerCubicMeterKelvin,
+    /** */
+    KilojoulePerCubicMeterDegreeCelsius,
+    /** */
+    MegajoulePerCubicMeterDegreeCelsius,
+    /** */
+    KilocaloriePerCubicCentimeterDegreeCelsius
 }
 
 /** The volumetric heat capacity is the amount of energy that must be added, in the form of heat, to one unit of volume of the material in order to cause an increase of one unit in its temperature. */
@@ -219,22 +237,31 @@ export class VolumetricHeatCapacity {
         switch (toUnit) {
                 
             case VolumetricHeatCapacityUnits.JoulesPerCubicMeterKelvin:
+            case VolumetricHeatCapacityUnits.JoulesPerCubicMeterKelvin:        
                 return this.value;
             case VolumetricHeatCapacityUnits.JoulesPerCubicMeterDegreeCelsius:
+            case VolumetricHeatCapacityUnits.JoulesPerCubicMeterDegreeCelsius:        
                 return this.value;
             case VolumetricHeatCapacityUnits.CaloriesPerCubicCentimeterDegreeCelsius:
+            case VolumetricHeatCapacityUnits.CaloriesPerCubicCentimeterDegreeCelsius:        
                 return this.value * 2.388459e-7;
             case VolumetricHeatCapacityUnits.BtusPerCubicFootDegreeFahrenheit:
+            case VolumetricHeatCapacityUnits.BtusPerCubicFootDegreeFahrenheit:        
                 return this.value * 1.4910660e-5;
             case VolumetricHeatCapacityUnits.KilojoulesPerCubicMeterKelvin:
+            case VolumetricHeatCapacityUnits.KilojoulesPerCubicMeterKelvin:        
                 return (this.value) / 1000;
             case VolumetricHeatCapacityUnits.MegajoulesPerCubicMeterKelvin:
+            case VolumetricHeatCapacityUnits.MegajoulesPerCubicMeterKelvin:        
                 return (this.value) / 1000000;
             case VolumetricHeatCapacityUnits.KilojoulesPerCubicMeterDegreeCelsius:
+            case VolumetricHeatCapacityUnits.KilojoulesPerCubicMeterDegreeCelsius:        
                 return (this.value) / 1000;
             case VolumetricHeatCapacityUnits.MegajoulesPerCubicMeterDegreeCelsius:
+            case VolumetricHeatCapacityUnits.MegajoulesPerCubicMeterDegreeCelsius:        
                 return (this.value) / 1000000;
             case VolumetricHeatCapacityUnits.KilocaloriesPerCubicCentimeterDegreeCelsius:
+            case VolumetricHeatCapacityUnits.KilocaloriesPerCubicCentimeterDegreeCelsius:        
                 return (this.value * 2.388459e-7) / 1000;
             default:
                 break;
@@ -246,22 +273,31 @@ export class VolumetricHeatCapacity {
         switch (fromUnit) {
                 
             case VolumetricHeatCapacityUnits.JoulesPerCubicMeterKelvin:
+            case VolumetricHeatCapacityUnits.JoulesPerCubicMeterKelvin:        
                 return value;
             case VolumetricHeatCapacityUnits.JoulesPerCubicMeterDegreeCelsius:
+            case VolumetricHeatCapacityUnits.JoulesPerCubicMeterDegreeCelsius:        
                 return value;
             case VolumetricHeatCapacityUnits.CaloriesPerCubicCentimeterDegreeCelsius:
+            case VolumetricHeatCapacityUnits.CaloriesPerCubicCentimeterDegreeCelsius:        
                 return value / 2.388459e-7;
             case VolumetricHeatCapacityUnits.BtusPerCubicFootDegreeFahrenheit:
+            case VolumetricHeatCapacityUnits.BtusPerCubicFootDegreeFahrenheit:        
                 return value / 1.4910660e-5;
             case VolumetricHeatCapacityUnits.KilojoulesPerCubicMeterKelvin:
+            case VolumetricHeatCapacityUnits.KilojoulesPerCubicMeterKelvin:        
                 return (value) * 1000;
             case VolumetricHeatCapacityUnits.MegajoulesPerCubicMeterKelvin:
+            case VolumetricHeatCapacityUnits.MegajoulesPerCubicMeterKelvin:        
                 return (value) * 1000000;
             case VolumetricHeatCapacityUnits.KilojoulesPerCubicMeterDegreeCelsius:
+            case VolumetricHeatCapacityUnits.KilojoulesPerCubicMeterDegreeCelsius:        
                 return (value) * 1000;
             case VolumetricHeatCapacityUnits.MegajoulesPerCubicMeterDegreeCelsius:
+            case VolumetricHeatCapacityUnits.MegajoulesPerCubicMeterDegreeCelsius:        
                 return (value) * 1000000;
             case VolumetricHeatCapacityUnits.KilocaloriesPerCubicCentimeterDegreeCelsius:
+            case VolumetricHeatCapacityUnits.KilocaloriesPerCubicCentimeterDegreeCelsius:        
                 return (value / 2.388459e-7) * 1000;
             default:
                 break;

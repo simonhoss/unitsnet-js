@@ -17,7 +17,25 @@ export enum TemperatureDeltaUnits {
     /** */
     DegreesRoemer,
     /** */
-    MillidegreesCelsius
+    MillidegreesCelsius,
+    /** */
+    Kelvin,
+    /** */
+    DegreeCelsius,
+    /** */
+    DegreeDelisle,
+    /** */
+    DegreeFahrenheit,
+    /** */
+    DegreeNewton,
+    /** */
+    DegreeRankine,
+    /** */
+    DegreeReaumur,
+    /** */
+    DegreeRoemer,
+    /** */
+    MillidegreeCelsius
 }
 
 /** Difference between two temperatures. The conversions are different than for Temperature. */
@@ -219,22 +237,31 @@ export class TemperatureDelta {
         switch (toUnit) {
                 
             case TemperatureDeltaUnits.Kelvins:
+            case TemperatureDeltaUnits.Kelvins:        
                 return this.value;
             case TemperatureDeltaUnits.DegreesCelsius:
+            case TemperatureDeltaUnits.DegreesCelsius:        
                 return this.value;
             case TemperatureDeltaUnits.DegreesDelisle:
+            case TemperatureDeltaUnits.DegreesDelisle:        
                 return this.value * -3 / 2;
             case TemperatureDeltaUnits.DegreesFahrenheit:
+            case TemperatureDeltaUnits.DegreesFahrenheit:        
                 return this.value * 9 / 5;
             case TemperatureDeltaUnits.DegreesNewton:
+            case TemperatureDeltaUnits.DegreesNewton:        
                 return this.value * 33 / 100;
             case TemperatureDeltaUnits.DegreesRankine:
+            case TemperatureDeltaUnits.DegreesRankine:        
                 return this.value * 9 / 5;
             case TemperatureDeltaUnits.DegreesReaumur:
+            case TemperatureDeltaUnits.DegreesReaumur:        
                 return this.value * 4 / 5;
             case TemperatureDeltaUnits.DegreesRoemer:
+            case TemperatureDeltaUnits.DegreesRoemer:        
                 return this.value * 21 / 40;
             case TemperatureDeltaUnits.MillidegreesCelsius:
+            case TemperatureDeltaUnits.MillidegreesCelsius:        
                 return (this.value) / 0.001;
             default:
                 break;
@@ -246,22 +273,31 @@ export class TemperatureDelta {
         switch (fromUnit) {
                 
             case TemperatureDeltaUnits.Kelvins:
+            case TemperatureDeltaUnits.Kelvins:        
                 return value;
             case TemperatureDeltaUnits.DegreesCelsius:
+            case TemperatureDeltaUnits.DegreesCelsius:        
                 return value;
             case TemperatureDeltaUnits.DegreesDelisle:
+            case TemperatureDeltaUnits.DegreesDelisle:        
                 return value * -2 / 3;
             case TemperatureDeltaUnits.DegreesFahrenheit:
+            case TemperatureDeltaUnits.DegreesFahrenheit:        
                 return value * 5 / 9;
             case TemperatureDeltaUnits.DegreesNewton:
+            case TemperatureDeltaUnits.DegreesNewton:        
                 return value * 100 / 33;
             case TemperatureDeltaUnits.DegreesRankine:
+            case TemperatureDeltaUnits.DegreesRankine:        
                 return value * 5 / 9;
             case TemperatureDeltaUnits.DegreesReaumur:
+            case TemperatureDeltaUnits.DegreesReaumur:        
                 return value * 5 / 4;
             case TemperatureDeltaUnits.DegreesRoemer:
+            case TemperatureDeltaUnits.DegreesRoemer:        
                 return value * 40 / 21;
             case TemperatureDeltaUnits.MillidegreesCelsius:
+            case TemperatureDeltaUnits.MillidegreesCelsius:        
                 return (value) * 0.001;
             default:
                 break;

@@ -3,7 +3,11 @@ export enum ThermalConductivityUnits {
     /** */
     WattsPerMeterKelvin,
     /** */
-    BtusPerHourFootFahrenheit
+    BtusPerHourFootFahrenheit,
+    /** */
+    WattPerMeterKelvin,
+    /** */
+    BtuPerHourFootFahrenheit
 }
 
 /** Thermal conductivity is the property of a material to conduct heat. */
@@ -72,8 +76,10 @@ export class ThermalConductivity {
         switch (toUnit) {
                 
             case ThermalConductivityUnits.WattsPerMeterKelvin:
+            case ThermalConductivityUnits.WattsPerMeterKelvin:        
                 return this.value;
             case ThermalConductivityUnits.BtusPerHourFootFahrenheit:
+            case ThermalConductivityUnits.BtusPerHourFootFahrenheit:        
                 return this.value / 1.73073467;
             default:
                 break;
@@ -85,8 +91,10 @@ export class ThermalConductivity {
         switch (fromUnit) {
                 
             case ThermalConductivityUnits.WattsPerMeterKelvin:
+            case ThermalConductivityUnits.WattsPerMeterKelvin:        
                 return value;
             case ThermalConductivityUnits.BtusPerHourFootFahrenheit:
+            case ThermalConductivityUnits.BtusPerHourFootFahrenheit:        
                 return value * 1.73073467;
             default:
                 break;

@@ -13,7 +13,21 @@ export enum CompressibilityUnits {
     /** */
     InverseBars,
     /** */
-    InversePoundsForcePerSquareInch
+    InversePoundsForcePerSquareInch,
+    /** */
+    InversePascal,
+    /** */
+    InverseKilopascal,
+    /** */
+    InverseMegapascal,
+    /** */
+    InverseAtmosphere,
+    /** */
+    InverseMillibar,
+    /** */
+    InverseBar,
+    /** */
+    InversePoundForcePerSquareInch
 }
 
 /** Compressibility is the measure of the relative volume change of a fluid or solid in response to pressure changes. */
@@ -177,18 +191,25 @@ export class Compressibility {
         switch (toUnit) {
                 
             case CompressibilityUnits.InversePascals:
+            case CompressibilityUnits.InversePascals:        
                 return this.value;
             case CompressibilityUnits.InverseKilopascals:
+            case CompressibilityUnits.InverseKilopascals:        
                 return this.value / 1e3;
             case CompressibilityUnits.InverseMegapascals:
+            case CompressibilityUnits.InverseMegapascals:        
                 return this.value / 1e6;
             case CompressibilityUnits.InverseAtmospheres:
+            case CompressibilityUnits.InverseAtmospheres:        
                 return this.value / 101325;
             case CompressibilityUnits.InverseMillibars:
+            case CompressibilityUnits.InverseMillibars:        
                 return this.value / 100;
             case CompressibilityUnits.InverseBars:
+            case CompressibilityUnits.InverseBars:        
                 return this.value / 1e5;
             case CompressibilityUnits.InversePoundsForcePerSquareInch:
+            case CompressibilityUnits.InversePoundsForcePerSquareInch:        
                 return this.value / 6.894757293168361e3;
             default:
                 break;
@@ -200,18 +221,25 @@ export class Compressibility {
         switch (fromUnit) {
                 
             case CompressibilityUnits.InversePascals:
+            case CompressibilityUnits.InversePascals:        
                 return value;
             case CompressibilityUnits.InverseKilopascals:
+            case CompressibilityUnits.InverseKilopascals:        
                 return value * 1e3;
             case CompressibilityUnits.InverseMegapascals:
+            case CompressibilityUnits.InverseMegapascals:        
                 return value * 1e6;
             case CompressibilityUnits.InverseAtmospheres:
+            case CompressibilityUnits.InverseAtmospheres:        
                 return value * 101325;
             case CompressibilityUnits.InverseMillibars:
+            case CompressibilityUnits.InverseMillibars:        
                 return value * 100;
             case CompressibilityUnits.InverseBars:
+            case CompressibilityUnits.InverseBars:        
                 return value * 1e5;
             case CompressibilityUnits.InversePoundsForcePerSquareInch:
+            case CompressibilityUnits.InversePoundsForcePerSquareInch:        
                 return value * 6.894757293168361e3;
             default:
                 break;

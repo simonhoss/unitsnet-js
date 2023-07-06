@@ -51,6 +51,7 @@ export class RelativeHumidity {
         switch (toUnit) {
                 
             case RelativeHumidityUnits.Percent:
+                    
                 return this.value;
             default:
                 break;
@@ -62,6 +63,7 @@ export class RelativeHumidity {
         switch (fromUnit) {
                 
             case RelativeHumidityUnits.Percent:
+                    
                 return value;
             default:
                 break;

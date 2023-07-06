@@ -11,7 +11,19 @@ export enum WarpingMomentOfInertiaUnits {
     /** */
     FeetToTheSixth,
     /** */
-    InchesToTheSixth
+    InchesToTheSixth,
+    /** */
+    MeterToTheSixth,
+    /** */
+    DecimeterToTheSixth,
+    /** */
+    CentimeterToTheSixth,
+    /** */
+    MillimeterToTheSixth,
+    /** */
+    FootToTheSixth,
+    /** */
+    InchToTheSixth
 }
 
 /** A geometric property of an area that is used to determine the warping stress. */
@@ -156,16 +168,22 @@ export class WarpingMomentOfInertia {
         switch (toUnit) {
                 
             case WarpingMomentOfInertiaUnits.MetersToTheSixth:
+            case WarpingMomentOfInertiaUnits.MetersToTheSixth:        
                 return this.value;
             case WarpingMomentOfInertiaUnits.DecimetersToTheSixth:
+            case WarpingMomentOfInertiaUnits.DecimetersToTheSixth:        
                 return this.value * 1e6;
             case WarpingMomentOfInertiaUnits.CentimetersToTheSixth:
+            case WarpingMomentOfInertiaUnits.CentimetersToTheSixth:        
                 return this.value * 1e12;
             case WarpingMomentOfInertiaUnits.MillimetersToTheSixth:
+            case WarpingMomentOfInertiaUnits.MillimetersToTheSixth:        
                 return this.value * 1e18;
             case WarpingMomentOfInertiaUnits.FeetToTheSixth:
+            case WarpingMomentOfInertiaUnits.FeetToTheSixth:        
                 return this.value / Math.pow(0.3048, 6);
             case WarpingMomentOfInertiaUnits.InchesToTheSixth:
+            case WarpingMomentOfInertiaUnits.InchesToTheSixth:        
                 return this.value / Math.pow(2.54e-2, 6);
             default:
                 break;
@@ -177,16 +195,22 @@ export class WarpingMomentOfInertia {
         switch (fromUnit) {
                 
             case WarpingMomentOfInertiaUnits.MetersToTheSixth:
+            case WarpingMomentOfInertiaUnits.MetersToTheSixth:        
                 return value;
             case WarpingMomentOfInertiaUnits.DecimetersToTheSixth:
+            case WarpingMomentOfInertiaUnits.DecimetersToTheSixth:        
                 return value / 1e6;
             case WarpingMomentOfInertiaUnits.CentimetersToTheSixth:
+            case WarpingMomentOfInertiaUnits.CentimetersToTheSixth:        
                 return value / 1e12;
             case WarpingMomentOfInertiaUnits.MillimetersToTheSixth:
+            case WarpingMomentOfInertiaUnits.MillimetersToTheSixth:        
                 return value / 1e18;
             case WarpingMomentOfInertiaUnits.FeetToTheSixth:
+            case WarpingMomentOfInertiaUnits.FeetToTheSixth:        
                 return value * Math.pow(0.3048, 6);
             case WarpingMomentOfInertiaUnits.InchesToTheSixth:
+            case WarpingMomentOfInertiaUnits.InchesToTheSixth:        
                 return value * Math.pow(2.54e-2, 6);
             default:
                 break;

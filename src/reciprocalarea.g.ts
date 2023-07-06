@@ -21,7 +21,29 @@ export enum ReciprocalAreaUnits {
     /** */
     InverseUsSurveySquareFeet,
     /** */
-    InverseSquareInches
+    InverseSquareInches,
+    /** */
+    InverseSquareMeter,
+    /** */
+    InverseSquareKilometer,
+    /** */
+    InverseSquareDecimeter,
+    /** */
+    InverseSquareCentimeter,
+    /** */
+    InverseSquareMillimeter,
+    /** */
+    InverseSquareMicrometer,
+    /** */
+    InverseSquareMile,
+    /** */
+    InverseSquareYard,
+    /** */
+    InverseSquareFoot,
+    /** */
+    InverseUsSurveySquareFoot,
+    /** */
+    InverseSquareInch
 }
 
 /** Reciprocal area (Inverse-square) quantity is used to specify a physical quantity inversely proportional to the square of the distance. */
@@ -261,26 +283,37 @@ export class ReciprocalArea {
         switch (toUnit) {
                 
             case ReciprocalAreaUnits.InverseSquareMeters:
+            case ReciprocalAreaUnits.InverseSquareMeters:        
                 return this.value;
             case ReciprocalAreaUnits.InverseSquareKilometers:
+            case ReciprocalAreaUnits.InverseSquareKilometers:        
                 return this.value * 1e6;
             case ReciprocalAreaUnits.InverseSquareDecimeters:
+            case ReciprocalAreaUnits.InverseSquareDecimeters:        
                 return this.value * 1e-2;
             case ReciprocalAreaUnits.InverseSquareCentimeters:
+            case ReciprocalAreaUnits.InverseSquareCentimeters:        
                 return this.value * 1e-4;
             case ReciprocalAreaUnits.InverseSquareMillimeters:
+            case ReciprocalAreaUnits.InverseSquareMillimeters:        
                 return this.value * 1e-6;
             case ReciprocalAreaUnits.InverseSquareMicrometers:
+            case ReciprocalAreaUnits.InverseSquareMicrometers:        
                 return this.value * 1e-12;
             case ReciprocalAreaUnits.InverseSquareMiles:
+            case ReciprocalAreaUnits.InverseSquareMiles:        
                 return this.value * 2.59e6;
             case ReciprocalAreaUnits.InverseSquareYards:
+            case ReciprocalAreaUnits.InverseSquareYards:        
                 return this.value * 0.836127;
             case ReciprocalAreaUnits.InverseSquareFeet:
+            case ReciprocalAreaUnits.InverseSquareFeet:        
                 return this.value * 0.092903;
             case ReciprocalAreaUnits.InverseUsSurveySquareFeet:
+            case ReciprocalAreaUnits.InverseUsSurveySquareFeet:        
                 return this.value * 0.09290341161;
             case ReciprocalAreaUnits.InverseSquareInches:
+            case ReciprocalAreaUnits.InverseSquareInches:        
                 return this.value * 0.00064516;
             default:
                 break;
@@ -292,26 +325,37 @@ export class ReciprocalArea {
         switch (fromUnit) {
                 
             case ReciprocalAreaUnits.InverseSquareMeters:
+            case ReciprocalAreaUnits.InverseSquareMeters:        
                 return value;
             case ReciprocalAreaUnits.InverseSquareKilometers:
+            case ReciprocalAreaUnits.InverseSquareKilometers:        
                 return value / 1e6;
             case ReciprocalAreaUnits.InverseSquareDecimeters:
+            case ReciprocalAreaUnits.InverseSquareDecimeters:        
                 return value / 1e-2;
             case ReciprocalAreaUnits.InverseSquareCentimeters:
+            case ReciprocalAreaUnits.InverseSquareCentimeters:        
                 return value / 1e-4;
             case ReciprocalAreaUnits.InverseSquareMillimeters:
+            case ReciprocalAreaUnits.InverseSquareMillimeters:        
                 return value / 1e-6;
             case ReciprocalAreaUnits.InverseSquareMicrometers:
+            case ReciprocalAreaUnits.InverseSquareMicrometers:        
                 return value / 1e-12;
             case ReciprocalAreaUnits.InverseSquareMiles:
+            case ReciprocalAreaUnits.InverseSquareMiles:        
                 return value / 2.59e6;
             case ReciprocalAreaUnits.InverseSquareYards:
+            case ReciprocalAreaUnits.InverseSquareYards:        
                 return value / 0.836127;
             case ReciprocalAreaUnits.InverseSquareFeet:
+            case ReciprocalAreaUnits.InverseSquareFeet:        
                 return value / 0.092903;
             case ReciprocalAreaUnits.InverseUsSurveySquareFeet:
+            case ReciprocalAreaUnits.InverseUsSurveySquareFeet:        
                 return value / 0.09290341161;
             case ReciprocalAreaUnits.InverseSquareInches:
+            case ReciprocalAreaUnits.InverseSquareInches:        
                 return value / 0.00064516;
             default:
                 break;

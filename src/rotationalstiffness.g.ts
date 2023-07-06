@@ -65,7 +65,71 @@ export enum RotationalStiffnessUnits {
     /** */
     KilonewtonMillimetersPerRadian,
     /** */
-    MeganewtonMillimetersPerRadian
+    MeganewtonMillimetersPerRadian,
+    /** */
+    NewtonMeterPerRadian,
+    /** */
+    PoundForceFootPerDegrees,
+    /** */
+    KilopoundForceFootPerDegrees,
+    /** */
+    NewtonMillimeterPerDegree,
+    /** */
+    NewtonMeterPerDegree,
+    /** */
+    NewtonMillimeterPerRadian,
+    /** */
+    KilonewtonMeterPerRadian,
+    /** */
+    MeganewtonMeterPerRadian,
+    /** */
+    NanonewtonMillimeterPerDegree,
+    /** */
+    MicronewtonMillimeterPerDegree,
+    /** */
+    MillinewtonMillimeterPerDegree,
+    /** */
+    CentinewtonMillimeterPerDegree,
+    /** */
+    DecinewtonMillimeterPerDegree,
+    /** */
+    DecanewtonMillimeterPerDegree,
+    /** */
+    KilonewtonMillimeterPerDegree,
+    /** */
+    MeganewtonMillimeterPerDegree,
+    /** */
+    NanonewtonMeterPerDegree,
+    /** */
+    MicronewtonMeterPerDegree,
+    /** */
+    MillinewtonMeterPerDegree,
+    /** */
+    CentinewtonMeterPerDegree,
+    /** */
+    DecinewtonMeterPerDegree,
+    /** */
+    DecanewtonMeterPerDegree,
+    /** */
+    KilonewtonMeterPerDegree,
+    /** */
+    MeganewtonMeterPerDegree,
+    /** */
+    NanonewtonMillimeterPerRadian,
+    /** */
+    MicronewtonMillimeterPerRadian,
+    /** */
+    MillinewtonMillimeterPerRadian,
+    /** */
+    CentinewtonMillimeterPerRadian,
+    /** */
+    DecinewtonMillimeterPerRadian,
+    /** */
+    DecanewtonMillimeterPerRadian,
+    /** */
+    KilonewtonMillimeterPerRadian,
+    /** */
+    MeganewtonMillimeterPerRadian
 }
 
 /** https://en.wikipedia.org/wiki/Stiffness#Rotational_stiffness */
@@ -723,70 +787,103 @@ export class RotationalStiffness {
         switch (toUnit) {
                 
             case RotationalStiffnessUnits.NewtonMetersPerRadian:
+            case RotationalStiffnessUnits.NewtonMetersPerRadian:        
                 return this.value;
             case RotationalStiffnessUnits.PoundForceFeetPerDegrees:
+            case RotationalStiffnessUnits.PoundForceFeetPerDegrees:        
                 return this.value / 77.6826;
             case RotationalStiffnessUnits.KilopoundForceFeetPerDegrees:
+            case RotationalStiffnessUnits.KilopoundForceFeetPerDegrees:        
                 return this.value / 77682.6;
             case RotationalStiffnessUnits.NewtonMillimetersPerDegree:
+            case RotationalStiffnessUnits.NewtonMillimetersPerDegree:        
                 return this.value / 180 * Math.PI * 1000;
             case RotationalStiffnessUnits.NewtonMetersPerDegree:
+            case RotationalStiffnessUnits.NewtonMetersPerDegree:        
                 return this.value / (180 / Math.PI);
             case RotationalStiffnessUnits.NewtonMillimetersPerRadian:
+            case RotationalStiffnessUnits.NewtonMillimetersPerRadian:        
                 return this.value * 1000;
             case RotationalStiffnessUnits.PoundForceFeetPerRadian:
+                    
                 return this.value / 1.3558179483314;
             case RotationalStiffnessUnits.KilonewtonMetersPerRadian:
+            case RotationalStiffnessUnits.KilonewtonMetersPerRadian:        
                 return (this.value) / 1000;
             case RotationalStiffnessUnits.MeganewtonMetersPerRadian:
+            case RotationalStiffnessUnits.MeganewtonMetersPerRadian:        
                 return (this.value) / 1000000;
             case RotationalStiffnessUnits.NanonewtonMillimetersPerDegree:
+            case RotationalStiffnessUnits.NanonewtonMillimetersPerDegree:        
                 return (this.value / 180 * Math.PI * 1000) / 1e-9;
             case RotationalStiffnessUnits.MicronewtonMillimetersPerDegree:
+            case RotationalStiffnessUnits.MicronewtonMillimetersPerDegree:        
                 return (this.value / 180 * Math.PI * 1000) / 0.000001;
             case RotationalStiffnessUnits.MillinewtonMillimetersPerDegree:
+            case RotationalStiffnessUnits.MillinewtonMillimetersPerDegree:        
                 return (this.value / 180 * Math.PI * 1000) / 0.001;
             case RotationalStiffnessUnits.CentinewtonMillimetersPerDegree:
+            case RotationalStiffnessUnits.CentinewtonMillimetersPerDegree:        
                 return (this.value / 180 * Math.PI * 1000) / 0.01;
             case RotationalStiffnessUnits.DecinewtonMillimetersPerDegree:
+            case RotationalStiffnessUnits.DecinewtonMillimetersPerDegree:        
                 return (this.value / 180 * Math.PI * 1000) / 0.1;
             case RotationalStiffnessUnits.DecanewtonMillimetersPerDegree:
+            case RotationalStiffnessUnits.DecanewtonMillimetersPerDegree:        
                 return (this.value / 180 * Math.PI * 1000) / 10;
             case RotationalStiffnessUnits.KilonewtonMillimetersPerDegree:
+            case RotationalStiffnessUnits.KilonewtonMillimetersPerDegree:        
                 return (this.value / 180 * Math.PI * 1000) / 1000;
             case RotationalStiffnessUnits.MeganewtonMillimetersPerDegree:
+            case RotationalStiffnessUnits.MeganewtonMillimetersPerDegree:        
                 return (this.value / 180 * Math.PI * 1000) / 1000000;
             case RotationalStiffnessUnits.NanonewtonMetersPerDegree:
+            case RotationalStiffnessUnits.NanonewtonMetersPerDegree:        
                 return (this.value / (180 / Math.PI)) / 1e-9;
             case RotationalStiffnessUnits.MicronewtonMetersPerDegree:
+            case RotationalStiffnessUnits.MicronewtonMetersPerDegree:        
                 return (this.value / (180 / Math.PI)) / 0.000001;
             case RotationalStiffnessUnits.MillinewtonMetersPerDegree:
+            case RotationalStiffnessUnits.MillinewtonMetersPerDegree:        
                 return (this.value / (180 / Math.PI)) / 0.001;
             case RotationalStiffnessUnits.CentinewtonMetersPerDegree:
+            case RotationalStiffnessUnits.CentinewtonMetersPerDegree:        
                 return (this.value / (180 / Math.PI)) / 0.01;
             case RotationalStiffnessUnits.DecinewtonMetersPerDegree:
+            case RotationalStiffnessUnits.DecinewtonMetersPerDegree:        
                 return (this.value / (180 / Math.PI)) / 0.1;
             case RotationalStiffnessUnits.DecanewtonMetersPerDegree:
+            case RotationalStiffnessUnits.DecanewtonMetersPerDegree:        
                 return (this.value / (180 / Math.PI)) / 10;
             case RotationalStiffnessUnits.KilonewtonMetersPerDegree:
+            case RotationalStiffnessUnits.KilonewtonMetersPerDegree:        
                 return (this.value / (180 / Math.PI)) / 1000;
             case RotationalStiffnessUnits.MeganewtonMetersPerDegree:
+            case RotationalStiffnessUnits.MeganewtonMetersPerDegree:        
                 return (this.value / (180 / Math.PI)) / 1000000;
             case RotationalStiffnessUnits.NanonewtonMillimetersPerRadian:
+            case RotationalStiffnessUnits.NanonewtonMillimetersPerRadian:        
                 return (this.value * 1000) / 1e-9;
             case RotationalStiffnessUnits.MicronewtonMillimetersPerRadian:
+            case RotationalStiffnessUnits.MicronewtonMillimetersPerRadian:        
                 return (this.value * 1000) / 0.000001;
             case RotationalStiffnessUnits.MillinewtonMillimetersPerRadian:
+            case RotationalStiffnessUnits.MillinewtonMillimetersPerRadian:        
                 return (this.value * 1000) / 0.001;
             case RotationalStiffnessUnits.CentinewtonMillimetersPerRadian:
+            case RotationalStiffnessUnits.CentinewtonMillimetersPerRadian:        
                 return (this.value * 1000) / 0.01;
             case RotationalStiffnessUnits.DecinewtonMillimetersPerRadian:
+            case RotationalStiffnessUnits.DecinewtonMillimetersPerRadian:        
                 return (this.value * 1000) / 0.1;
             case RotationalStiffnessUnits.DecanewtonMillimetersPerRadian:
+            case RotationalStiffnessUnits.DecanewtonMillimetersPerRadian:        
                 return (this.value * 1000) / 10;
             case RotationalStiffnessUnits.KilonewtonMillimetersPerRadian:
+            case RotationalStiffnessUnits.KilonewtonMillimetersPerRadian:        
                 return (this.value * 1000) / 1000;
             case RotationalStiffnessUnits.MeganewtonMillimetersPerRadian:
+            case RotationalStiffnessUnits.MeganewtonMillimetersPerRadian:        
                 return (this.value * 1000) / 1000000;
             default:
                 break;
@@ -798,70 +895,103 @@ export class RotationalStiffness {
         switch (fromUnit) {
                 
             case RotationalStiffnessUnits.NewtonMetersPerRadian:
+            case RotationalStiffnessUnits.NewtonMetersPerRadian:        
                 return value;
             case RotationalStiffnessUnits.PoundForceFeetPerDegrees:
+            case RotationalStiffnessUnits.PoundForceFeetPerDegrees:        
                 return value * 77.6826;
             case RotationalStiffnessUnits.KilopoundForceFeetPerDegrees:
+            case RotationalStiffnessUnits.KilopoundForceFeetPerDegrees:        
                 return value * 77682.6;
             case RotationalStiffnessUnits.NewtonMillimetersPerDegree:
+            case RotationalStiffnessUnits.NewtonMillimetersPerDegree:        
                 return value * 180 / Math.PI * 0.001;
             case RotationalStiffnessUnits.NewtonMetersPerDegree:
+            case RotationalStiffnessUnits.NewtonMetersPerDegree:        
                 return value * (180 / Math.PI);
             case RotationalStiffnessUnits.NewtonMillimetersPerRadian:
+            case RotationalStiffnessUnits.NewtonMillimetersPerRadian:        
                 return value * 0.001;
             case RotationalStiffnessUnits.PoundForceFeetPerRadian:
+                    
                 return value * 1.3558179483314;
             case RotationalStiffnessUnits.KilonewtonMetersPerRadian:
+            case RotationalStiffnessUnits.KilonewtonMetersPerRadian:        
                 return (value) * 1000;
             case RotationalStiffnessUnits.MeganewtonMetersPerRadian:
+            case RotationalStiffnessUnits.MeganewtonMetersPerRadian:        
                 return (value) * 1000000;
             case RotationalStiffnessUnits.NanonewtonMillimetersPerDegree:
+            case RotationalStiffnessUnits.NanonewtonMillimetersPerDegree:        
                 return (value * 180 / Math.PI * 0.001) * 1e-9;
             case RotationalStiffnessUnits.MicronewtonMillimetersPerDegree:
+            case RotationalStiffnessUnits.MicronewtonMillimetersPerDegree:        
                 return (value * 180 / Math.PI * 0.001) * 0.000001;
             case RotationalStiffnessUnits.MillinewtonMillimetersPerDegree:
+            case RotationalStiffnessUnits.MillinewtonMillimetersPerDegree:        
                 return (value * 180 / Math.PI * 0.001) * 0.001;
             case RotationalStiffnessUnits.CentinewtonMillimetersPerDegree:
+            case RotationalStiffnessUnits.CentinewtonMillimetersPerDegree:        
                 return (value * 180 / Math.PI * 0.001) * 0.01;
             case RotationalStiffnessUnits.DecinewtonMillimetersPerDegree:
+            case RotationalStiffnessUnits.DecinewtonMillimetersPerDegree:        
                 return (value * 180 / Math.PI * 0.001) * 0.1;
             case RotationalStiffnessUnits.DecanewtonMillimetersPerDegree:
+            case RotationalStiffnessUnits.DecanewtonMillimetersPerDegree:        
                 return (value * 180 / Math.PI * 0.001) * 10;
             case RotationalStiffnessUnits.KilonewtonMillimetersPerDegree:
+            case RotationalStiffnessUnits.KilonewtonMillimetersPerDegree:        
                 return (value * 180 / Math.PI * 0.001) * 1000;
             case RotationalStiffnessUnits.MeganewtonMillimetersPerDegree:
+            case RotationalStiffnessUnits.MeganewtonMillimetersPerDegree:        
                 return (value * 180 / Math.PI * 0.001) * 1000000;
             case RotationalStiffnessUnits.NanonewtonMetersPerDegree:
+            case RotationalStiffnessUnits.NanonewtonMetersPerDegree:        
                 return (value * (180 / Math.PI)) * 1e-9;
             case RotationalStiffnessUnits.MicronewtonMetersPerDegree:
+            case RotationalStiffnessUnits.MicronewtonMetersPerDegree:        
                 return (value * (180 / Math.PI)) * 0.000001;
             case RotationalStiffnessUnits.MillinewtonMetersPerDegree:
+            case RotationalStiffnessUnits.MillinewtonMetersPerDegree:        
                 return (value * (180 / Math.PI)) * 0.001;
             case RotationalStiffnessUnits.CentinewtonMetersPerDegree:
+            case RotationalStiffnessUnits.CentinewtonMetersPerDegree:        
                 return (value * (180 / Math.PI)) * 0.01;
             case RotationalStiffnessUnits.DecinewtonMetersPerDegree:
+            case RotationalStiffnessUnits.DecinewtonMetersPerDegree:        
                 return (value * (180 / Math.PI)) * 0.1;
             case RotationalStiffnessUnits.DecanewtonMetersPerDegree:
+            case RotationalStiffnessUnits.DecanewtonMetersPerDegree:        
                 return (value * (180 / Math.PI)) * 10;
             case RotationalStiffnessUnits.KilonewtonMetersPerDegree:
+            case RotationalStiffnessUnits.KilonewtonMetersPerDegree:        
                 return (value * (180 / Math.PI)) * 1000;
             case RotationalStiffnessUnits.MeganewtonMetersPerDegree:
+            case RotationalStiffnessUnits.MeganewtonMetersPerDegree:        
                 return (value * (180 / Math.PI)) * 1000000;
             case RotationalStiffnessUnits.NanonewtonMillimetersPerRadian:
+            case RotationalStiffnessUnits.NanonewtonMillimetersPerRadian:        
                 return (value * 0.001) * 1e-9;
             case RotationalStiffnessUnits.MicronewtonMillimetersPerRadian:
+            case RotationalStiffnessUnits.MicronewtonMillimetersPerRadian:        
                 return (value * 0.001) * 0.000001;
             case RotationalStiffnessUnits.MillinewtonMillimetersPerRadian:
+            case RotationalStiffnessUnits.MillinewtonMillimetersPerRadian:        
                 return (value * 0.001) * 0.001;
             case RotationalStiffnessUnits.CentinewtonMillimetersPerRadian:
+            case RotationalStiffnessUnits.CentinewtonMillimetersPerRadian:        
                 return (value * 0.001) * 0.01;
             case RotationalStiffnessUnits.DecinewtonMillimetersPerRadian:
+            case RotationalStiffnessUnits.DecinewtonMillimetersPerRadian:        
                 return (value * 0.001) * 0.1;
             case RotationalStiffnessUnits.DecanewtonMillimetersPerRadian:
+            case RotationalStiffnessUnits.DecanewtonMillimetersPerRadian:        
                 return (value * 0.001) * 10;
             case RotationalStiffnessUnits.KilonewtonMillimetersPerRadian:
+            case RotationalStiffnessUnits.KilonewtonMillimetersPerRadian:        
                 return (value * 0.001) * 1000;
             case RotationalStiffnessUnits.MeganewtonMillimetersPerRadian:
+            case RotationalStiffnessUnits.MeganewtonMillimetersPerRadian:        
                 return (value * 0.001) * 1000000;
             default:
                 break;

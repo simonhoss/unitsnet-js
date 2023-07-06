@@ -11,7 +11,19 @@ export enum ApparentPowerUnits {
     /** */
     Megavoltamperes,
     /** */
-    Gigavoltamperes
+    Gigavoltamperes,
+    /** */
+    Voltampere,
+    /** */
+    Microvoltampere,
+    /** */
+    Millivoltampere,
+    /** */
+    Kilovoltampere,
+    /** */
+    Megavoltampere,
+    /** */
+    Gigavoltampere
 }
 
 /** Power engineers measure apparent power as the magnitude of the vector sum of active and reactive power. Apparent power is the product of the root-mean-square of voltage and current. */
@@ -156,16 +168,22 @@ export class ApparentPower {
         switch (toUnit) {
                 
             case ApparentPowerUnits.Voltamperes:
+            case ApparentPowerUnits.Voltamperes:        
                 return this.value;
             case ApparentPowerUnits.Microvoltamperes:
+            case ApparentPowerUnits.Microvoltamperes:        
                 return (this.value) / 0.000001;
             case ApparentPowerUnits.Millivoltamperes:
+            case ApparentPowerUnits.Millivoltamperes:        
                 return (this.value) / 0.001;
             case ApparentPowerUnits.Kilovoltamperes:
+            case ApparentPowerUnits.Kilovoltamperes:        
                 return (this.value) / 1000;
             case ApparentPowerUnits.Megavoltamperes:
+            case ApparentPowerUnits.Megavoltamperes:        
                 return (this.value) / 1000000;
             case ApparentPowerUnits.Gigavoltamperes:
+            case ApparentPowerUnits.Gigavoltamperes:        
                 return (this.value) / 1000000000;
             default:
                 break;
@@ -177,16 +195,22 @@ export class ApparentPower {
         switch (fromUnit) {
                 
             case ApparentPowerUnits.Voltamperes:
+            case ApparentPowerUnits.Voltamperes:        
                 return value;
             case ApparentPowerUnits.Microvoltamperes:
+            case ApparentPowerUnits.Microvoltamperes:        
                 return (value) * 0.000001;
             case ApparentPowerUnits.Millivoltamperes:
+            case ApparentPowerUnits.Millivoltamperes:        
                 return (value) * 0.001;
             case ApparentPowerUnits.Kilovoltamperes:
+            case ApparentPowerUnits.Kilovoltamperes:        
                 return (value) * 1000;
             case ApparentPowerUnits.Megavoltamperes:
+            case ApparentPowerUnits.Megavoltamperes:        
                 return (value) * 1000000;
             case ApparentPowerUnits.Gigavoltamperes:
+            case ApparentPowerUnits.Gigavoltamperes:        
                 return (value) * 1000000000;
             default:
                 break;

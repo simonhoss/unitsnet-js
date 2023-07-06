@@ -13,7 +13,21 @@ export enum CapacitanceUnits {
     /** */
     Kilofarads,
     /** */
-    Megafarads
+    Megafarads,
+    /** */
+    Farad,
+    /** */
+    Picofarad,
+    /** */
+    Nanofarad,
+    /** */
+    Microfarad,
+    /** */
+    Millifarad,
+    /** */
+    Kilofarad,
+    /** */
+    Megafarad
 }
 
 /** Capacitance is the ability of a body to store an electric charge. */
@@ -177,18 +191,25 @@ export class Capacitance {
         switch (toUnit) {
                 
             case CapacitanceUnits.Farads:
+            case CapacitanceUnits.Farads:        
                 return this.value;
             case CapacitanceUnits.Picofarads:
+            case CapacitanceUnits.Picofarads:        
                 return (this.value) / 1e-12;
             case CapacitanceUnits.Nanofarads:
+            case CapacitanceUnits.Nanofarads:        
                 return (this.value) / 1e-9;
             case CapacitanceUnits.Microfarads:
+            case CapacitanceUnits.Microfarads:        
                 return (this.value) / 0.000001;
             case CapacitanceUnits.Millifarads:
+            case CapacitanceUnits.Millifarads:        
                 return (this.value) / 0.001;
             case CapacitanceUnits.Kilofarads:
+            case CapacitanceUnits.Kilofarads:        
                 return (this.value) / 1000;
             case CapacitanceUnits.Megafarads:
+            case CapacitanceUnits.Megafarads:        
                 return (this.value) / 1000000;
             default:
                 break;
@@ -200,18 +221,25 @@ export class Capacitance {
         switch (fromUnit) {
                 
             case CapacitanceUnits.Farads:
+            case CapacitanceUnits.Farads:        
                 return value;
             case CapacitanceUnits.Picofarads:
+            case CapacitanceUnits.Picofarads:        
                 return (value) * 1e-12;
             case CapacitanceUnits.Nanofarads:
+            case CapacitanceUnits.Nanofarads:        
                 return (value) * 1e-9;
             case CapacitanceUnits.Microfarads:
+            case CapacitanceUnits.Microfarads:        
                 return (value) * 0.000001;
             case CapacitanceUnits.Millifarads:
+            case CapacitanceUnits.Millifarads:        
                 return (value) * 0.001;
             case CapacitanceUnits.Kilofarads:
+            case CapacitanceUnits.Kilofarads:        
                 return (value) * 1000;
             case CapacitanceUnits.Megafarads:
+            case CapacitanceUnits.Megafarads:        
                 return (value) * 1000000;
             default:
                 break;

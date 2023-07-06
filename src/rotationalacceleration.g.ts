@@ -7,7 +7,15 @@ export enum RotationalAccelerationUnits {
     /** */
     RevolutionsPerMinutePerSecond,
     /** */
-    RevolutionsPerSecondSquared
+    RevolutionsPerSecondSquared,
+    /** */
+    RadianPerSecondSquared,
+    /** */
+    DegreePerSecondSquared,
+    /** */
+    RevolutionPerMinutePerSecond,
+    /** */
+    RevolutionPerSecondSquared
 }
 
 /** Angular acceleration is the rate of change of rotational speed. */
@@ -114,12 +122,16 @@ export class RotationalAcceleration {
         switch (toUnit) {
                 
             case RotationalAccelerationUnits.RadiansPerSecondSquared:
+            case RotationalAccelerationUnits.RadiansPerSecondSquared:        
                 return this.value;
             case RotationalAccelerationUnits.DegreesPerSecondSquared:
+            case RotationalAccelerationUnits.DegreesPerSecondSquared:        
                 return (180 / Math.PI) * this.value;
             case RotationalAccelerationUnits.RevolutionsPerMinutePerSecond:
+            case RotationalAccelerationUnits.RevolutionsPerMinutePerSecond:        
                 return (60 / (2 * Math.PI)) * this.value;
             case RotationalAccelerationUnits.RevolutionsPerSecondSquared:
+            case RotationalAccelerationUnits.RevolutionsPerSecondSquared:        
                 return (1 / (2 * Math.PI)) * this.value;
             default:
                 break;
@@ -131,12 +143,16 @@ export class RotationalAcceleration {
         switch (fromUnit) {
                 
             case RotationalAccelerationUnits.RadiansPerSecondSquared:
+            case RotationalAccelerationUnits.RadiansPerSecondSquared:        
                 return value;
             case RotationalAccelerationUnits.DegreesPerSecondSquared:
+            case RotationalAccelerationUnits.DegreesPerSecondSquared:        
                 return (Math.PI / 180) * value;
             case RotationalAccelerationUnits.RevolutionsPerMinutePerSecond:
+            case RotationalAccelerationUnits.RevolutionsPerMinutePerSecond:        
                 return ((2 * Math.PI) / 60) * value;
             case RotationalAccelerationUnits.RevolutionsPerSecondSquared:
+            case RotationalAccelerationUnits.RevolutionsPerSecondSquared:        
                 return (2 * Math.PI) * value;
             default:
                 break;
